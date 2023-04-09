@@ -9,12 +9,16 @@ import Foundation
 
 
 final class ModelPersistence {
-    static let persistence = ModelPersistence()
+    static let shared = ModelPersistence()
     
-    let filetBundleURL = Bundle.main.url(forResource: "anime", withExtension: "json")!
+    let fileLocation:FileLocation
     
-    func getAnimes() throws -> [Anime] {
-        let data = try Data(contentsOf: filetBundleURL)
+    init(fileLocation:FileLocation = FileProduction()) {
+        self.fileLocation = fileLocation
+    }
+    
+    func loadAnimes() throws -> [Anime] {
+        let data = try Data(contentsOf: fileLocation.fileURL)
         return try JSONDecoder().decode([Anime].self, from: data)
     }
 }

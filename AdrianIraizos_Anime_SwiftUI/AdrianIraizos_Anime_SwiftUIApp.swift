@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct AdrianIraizos_Anime_SwiftUIApp: App {
+    @State var viewModel = AnimesViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView(anime:.test)
+            AnimesListView()
+                .environmentObject(viewModel)
         }
     }
 }
