@@ -11,7 +11,7 @@ import SwiftUI
 struct AdrianIraizos_Anime_SwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(anime:.test)
         }
     }
 }

@@ -11,6 +11,9 @@
 		3A25B8D929E3181A0078D264 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A25B8D829E3181A0078D264 /* ContentView.swift */; };
 		3A25B8DB29E3181B0078D264 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A25B8DA29E3181B0078D264 /* Assets.xcassets */; };
 		3A25B8DE29E3181B0078D264 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A25B8DD29E3181B0078D264 /* Preview Assets.xcassets */; };
+		3A25B8E629E318600078D264 /* anime.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A25B8E529E318600078D264 /* anime.json */; };
+		3A25B8E929E3196A0078D264 /* Anime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A25B8E829E3196A0078D264 /* Anime.swift */; };
+		3A25B8EB29E31FAA0078D264 /* ModelPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A25B8EA29E31FAA0078D264 /* ModelPersistence.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		3A25B8D829E3181A0078D264 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3A25B8DA29E3181B0078D264 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A25B8DD29E3181B0078D264 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3A25B8E529E318600078D264 /* anime.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = anime.json; sourceTree = "<group>"; };
+		3A25B8E829E3196A0078D264 /* Anime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anime.swift; sourceTree = "<group>"; };
+		3A25B8EA29E31FAA0078D264 /* ModelPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelPersistence.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +57,8 @@
 		3A25B8D529E3181A0078D264 /* AdrianIraizos_Anime_SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				3A25B8E729E3187A0078D264 /* Model */,
+				3A25B8E429E3184A0078D264 /* Resources */,
 				3A25B8D629E3181A0078D264 /* AdrianIraizos_Anime_SwiftUIApp.swift */,
 				3A25B8D829E3181A0078D264 /* ContentView.swift */,
 				3A25B8DA29E3181B0078D264 /* Assets.xcassets */,
@@ -65,6 +73,23 @@
 				3A25B8DD29E3181B0078D264 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3A25B8E429E3184A0078D264 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3A25B8E529E318600078D264 /* anime.json */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		3A25B8E729E3187A0078D264 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3A25B8E829E3196A0078D264 /* Anime.swift */,
+				3A25B8EA29E31FAA0078D264 /* ModelPersistence.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +152,7 @@
 			files = (
 				3A25B8DE29E3181B0078D264 /* Preview Assets.xcassets in Resources */,
 				3A25B8DB29E3181B0078D264 /* Assets.xcassets in Resources */,
+				3A25B8E629E318600078D264 /* anime.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +165,8 @@
 			files = (
 				3A25B8D929E3181A0078D264 /* ContentView.swift in Sources */,
 				3A25B8D729E3181A0078D264 /* AdrianIraizos_Anime_SwiftUIApp.swift in Sources */,
+				3A25B8E929E3196A0078D264 /* Anime.swift in Sources */,
+				3A25B8EB29E31FAA0078D264 /* ModelPersistence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
