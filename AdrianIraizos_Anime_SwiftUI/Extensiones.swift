@@ -15,6 +15,11 @@ extension Color {
     static let lightEnd = Color(red: 30 / 255, green: 80 / 255, blue: 120 / 255)
     
     static let offWhite = Color(red: 225 / 255, green: 225 / 255 , blue: 235 / 255)
+    
+    
+    static let b13254 = Color(red: 0.694, green: 0.196, blue: 0.329)
+    
+    static let b471337 = Color(red:0.278, green:0.075, blue:0.216)
 }
 
 

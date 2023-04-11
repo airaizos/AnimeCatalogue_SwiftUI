@@ -28,6 +28,12 @@
 		3A33CB3029E545D000160AC3 /* Rhombus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A33CB2F29E545D000160AC3 /* Rhombus.swift */; };
 		3A33CB3229E5503C00160AC3 /* Points.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A33CB3129E5503C00160AC3 /* Points.swift */; };
 		3A33CB3429E5543C00160AC3 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A33CB3329E5543C00160AC3 /* RatingView.swift */; };
+		3A33CB3629E56F2700160AC3 /* AnimeStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A33CB3529E56F2700160AC3 /* AnimeStatusView.swift */; };
+		3A33CB3829E5712000160AC3 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A33CB3729E5712000160AC3 /* Triangle.swift */; };
+		3A33CB3A29E5727F00160AC3 /* AnimeTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A33CB3929E5727F00160AC3 /* AnimeTypeView.swift */; };
+		3A33CB3C29E57A4B00160AC3 /* ExtensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A33CB3B29E57A4B00160AC3 /* ExtensionView.swift */; };
+		3A33CB3E29E59D3800160AC3 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A33CB3D29E59D3800160AC3 /* Enums.swift */; };
+		3A33CB4029E5A26100160AC3 /* AnimeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A33CB3F29E5A26100160AC3 /* AnimeDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +59,12 @@
 		3A33CB2F29E545D000160AC3 /* Rhombus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rhombus.swift; sourceTree = "<group>"; };
 		3A33CB3129E5503C00160AC3 /* Points.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Points.swift; sourceTree = "<group>"; };
 		3A33CB3329E5543C00160AC3 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		3A33CB3529E56F2700160AC3 /* AnimeStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeStatusView.swift; sourceTree = "<group>"; };
+		3A33CB3729E5712000160AC3 /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
+		3A33CB3929E5727F00160AC3 /* AnimeTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeTypeView.swift; sourceTree = "<group>"; };
+		3A33CB3B29E57A4B00160AC3 /* ExtensionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionView.swift; sourceTree = "<group>"; };
+		3A33CB3D29E59D3800160AC3 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		3A33CB3F29E5A26100160AC3 /* AnimeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +144,7 @@
 				3A25B90029E33B5F0078D264 /* ViewHelpers */,
 				3A25B8F929E330FE0078D264 /* AnimesListView.swift */,
 				3A25B8FB29E3369F0078D264 /* AnimeListCell.swift */,
+				3A33CB3F29E5A26100160AC3 /* AnimeDetail.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -144,6 +157,9 @@
 				3A33CB2D29E544CF00160AC3 /* Polygon.swift */,
 				3A33CB2F29E545D000160AC3 /* Rhombus.swift */,
 				3A33CB3129E5503C00160AC3 /* Points.swift */,
+				3A33CB3729E5712000160AC3 /* Triangle.swift */,
+				3A33CB3B29E57A4B00160AC3 /* ExtensionView.swift */,
+				3A33CB3D29E59D3800160AC3 /* Enums.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -154,6 +170,8 @@
 				3A25B90129E33C170078D264 /* DarkBackground.swift */,
 				3A25B90329E3433C0078D264 /* LightBackground.swift */,
 				3A33CB3329E5543C00160AC3 /* RatingView.swift */,
+				3A33CB3529E56F2700160AC3 /* AnimeStatusView.swift */,
+				3A33CB3929E5727F00160AC3 /* AnimeTypeView.swift */,
 			);
 			name = ViewHelpers;
 			sourceTree = "<group>";
@@ -232,18 +250,24 @@
 			files = (
 				3A25B8F629E32EB50078D264 /* AnimesViewModel.swift in Sources */,
 				3A25B8D729E3181A0078D264 /* AdrianIraizos_Anime_SwiftUIApp.swift in Sources */,
+				3A33CB3C29E57A4B00160AC3 /* ExtensionView.swift in Sources */,
 				3A25B8FA29E330FE0078D264 /* AnimesListView.swift in Sources */,
+				3A33CB3829E5712000160AC3 /* Triangle.swift in Sources */,
 				3A25B8FF29E33A8B0078D264 /* Extensiones.swift in Sources */,
 				3A33CB3229E5503C00160AC3 /* Points.swift in Sources */,
 				3A25B90429E3433D0078D264 /* LightBackground.swift in Sources */,
 				3A33CB2C29E5441000160AC3 /* Star.swift in Sources */,
 				3A33CB2E29E544CF00160AC3 /* Polygon.swift in Sources */,
+				3A33CB3E29E59D3800160AC3 /* Enums.swift in Sources */,
 				3A25B8F229E32CD30078D264 /* FileProduction.swift in Sources */,
+				3A33CB3629E56F2700160AC3 /* AnimeStatusView.swift in Sources */,
 				3A25B8E929E3196A0078D264 /* Anime.swift in Sources */,
 				3A25B8FC29E3369F0078D264 /* AnimeListCell.swift in Sources */,
+				3A33CB3A29E5727F00160AC3 /* AnimeTypeView.swift in Sources */,
 				3A33CB3429E5543C00160AC3 /* RatingView.swift in Sources */,
 				3A25B8F429E32CF90078D264 /* DataTest.swift in Sources */,
 				3A25B8EB29E31FAA0078D264 /* ModelPersistence.swift in Sources */,
+				3A33CB4029E5A26100160AC3 /* AnimeDetail.swift in Sources */,
 				3A33CB3029E545D000160AC3 /* Rhombus.swift in Sources */,
 				3A25B8F029E32C760078D264 /* Protocolos.swift in Sources */,
 				3A25B90229E33C170078D264 /* DarkBackground.swift in Sources */,
