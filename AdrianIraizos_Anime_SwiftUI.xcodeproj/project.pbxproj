@@ -34,6 +34,7 @@
 		3A33CB3C29E57A4B00160AC3 /* ExtensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A33CB3B29E57A4B00160AC3 /* ExtensionView.swift */; };
 		3A33CB3E29E59D3800160AC3 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A33CB3D29E59D3800160AC3 /* Enums.swift */; };
 		3A33CB4029E5A26100160AC3 /* AnimeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A33CB3F29E5A26100160AC3 /* AnimeDetail.swift */; };
+		3A33CB4229E5B67100160AC3 /* FavoriteButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A33CB4129E5B67100160AC3 /* FavoriteButtonStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,7 @@
 		3A33CB3B29E57A4B00160AC3 /* ExtensionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionView.swift; sourceTree = "<group>"; };
 		3A33CB3D29E59D3800160AC3 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		3A33CB3F29E5A26100160AC3 /* AnimeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeDetail.swift; sourceTree = "<group>"; };
+		3A33CB4129E5B67100160AC3 /* FavoriteButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 				3A33CB3329E5543C00160AC3 /* RatingView.swift */,
 				3A33CB3529E56F2700160AC3 /* AnimeStatusView.swift */,
 				3A33CB3929E5727F00160AC3 /* AnimeTypeView.swift */,
+				3A33CB4129E5B67100160AC3 /* FavoriteButtonStyle.swift */,
 			);
 			name = ViewHelpers;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A25B8F629E32EB50078D264 /* AnimesViewModel.swift in Sources */,
+				3A33CB4229E5B67100160AC3 /* FavoriteButtonStyle.swift in Sources */,
 				3A25B8D729E3181A0078D264 /* AdrianIraizos_Anime_SwiftUIApp.swift in Sources */,
 				3A33CB3C29E57A4B00160AC3 /* ExtensionView.swift in Sources */,
 				3A25B8FA29E330FE0078D264 /* AnimesListView.swift in Sources */,

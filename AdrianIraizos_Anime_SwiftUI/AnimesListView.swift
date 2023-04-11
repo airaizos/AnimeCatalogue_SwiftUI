@@ -9,8 +9,6 @@ import SwiftUI
 
 struct AnimesListView: View {
     @EnvironmentObject var viewModel: AnimesViewModel
-    @State var picker = 0
-    
     
     var body: some View {
         NavigationStack {
@@ -24,8 +22,6 @@ struct AnimesListView: View {
                         }
                     }
                     .padding(10)
-                    
-                    
                 }
                 .navigationDestination(for: Anime.self) { value in
                     AnimeDetail(anime: value)

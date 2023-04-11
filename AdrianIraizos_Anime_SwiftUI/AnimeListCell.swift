@@ -58,6 +58,12 @@ struct AnimeListCell: View {
                 Spacer()
                 AnimeTypeView(type: anime.typeLetter)
                 Spacer()
+                Button {
+                    
+                } label: {
+                    Image(systemName: "star.circle")
+                }
+                .buttonStyle(FavoriteButtonStyle())
             }
            
         }  .frame(idealWidth: .infinity)

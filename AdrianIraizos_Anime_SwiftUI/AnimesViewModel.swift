@@ -16,6 +16,7 @@ final class AnimesViewModel:ObservableObject {
     @Published var obraPicker = 0 {
         didSet {
             switch obraPicker {
+            case 0: obraFilter = .All
             case 1: obraFilter = .OVA
             case 2: obraFilter = .Pelicula
             case 3: obraFilter = .Especial
