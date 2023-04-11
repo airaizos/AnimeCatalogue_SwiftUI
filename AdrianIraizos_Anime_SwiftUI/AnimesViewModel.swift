@@ -16,9 +16,9 @@ final class AnimesViewModel:ObservableObject {
         self.persistence = persistence
         do {
             self.animes = try persistence.loadAnimes()
-            print(animes.first!)
+           
         } catch {
-            print(error)
+
             self.animes = []
         }
     }

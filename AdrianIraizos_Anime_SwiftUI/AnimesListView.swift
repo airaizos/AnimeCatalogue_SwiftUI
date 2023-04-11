@@ -11,7 +11,22 @@ struct AnimesListView: View {
     @EnvironmentObject var viewModel: AnimesViewModel
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            ScrollView {
+                LazyVStack {
+                    ForEach(viewModel.animes, id:\.self) { anime in
+                        NavigationLink(value: anime) {
+                            AnimeListCell(anime: anime)
+                                .padding(10)
+                                .background(LightBackground(isHighlighted: true, shape: RoundedRectangle(cornerRadius: 10)))
+                        }
+                        .padding(10)
+                    }
+                }
+            }
+            .background(Color.black)
+        }
+        
     }
 }
 

@@ -19,6 +19,15 @@
 		3A25B8F429E32CF90078D264 /* DataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A25B8F329E32CF90078D264 /* DataTest.swift */; };
 		3A25B8F629E32EB50078D264 /* AnimesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A25B8F529E32EB50078D264 /* AnimesViewModel.swift */; };
 		3A25B8FA29E330FE0078D264 /* AnimesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A25B8F929E330FE0078D264 /* AnimesListView.swift */; };
+		3A25B8FC29E3369F0078D264 /* AnimeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A25B8FB29E3369F0078D264 /* AnimeListCell.swift */; };
+		3A25B8FF29E33A8B0078D264 /* Extensiones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A25B8FE29E33A8B0078D264 /* Extensiones.swift */; };
+		3A25B90229E33C170078D264 /* DarkBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A25B90129E33C170078D264 /* DarkBackground.swift */; };
+		3A25B90429E3433D0078D264 /* LightBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A25B90329E3433C0078D264 /* LightBackground.swift */; };
+		3A33CB2C29E5441000160AC3 /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A33CB2B29E5441000160AC3 /* Star.swift */; };
+		3A33CB2E29E544CF00160AC3 /* Polygon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A33CB2D29E544CF00160AC3 /* Polygon.swift */; };
+		3A33CB3029E545D000160AC3 /* Rhombus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A33CB2F29E545D000160AC3 /* Rhombus.swift */; };
+		3A33CB3229E5503C00160AC3 /* Points.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A33CB3129E5503C00160AC3 /* Points.swift */; };
+		3A33CB3429E5543C00160AC3 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A33CB3329E5543C00160AC3 /* RatingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +44,15 @@
 		3A25B8F329E32CF90078D264 /* DataTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTest.swift; sourceTree = "<group>"; };
 		3A25B8F529E32EB50078D264 /* AnimesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimesViewModel.swift; sourceTree = "<group>"; };
 		3A25B8F929E330FE0078D264 /* AnimesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimesListView.swift; sourceTree = "<group>"; };
+		3A25B8FB29E3369F0078D264 /* AnimeListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeListCell.swift; sourceTree = "<group>"; };
+		3A25B8FE29E33A8B0078D264 /* Extensiones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensiones.swift; sourceTree = "<group>"; };
+		3A25B90129E33C170078D264 /* DarkBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkBackground.swift; sourceTree = "<group>"; };
+		3A25B90329E3433C0078D264 /* LightBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightBackground.swift; sourceTree = "<group>"; };
+		3A33CB2B29E5441000160AC3 /* Star.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Star.swift; sourceTree = "<group>"; };
+		3A33CB2D29E544CF00160AC3 /* Polygon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Polygon.swift; sourceTree = "<group>"; };
+		3A33CB2F29E545D000160AC3 /* Rhombus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rhombus.swift; sourceTree = "<group>"; };
+		3A33CB3129E5503C00160AC3 /* Points.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Points.swift; sourceTree = "<group>"; };
+		3A33CB3329E5543C00160AC3 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +85,7 @@
 		3A25B8D529E3181A0078D264 /* AdrianIraizos_Anime_SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				3A25B8FD29E33A7D0078D264 /* Helpers */,
 				3A25B8F829E330EE0078D264 /* View */,
 				3A25B8E729E3187A0078D264 /* Model */,
 				3A25B8E429E3184A0078D264 /* Resources */,
@@ -110,9 +129,33 @@
 		3A25B8F829E330EE0078D264 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3A25B90029E33B5F0078D264 /* ViewHelpers */,
 				3A25B8F929E330FE0078D264 /* AnimesListView.swift */,
+				3A25B8FB29E3369F0078D264 /* AnimeListCell.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		3A25B8FD29E33A7D0078D264 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				3A25B8FE29E33A8B0078D264 /* Extensiones.swift */,
+				3A33CB2B29E5441000160AC3 /* Star.swift */,
+				3A33CB2D29E544CF00160AC3 /* Polygon.swift */,
+				3A33CB2F29E545D000160AC3 /* Rhombus.swift */,
+				3A33CB3129E5503C00160AC3 /* Points.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		3A25B90029E33B5F0078D264 /* ViewHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				3A25B90129E33C170078D264 /* DarkBackground.swift */,
+				3A25B90329E3433C0078D264 /* LightBackground.swift */,
+				3A33CB3329E5543C00160AC3 /* RatingView.swift */,
+			);
+			name = ViewHelpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,11 +233,20 @@
 				3A25B8F629E32EB50078D264 /* AnimesViewModel.swift in Sources */,
 				3A25B8D729E3181A0078D264 /* AdrianIraizos_Anime_SwiftUIApp.swift in Sources */,
 				3A25B8FA29E330FE0078D264 /* AnimesListView.swift in Sources */,
+				3A25B8FF29E33A8B0078D264 /* Extensiones.swift in Sources */,
+				3A33CB3229E5503C00160AC3 /* Points.swift in Sources */,
+				3A25B90429E3433D0078D264 /* LightBackground.swift in Sources */,
+				3A33CB2C29E5441000160AC3 /* Star.swift in Sources */,
+				3A33CB2E29E544CF00160AC3 /* Polygon.swift in Sources */,
 				3A25B8F229E32CD30078D264 /* FileProduction.swift in Sources */,
 				3A25B8E929E3196A0078D264 /* Anime.swift in Sources */,
+				3A25B8FC29E3369F0078D264 /* AnimeListCell.swift in Sources */,
+				3A33CB3429E5543C00160AC3 /* RatingView.swift in Sources */,
 				3A25B8F429E32CF90078D264 /* DataTest.swift in Sources */,
 				3A25B8EB29E31FAA0078D264 /* ModelPersistence.swift in Sources */,
+				3A33CB3029E545D000160AC3 /* Rhombus.swift in Sources */,
 				3A25B8F029E32C760078D264 /* Protocolos.swift in Sources */,
+				3A25B90229E33C170078D264 /* DarkBackground.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -53,5 +53,32 @@
         "genres": "Comedia,Mecha,Romance",
         "url_anime": "https:\/\/www3.animeflv.net\/anime\/akane-maniax",
         "image": "https:\/\/www3.animeflv.net\/uploads\/animes\/covers\/1711.jpg"
+      },
+    {
+        "title": "Shin no Nakama ja Nai to Yuusha no Party wo Oidasareta node, Henkyou de Slow Life suru Koto ni Shima",
+        "description": "En un mundo de fantasía en el que una chica con la Protección Divina del héroe combate contra el Señor Demonio. En ese mundo, Red, el hermano mayor de esa chica, quien posee la Protección Divina del “Guía”, que solo le otorga un nivel inicial mayor que sus compañeros, acompañó al héroe en su grupo inicial. No obstante, puesto que esa Protección Divina solo le otorga un alto nivel pero no magia ni artes marciales, gradualmente no pudo equipararse al poder de sus compañeros, y al final, un compañero hechicero señaló, “tú no eres un verdadero miembro del equipo”, al mismo tiempo que lo corría de allí con todas sus cosas. Con su corazón completamente roto, Red se distanció de la batalla contra el ejército del Rey Demonio, a pesar de saber que el destino del mundo dependía de ello, y ahora apuntó a vivir una vida tranquila en la frontera, y ganar dinero abriendo una tienda de herbolaria utilizando el conocimiento adquirido durante sus viajes.",
+        "year": 2021,
+        "type": "Anime",
+        "rate_start": "4.6",
+        "votes": 1749,
+        "status": "Finalizado",
+        "followers": 19628,
+        "episodes": 13,
+        "genres": "Aventuras,Fantasía,Recuentos de la vida",
+        "url_anime": "https:\/\/www3.animeflv.net\/anime\/shin-no-nakama-ja-nai-to-yuusha-no-party-wo-oidasareta-node-henkyou-de-slow-life-suru-koto-ni-shimas",
+        "image": "https:\/\/www3.animeflv.net\/uploads\/animes\/covers\/3533.jpg"
+      },
+    {
+        "title": "Dragon Ball Z Especial: Freezer contra el padre de Goku",
+        "description": "Los Saiyajin han trabajado muy duro para Freezer. Sin embargo, éste temía que algún día los Saiyajin se le rebelaran, y apareciera el Legendario Super Saiyajin. Bardock se fue con sus compañeros a conquistar el planeta Kanassa, en el cual a Bardock le dieron un golpe, el cual le permitía tener visiones del futuro, entre ellas una futura destrucción del planeta de su especie, así como de la vida y obra de su hijo Son Goku.",
+        "year": 1990,
+        "type": "OVA",
+        "rate_start": "4.3",
+        "votes": 218,
+        "status": "Finalizado",
+        "followers": 1249,
+        "episodes": 1,
+        "url_anime": "https:\/\/www3.animeflv.net\/anime\/dragon-ball-z-especial-1",
+        "image": "https:\/\/www3.animeflv.net\/uploads\/animes\/covers\/1115.jpg"
       }
 ]

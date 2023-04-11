@@ -5,10 +5,10 @@
 //  Created by Adrian Iraizos Mendoza on 9/4/23.
 //
 
-import Foundation
+import SwiftUI
 
 
-public struct Anime:Codable {
+public struct Anime:Codable,Hashable {
     let title:String
     let description:String?
     let year:Int
@@ -34,6 +34,31 @@ enum Estatus:String,Codable {
 enum Obra:String,Codable {
     case OVA = "OVA", Anime = "Anime", Pelicula = "Película", Especial = "Especial"
 }
+
+extension Anime {
+    var statusLetter:[String:Color] {
+        switch status {
+        case .EnEmision: return ["E":.blue]
+        case .Finalizado: return ["F": .red]
+        case .Proximamente: return ["P":.green]
+        }
+    }
+    
+    var typeLetter:[String:Color] {
+        switch type {
+        case .OVA: return ["O":.yellow]
+        case .Anime:return ["A":.orange]
+        case .Pelicula: return ["M":.brown]
+        case .Especial: return ["E":.purple]
+        }
+    }
+    
+    var rateDouble:Double {
+        Double(rate) ?? 0
+    }
+    
+}
+
 
 
 extension Anime {
