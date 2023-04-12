@@ -9,12 +9,19 @@ import SwiftUI
 
 @main
 struct AdrianIraizos_Anime_SwiftUIApp: App {
-    @State var viewModel = AnimesViewModel()
+    @StateObject var viewModel = AnimesViewModel()
     
     var body: some Scene {
         WindowGroup {
             AnimesListView()
                 .environmentObject(viewModel)
+                .overlay {
+                    if viewModel.loading {
+                        LoadingView()
+                            .transition(.opacity)
+                    }
+                }
+                .animation(.default, value: viewModel.loading)
         }
     }
 }

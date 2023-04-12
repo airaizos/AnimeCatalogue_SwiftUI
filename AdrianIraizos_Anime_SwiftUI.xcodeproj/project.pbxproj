@@ -10,6 +10,7 @@
 		3A1F39CB29E6EC5900656E61 /* AnimeViewLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F39CA29E6EC5900656E61 /* AnimeViewLogic.swift */; };
 		3A1F39CD29E6EF9800656E61 /* AnimeStatusLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F39CC29E6EF9800656E61 /* AnimeStatusLabel.swift */; };
 		3A1F39CF29E703F200656E61 /* AnimeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F39CE29E703F200656E61 /* AnimeDetailViewModel.swift */; };
+		3A21F0FC29E7113B00ACCC83 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A21F0FB29E7113B00ACCC83 /* LoadingView.swift */; };
 		3A25B8D729E3181A0078D264 /* AdrianIraizos_Anime_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A25B8D629E3181A0078D264 /* AdrianIraizos_Anime_SwiftUIApp.swift */; };
 		3A25B8DB29E3181B0078D264 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A25B8DA29E3181B0078D264 /* Assets.xcassets */; };
 		3A25B8DE29E3181B0078D264 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A25B8DD29E3181B0078D264 /* Preview Assets.xcassets */; };
@@ -44,6 +45,7 @@
 		3A1F39CA29E6EC5900656E61 /* AnimeViewLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeViewLogic.swift; sourceTree = "<group>"; };
 		3A1F39CC29E6EF9800656E61 /* AnimeStatusLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeStatusLabel.swift; sourceTree = "<group>"; };
 		3A1F39CE29E703F200656E61 /* AnimeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeDetailViewModel.swift; sourceTree = "<group>"; };
+		3A21F0FB29E7113B00ACCC83 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		3A25B8D329E3181A0078D264 /* AdrianIraizos_Anime_SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdrianIraizos_Anime_SwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A25B8D629E3181A0078D264 /* AdrianIraizos_Anime_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdrianIraizos_Anime_SwiftUIApp.swift; sourceTree = "<group>"; };
 		3A25B8DA29E3181B0078D264 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				3A25B8FB29E3369F0078D264 /* AnimeListCell.swift */,
 				3A33CB3F29E5A26100160AC3 /* AnimeDetailView.swift */,
 				3A1F39CA29E6EC5900656E61 /* AnimeViewLogic.swift */,
+				3A21F0FB29E7113B00ACCC83 /* LoadingView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				3A25B8D729E3181A0078D264 /* AdrianIraizos_Anime_SwiftUIApp.swift in Sources */,
 				3A33CB3C29E57A4B00160AC3 /* ExtensionView.swift in Sources */,
 				3A25B8FA29E330FE0078D264 /* AnimesListView.swift in Sources */,
+				3A21F0FC29E7113B00ACCC83 /* LoadingView.swift in Sources */,
 				3A33CB3829E5712000160AC3 /* Triangle.swift in Sources */,
 				3A25B8FF29E33A8B0078D264 /* Extensiones.swift in Sources */,
 				3A33CB3229E5503C00160AC3 /* Points.swift in Sources */,

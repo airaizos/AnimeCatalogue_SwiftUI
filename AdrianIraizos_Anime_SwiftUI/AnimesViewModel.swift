@@ -10,6 +10,7 @@ import Foundation
 final class AnimesViewModel:ObservableObject {
     let persistence:ModelPersistence
     
+    @Published var loading:Bool
     @Published var animes:[Anime]
     @Published var search = ""
     @Published var sorted = SortedBy.none
@@ -69,16 +70,26 @@ final class AnimesViewModel:ObservableObject {
     
     init(persistence:ModelPersistence = .shared) {
         self.persistence = persistence
-        do {
-            self.animes = try persistence.loadAnimes()
-            
-        } catch {
-
-            self.animes = []
-   
+        self.loading = true
+        self.animes = []
+        Task {
+            await getData()
+            await MainActor.run {
+                self.loading = false
+            }
         }
     }
     
+    func getData() async {
+        do {
+            let animes = try persistence.loadAnimes()
+            await MainActor.run {
+                self.animes = animes
+            }
+        } catch {
+            self.animes = []
+        }
+    }
     
   
 }

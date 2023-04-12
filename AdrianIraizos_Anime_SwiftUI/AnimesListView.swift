@@ -63,6 +63,9 @@ struct AnimesListView: View {
             }
           
         }
+        .task(priority: .high) {
+            await viewModel.getData()
+        }
         
     }
 }
