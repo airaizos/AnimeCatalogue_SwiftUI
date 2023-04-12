@@ -24,10 +24,9 @@ struct AnimesListView: View {
                     .padding(10)
                 }
                 .navigationDestination(for: Anime.self) { value in
-                    AnimeDetail(anime: value)
+                    AnimeDetailView(detailViewModel: AnimeDetailViewModel(anime: value))
                 }
             }
-        
             .background(Color.offWhite)
             .navigationTitle("Animes")
             .searchable(text: $viewModel.search)

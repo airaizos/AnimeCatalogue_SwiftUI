@@ -25,7 +25,8 @@ final class AnimesViewModel:ObservableObject {
             }
         }
     }
-     private var obraFilter:Obra = .All
+    
+    private var obraFilter:Obra = .All
     
     var animesSearch:[Anime] {
         
@@ -70,11 +71,14 @@ final class AnimesViewModel:ObservableObject {
         self.persistence = persistence
         do {
             self.animes = try persistence.loadAnimes()
-           
+            
         } catch {
 
             self.animes = []
+   
         }
     }
     
+    
+  
 }

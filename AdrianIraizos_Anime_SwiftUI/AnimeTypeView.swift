@@ -9,23 +9,22 @@ import SwiftUI
 
 struct AnimeTypeView: View {
     let type:(letra:String,color:Color)
+    var size:infoSize = .small
     var body: some View {
         ZStack(alignment:.bottom){
             Text(type.letra)
-                .font(.caption2)
+                .font(size.fontSize)
                 .fontWeight(.bold)
                 .background {
-                    Polygon(sides: 5)           .stroke(style: StrokeStyle(lineWidth: 3, lineCap: .round, lineJoin: .round))
+                    Polygon(sides: 5)           .stroke(style: StrokeStyle(lineWidth: size.rawValue * 2, lineCap: .round, lineJoin: .round))
                         .fill(type.color)
                         .opacity(0.6)
-                        .frame(width: 25,height: 25)
+                        .frame(width: 15 * size.rawValue)
                         .rotationEffect(Angle(degrees: -17))
-              
-                        
                 }
         }
     }
-
+    
 }
 
 struct AnimeTypeView_Previews: PreviewProvider {
