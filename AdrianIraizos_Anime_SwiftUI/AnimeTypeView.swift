@@ -17,7 +17,12 @@ struct AnimeTypeView: View {
                 .fontWeight(.bold)
                 .background {
                     Polygon(sides: 5)           .stroke(style: StrokeStyle(lineWidth: size.rawValue * 1.5, lineCap: .round, lineJoin: .round))
-                        .fill(type.color)
+                        .fill(RadialGradient(
+                            gradient: Gradient(colors: [type.color, type.color.opacity(0.5)]),
+                            center:.center,
+                            startRadius: 0,
+                            endRadius: 20
+                            ))
                         .opacity(0.6)
                         .frame(width: 15 * size.rawValue)
                         .rotationEffect(Angle(degrees: -17))

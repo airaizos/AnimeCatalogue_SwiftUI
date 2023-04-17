@@ -20,26 +20,7 @@ struct AnimeDetailView: View {
                     .font(.largeTitle)
                     .multilineTextAlignment(.center)
                 HStack {
-                    ZStack{
-                   
-                        RoundedRectangle(cornerRadius: 30)
-                            .fill(Color.offWhite)
-                            .shadow(color:Color.black.opacity(0.2), radius: 10, x:10, y:10)
-                            .shadow(color:Color.white.opacity(0.7), radius: 10, x:5, y:5)
-                            .frame(width:155, height: 220)
-                        AsyncImage(url: detailViewModel.anime.image) { image in
-                            image
-                                .resizable()
-                                .scaledToFit()
-                                .cornerRadius(30)
-                                .frame(width:150, height: 250)
-                        } placeholder: {
-                            Image(systemName: "popcorn")
-                                .resizable()
-                                .scaledToFit()
-                                .cornerRadius(30)
-                        }
-                    }
+                    AsyncImageNeumorphicStyle(imageURL: detailViewModel.anime.image)
                     Grid(verticalSpacing:30) {
                         GridRow(alignment:.top)  {
                             

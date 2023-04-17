@@ -20,12 +20,18 @@ struct AnimeStatusView: View {
                 .background {
                     Triangle()
                         .stroke(style: StrokeStyle(lineWidth: size.rawValue * 1.5, lineCap: .round, lineJoin: .round))
-                        .fill(status.color)
+                        .fill(RadialGradient(
+                            gradient: Gradient(colors: [status.color, status.color.opacity(0.5)]),
+                            center:.center,
+                            startRadius: 0,
+                            endRadius: 20
+                            ))
                         .opacity(0.6)
                         .frame(width: 15 * size.rawValue,height: 15 * size.rawValue)
                         .offset(y:-2 * size.rawValue)
                         
                 }
+                
         }
         .padding(10)
     }

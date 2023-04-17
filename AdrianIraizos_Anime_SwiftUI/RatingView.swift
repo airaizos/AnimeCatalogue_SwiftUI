@@ -16,7 +16,12 @@ struct RatingView: View {
                 .bold()
                 .background {
                     Star(points:Int(rate), innerRadio: 3)
-                        .fill(Color.yellow)
+                        .fill(RadialGradient(
+                            gradient: Gradient(colors: [.yellow, .yellow.opacity(0.5)]),
+                            center:.center,
+                            startRadius: 0,
+                            endRadius: 20
+                            ))
                         .opacity(0.6)
                         .frame(width: 15)
                 }

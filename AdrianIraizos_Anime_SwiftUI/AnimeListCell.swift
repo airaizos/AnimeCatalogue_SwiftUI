@@ -10,69 +10,47 @@ import SwiftUI
 struct AnimeListCell: View {
     let anime:Anime
     var body: some View {
-        HStack {
+        HStack(spacing:20) {
             
-            AsyncImage(url: anime.image) { image in
-                image
-                    .resizable()
-                    .scaledToFit()
-                    .cornerRadius(20)
-                    
-                    .clipShape(Rhomboid())
-                    
-                    .rotationEffect(Angle(degrees: -10))
-                
-                    .cornerRadius(200)
-                    .frame(width:100,height:150)
-                    .multicolorGlow(size: 130)
-                
-            } placeholder: {
-                Image(systemName: "film")
-                    .resizable()
-                    .scaledToFit()
-                    .cornerRadius(20)
-                    .frame(height:150)
-            }
-            .offset(x:-30,y:30)
+            AsyncImageNeumorphicStyle(imageURL: anime.image)
             VStack {
                 Text(anime.title)
                     .font(.headline)
-                    .foregroundColor(.offWhite)
-                    .glow(color: .b13254, radius: 3)
-                   
-                Text(anime.type.rawValue)
-                    .font(.subheadline)
-                    .fontWeight(.bold)
-                    .padding(20)
-                    .foregroundColor(.white)
-                   
+                    .foregroundColor(.darkStart)
+                
+              
+                    Text(anime.type.rawValue)
+                        .font(.subheadline)
+                        .fontWeight(.bold)
+                        .foregroundColor(.gray)
+                    
+                        .shadow(color: .black, radius: 0.5,x:0.5,y:0.5)
+
             }
-            .offset(x:-50,y:30)
-            
-            
+
             VStack(alignment:.center) {
                 Spacer()
                 RatingView(rate: anime.rateDouble)
+           
                 Spacer()
                 AnimeStatusView(status: anime.statusLetter)
                 Spacer()
                 AnimeTypeView(type: anime.typeLetter)
                 Spacer()
-                Button {
-                    
-                } label: {
-                    Image(systemName: "star.circle")
-                }
-                .buttonStyle(FavoriteButtonStyle())
             }
            
-        }  .frame(idealWidth: .infinity)
+        }
+        .frame(maxWidth: .infinity)
     }
 }
 
 struct AnimeListCell_Previews: PreviewProvider {
     static var previews: some View {
-        AnimeListCell(anime: .testLong)
+        VStack {
+            AnimeListCell(anime: .testLong)
+                .frame(width: .infinity, height: 300)
+            Spacer()
+        }
     }
 }
 

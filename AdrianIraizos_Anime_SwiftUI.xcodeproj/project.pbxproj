@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3A1F39CB29E6EC5900656E61 /* AnimeViewLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F39CA29E6EC5900656E61 /* AnimeViewLogic.swift */; };
 		3A1F39CD29E6EF9800656E61 /* AnimeStatusLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F39CC29E6EF9800656E61 /* AnimeStatusLabel.swift */; };
 		3A1F39CF29E703F200656E61 /* AnimeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F39CE29E703F200656E61 /* AnimeDetailViewModel.swift */; };
 		3A20711C29ED46AD0000BF39 /* NeumorphicButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A20711B29ED46AD0000BF39 /* NeumorphicButtonStyle.swift */; };
@@ -43,10 +42,10 @@
 		3AACBF2F29ED638700D0AEF0 /* WatchedShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AACBF2E29ED638700D0AEF0 /* WatchedShapeView.swift */; };
 		3AACBF3129ED878A00D0AEF0 /* FavoriteShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AACBF3029ED878A00D0AEF0 /* FavoriteShapeView.swift */; };
 		3AACBF3329ED8AEF00D0AEF0 /* NeumorphicViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AACBF3229ED8AEF00D0AEF0 /* NeumorphicViewStyle.swift */; };
+		3AACBF3529ED986B00D0AEF0 /* AsyncImageNeumorphicStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AACBF3429ED986B00D0AEF0 /* AsyncImageNeumorphicStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3A1F39CA29E6EC5900656E61 /* AnimeViewLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeViewLogic.swift; sourceTree = "<group>"; };
 		3A1F39CC29E6EF9800656E61 /* AnimeStatusLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeStatusLabel.swift; sourceTree = "<group>"; };
 		3A1F39CE29E703F200656E61 /* AnimeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeDetailViewModel.swift; sourceTree = "<group>"; };
 		3A20711B29ED46AD0000BF39 /* NeumorphicButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumorphicButtonStyle.swift; sourceTree = "<group>"; };
@@ -83,6 +82,7 @@
 		3AACBF2E29ED638700D0AEF0 /* WatchedShapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchedShapeView.swift; sourceTree = "<group>"; };
 		3AACBF3029ED878A00D0AEF0 /* FavoriteShapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteShapeView.swift; sourceTree = "<group>"; };
 		3AACBF3229ED8AEF00D0AEF0 /* NeumorphicViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumorphicViewStyle.swift; sourceTree = "<group>"; };
+		3AACBF3429ED986B00D0AEF0 /* AsyncImageNeumorphicStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageNeumorphicStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,7 +172,6 @@
 				3A25B8F929E330FE0078D264 /* AnimesListView.swift */,
 				3A25B8FB29E3369F0078D264 /* AnimeListCell.swift */,
 				3A33CB3F29E5A26100160AC3 /* AnimeDetailView.swift */,
-				3A1F39CA29E6EC5900656E61 /* AnimeViewLogic.swift */,
 				3A21F0FB29E7113B00ACCC83 /* LoadingView.swift */,
 			);
 			name = View;
@@ -207,6 +206,7 @@
 				3AACBF3229ED8AEF00D0AEF0 /* NeumorphicViewStyle.swift */,
 				3AACBF2E29ED638700D0AEF0 /* WatchedShapeView.swift */,
 				3AACBF3029ED878A00D0AEF0 /* FavoriteShapeView.swift */,
+				3AACBF3429ED986B00D0AEF0 /* AsyncImageNeumorphicStyle.swift */,
 			);
 			name = ViewHelpers;
 			sourceTree = "<group>";
@@ -289,6 +289,7 @@
 				3A33CB3C29E57A4B00160AC3 /* ExtensionView.swift in Sources */,
 				3A25B8FA29E330FE0078D264 /* AnimesListView.swift in Sources */,
 				3A21F0FC29E7113B00ACCC83 /* LoadingView.swift in Sources */,
+				3AACBF3529ED986B00D0AEF0 /* AsyncImageNeumorphicStyle.swift in Sources */,
 				3A20711C29ED46AD0000BF39 /* NeumorphicButtonStyle.swift in Sources */,
 				3A33CB3829E5712000160AC3 /* Triangle.swift in Sources */,
 				3A25B8FF29E33A8B0078D264 /* Extensiones.swift in Sources */,
@@ -310,7 +311,6 @@
 				3A33CB4029E5A26100160AC3 /* AnimeDetailView.swift in Sources */,
 				3A33CB3029E545D000160AC3 /* Rhombus.swift in Sources */,
 				3AACBF3329ED8AEF00D0AEF0 /* NeumorphicViewStyle.swift in Sources */,
-				3A1F39CB29E6EC5900656E61 /* AnimeViewLogic.swift in Sources */,
 				3A1F39CF29E703F200656E61 /* AnimeDetailViewModel.swift in Sources */,
 				3AACBF2F29ED638700D0AEF0 /* WatchedShapeView.swift in Sources */,
 				3A25B8F029E32C760078D264 /* Protocolos.swift in Sources */,

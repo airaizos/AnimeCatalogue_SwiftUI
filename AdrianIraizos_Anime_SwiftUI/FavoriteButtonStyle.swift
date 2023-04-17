@@ -30,10 +30,27 @@ struct FavoriteButtonStyle:ButtonStyle {
                     )
             )
             .opacity(configuration.isPressed ? 0.8 : 1)
-
-        
     }
-    
 }
 
 
+struct GlowViewStyle {
+    
+    var color: Color
+    var strokeColor:Color
+    var glowStrength:Intensity = .medium
+   /*
+    func makeBody() -> some View {
+
+        .background(
+            RadialGradient(
+                gradient: Gradient(colors: [color, color.opacity(0)]),
+                center:.center,
+                startRadius: 0,
+                endRadius: 20
+                )
+        )
+    }
+    
+    */
+}
