@@ -25,8 +25,8 @@ final class AnimeDetailViewModel:ObservableObject {
             self.watched = []
         }
         
-        self.isFavorite = favorites.contains(anime.idHash)
-        self.isWatched = watched.contains(anime.idHash)
+        self.isFavorite = favorites.contains(anime.id)
+        self.isWatched = watched.contains(anime.id)
         
     }
     
@@ -50,13 +50,16 @@ final class AnimeDetailViewModel:ObservableObject {
         }
     }
     
-    func toggleFavorite(idHash:String) {
-        switch favorites.contains(idHash) {
-        case true: favorites.removeAll() { $0 == idHash }
-        case false: favorites.append(idHash)
+    func toggleFavorite(anime:Anime) {
+        switch favorites.contains(anime.id) {
+        case true: favorites.removeAll() { $0 == anime.id }
+        case false: favorites.append(anime.id)
         }
     }
     
+    func isFavorite(anime:Anime) -> Bool {
+        favorites.contains(anime.id)
+    }
     //Watched
     private var watched:[String] {
         didSet {
@@ -64,14 +67,14 @@ final class AnimeDetailViewModel:ObservableObject {
         }
     }
     
-    func isWatched(idHash:String) -> Bool {
-        watched.contains(idHash)
+    func isWatched(anime:Anime) -> Bool {
+        watched.contains(anime.id)
     }
     
-    func toggleWatched(idHash:String) {
-        switch watched.contains(idHash) {
-        case true: watched.removeAll() { $0 == idHash }
-        case false: watched.append(idHash)
+    func toggleWatched(anime:Anime) {
+        switch watched.contains(anime.id) {
+        case true: watched.removeAll() { $0 == anime.id }
+        case false: watched.append(anime.id)
         }
     }
 }

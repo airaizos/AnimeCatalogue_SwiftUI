@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Anime:Codable,Hashable,Identifiable {
-    let id = UUID()
+
     let title:String
     let description:String?
     let year:Int
@@ -72,8 +72,8 @@ extension Anime {
         return yearString
     }
     
-    var idHash:String {
-        return "\(title.hashValue)"
+    var id:String {
+        "\(title)\(year)\(type)"
     }
     
     var followersFormatted:String {

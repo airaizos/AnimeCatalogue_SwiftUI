@@ -67,7 +67,6 @@ final class AnimesViewModel:ObservableObject {
         }
     }
     
-    
     init(persistence:ModelPersistence = .shared) {
         self.persistence = persistence
         self.loading = true
