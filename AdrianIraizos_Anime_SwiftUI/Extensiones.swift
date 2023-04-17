@@ -20,6 +20,10 @@ extension Color {
     static let b13254 = Color(red: 0.694, green: 0.196, blue: 0.329)
     
     static let b471337 = Color(red:0.278, green:0.075, blue:0.216)
+    
+    
+    static let pinkStart = Color(red: 0.929, green: 0.263, blue: 0.682)
+    static let pinkEnd = Color(red: 0.800, green: 0.278, blue: 0.557)
 }
 
 

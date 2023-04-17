@@ -19,24 +19,35 @@ struct AnimeDetailView: View {
                 Text(detailViewModel.upAndDownText(detailViewModel.anime.title))
                     .font(.largeTitle)
                     .multilineTextAlignment(.center)
-                HStack{
-                    AsyncImage(url: detailViewModel.anime.image) { image in
-                        image
-                            .resizable()
-                            .scaledToFit()
-                            .cornerRadius(30)
-                    } placeholder: {
-                        Image(systemName: "popcorn")
-                            .resizable()
-                            .scaledToFit()
-                            .cornerRadius(30)
+                HStack {
+                    ZStack{
+                   
+                        RoundedRectangle(cornerRadius: 30)
+                            .fill(Color.offWhite)
+                            .shadow(color:Color.black.opacity(0.2), radius: 10, x:10, y:10)
+                            .shadow(color:Color.white.opacity(0.7), radius: 10, x:5, y:5)
+                            .frame(width:155, height: 220)
+                        AsyncImage(url: detailViewModel.anime.image) { image in
+                            image
+                                .resizable()
+                                .scaledToFit()
+                                .cornerRadius(30)
+                                .frame(width:150, height: 250)
+                        } placeholder: {
+                            Image(systemName: "popcorn")
+                                .resizable()
+                                .scaledToFit()
+                                .cornerRadius(30)
+                        }
                     }
-                    VStack {
-                        HStack(alignment:.top)  {
+                    Grid(verticalSpacing:30) {
+                        GridRow(alignment:.top)  {
                             
                             VStack {
                                 Text("rate")
                                     .foregroundColor(.gray)
+                                    .font(.caption2)
+                                
                                 RatingView(rate: detailViewModel.anime.rateDouble)
                                 
                             }
@@ -44,6 +55,7 @@ struct AnimeDetailView: View {
                             VStack {
                                 Text("type")
                                     .foregroundColor(.gray)
+                                    .font(.caption2)
                              
                                 AnimeTypeView(type: detailViewModel.anime.typeLetter,size:.small)
                                 Text(detailViewModel.anime.type.rawValue)
@@ -53,26 +65,31 @@ struct AnimeDetailView: View {
                             VStack {
                                    Text("status")
                                     .foregroundColor(.gray)
+                                    .font(.caption2)
                                 AnimeStatusView(status: detailViewModel.anime.statusLetter,size: .small)
                                 Text(detailViewModel.anime.status.rawValue)
                                     .foregroundColor(.black.opacity(0.7))
                                     .font(.caption2)
+                                    .bold()
                             }
                         }
-                      
-                        
-                        HStack(alignment:.top) {
+                        GridRow(alignment:.top) {
                             VStack {
                                 Text("followers")
                                     .foregroundColor(.gray)
                                     .font(.caption2)
                                 Text(detailViewModel.anime.followersFormatted)
+                                    .font(.callout)
+                                    .bold()
                             }
                             VStack {
                                 Text("votes")
                                     .foregroundColor(.gray)
                                     .font(.caption2)
                                 Text("\(detailViewModel.anime.votes ?? 0)")
+                                    .font(.callout)
+                                    .bold()
+                                
                             }
                             VStack {
                                 Text("year")
@@ -81,14 +98,16 @@ struct AnimeDetailView: View {
                                 Text("\(detailViewModel.anime.yearFormatted)")
                                     .foregroundColor(.black.opacity(0.7))
                                     .font(.callout)
+                                    .bold()
                             }
                             
                         }
-                        HStack(alignment:.top) {
+                        GridRow(alignment:.top) {
                             VStack {
                                 Text("episodes")
                                     .foregroundColor(.gray)
                                     .font(.caption2)
+                                    .padding(.bottom,3)
                                 Text("\(detailViewModel.anime.episodes)")
                                     .bold()
                                 
@@ -97,37 +116,31 @@ struct AnimeDetailView: View {
                                 Text("watched")
                                     .foregroundColor(.gray)
                                     .font(.caption2)
-                                ZStack {
-                                    Polygon(sides:6)
-                                    
-                                        .foregroundColor(.green)
-                                        .frame(width: 30)
-                                    Image(systemName: "eye.circle")
-                                
-                                }
+                               
+                                WatchedShapeView(isHighlighted: detailViewModel.isFavorite(anime: detailViewModel.anime))
+                            
                            
                             }
                             VStack {
                                 Text("Favorite")
                                     .foregroundColor(.gray)
                                     .font(.caption2)
-                                Points(points: 5, size: 6, distance: 9)
-                                    .foregroundColor(.yellow)
+                            
+                                FavoriteShapeView(isHighlighted: detailViewModel.isFavorite(anime: detailViewModel.anime))
                               
                             }
                         }
-                        
-                        
                     }
                 }
                 
                 .padding([.horizontal,.vertical])
                 
+                
+                
                 HStack {
                     ScrollView{
                         Text(detailViewModel.anime.description ?? "No description")
                             .font(.caption2)
-                            .fontDesign(.serif)
                             .textSelection(.enabled)
                     }
                     .frame(maxHeight:100)

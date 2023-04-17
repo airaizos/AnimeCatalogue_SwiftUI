@@ -16,7 +16,7 @@ struct NeumorphicButtonStyle: ButtonStyle {
             .padding(15)
             .background(
                 Group {
-                    if configuration.isPressed || isActive {
+                    if configuration.isPressed {
                         Circle()
                             .fill(Color.offWhite)
                             .overlay(
