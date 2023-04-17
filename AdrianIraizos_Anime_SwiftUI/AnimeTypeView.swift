@@ -16,13 +16,14 @@ struct AnimeTypeView: View {
                 .font(size.fontSize)
                 .fontWeight(.bold)
                 .background {
-                    Polygon(sides: 5)           .stroke(style: StrokeStyle(lineWidth: size.rawValue * 2, lineCap: .round, lineJoin: .round))
+                    Polygon(sides: 5)           .stroke(style: StrokeStyle(lineWidth: size.rawValue * 1.5, lineCap: .round, lineJoin: .round))
                         .fill(type.color)
                         .opacity(0.6)
                         .frame(width: 15 * size.rawValue)
                         .rotationEffect(Angle(degrees: -17))
                 }
         }
+        .padding(10)
     }
     
 }

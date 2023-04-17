@@ -13,13 +13,15 @@ struct RatingView: View {
         ZStack {
             Text(String(format: "%.1f",rate))
                 .font(.caption2)
+                .bold()
                 .background {
                     Star(points:Int(rate), innerRadio: 3)
                         .fill(Color.yellow)
                         .opacity(0.6)
-                        .frame(width: 20)
+                        .frame(width: 15)
                 }
         }
+        .padding(9)
     }
 }
 

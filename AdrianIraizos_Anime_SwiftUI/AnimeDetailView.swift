@@ -31,69 +31,96 @@ struct AnimeDetailView: View {
                             .scaledToFit()
                             .cornerRadius(30)
                     }
-                    VStack(alignment:.leading) {
+                    VStack {
                         HStack(alignment:.top)  {
+                            
                             VStack {
-                                Text("year")
-                                Text("\(detailViewModel.anime.yearFormatted)")
+                                Text("rate")
+                                    .foregroundColor(.gray)
+                                RatingView(rate: detailViewModel.anime.rateDouble)
                                 
                             }
+                          
                             VStack {
                                 Text("type")
+                                    .foregroundColor(.gray)
+                             
+                                AnimeTypeView(type: detailViewModel.anime.typeLetter,size:.small)
                                 Text(detailViewModel.anime.type.rawValue)
-                                AnimeTypeView(type: detailViewModel.anime.typeLetter)
+                                    .foregroundColor(.black.opacity(0.7))
+                                    .font(.caption2)
                             }
                             VStack {
-                                //    Text("status")
-                                
-                                AnimeStatusView(status: detailViewModel.anime.statusLetter,size: .medium)
-                                Text(detailViewModel.anime.status.rawValue)
+                                   Text("status")
                                     .foregroundColor(.gray)
+                                AnimeStatusView(status: detailViewModel.anime.statusLetter,size: .small)
+                                Text(detailViewModel.anime.status.rawValue)
+                                    .foregroundColor(.black.opacity(0.7))
+                                    .font(.caption2)
                             }
                         }
-                        .padding(.vertical)
+                      
+                        
+                        HStack(alignment:.top) {
+                            VStack {
+                                Text("followers")
+                                    .foregroundColor(.gray)
+                                    .font(.caption2)
+                                Text(detailViewModel.anime.followersFormatted)
+                            }
+                            VStack {
+                                Text("votes")
+                                    .foregroundColor(.gray)
+                                    .font(.caption2)
+                                Text("\(detailViewModel.anime.votes ?? 0)")
+                            }
+                            VStack {
+                                Text("year")
+                                    .foregroundColor(.gray)
+                                    .font(.caption2)
+                                Text("\(detailViewModel.anime.yearFormatted)")
+                                    .foregroundColor(.black.opacity(0.7))
+                                    .font(.callout)
+                            }
+                            
+                        }
                         HStack(alignment:.top) {
                             VStack {
                                 Text("episodes")
+                                    .foregroundColor(.gray)
+                                    .font(.caption2)
                                 Text("\(detailViewModel.anime.episodes)")
+                                    .bold()
                                 
                             }
                             VStack {
                                 Text("watched")
-                                ZStack{
+                                    .foregroundColor(.gray)
+                                    .font(.caption2)
+                                ZStack {
                                     Polygon(sides:6)
                                     
                                         .foregroundColor(.green)
                                         .frame(width: 30)
                                     Image(systemName: "eye.circle")
+                                
                                 }
+                           
                             }
                             VStack {
                                 Text("Favorite")
+                                    .foregroundColor(.gray)
+                                    .font(.caption2)
                                 Points(points: 5, size: 6, distance: 9)
                                     .foregroundColor(.yellow)
+                              
                             }
                         }
-                        HStack(alignment:.top) {
-                            VStack {
-                                Text("Followers")
-                                    .fontWidth(.condensed)
-                                Text(detailViewModel.anime.followersFormatted)
-                            }
-                            VStack {
-                                Text("Votes")
-                                Text("\(detailViewModel.anime.votes ?? 0)")
-                            }
-                            VStack {
-                                Text("Rate")
-                                RatingView(rate: detailViewModel.anime.rateDouble)
-                                
-                            }
-                            
-                        }
+                        
                         
                     }
                 }
+                
                 .padding([.horizontal,.vertical])
                 
                 HStack {

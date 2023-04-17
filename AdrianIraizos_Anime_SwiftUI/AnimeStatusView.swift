@@ -19,14 +19,15 @@ struct AnimeStatusView: View {
                 
                 .background {
                     Triangle()
-                        .stroke(style: StrokeStyle(lineWidth: size.rawValue, lineCap: .round, lineJoin: .round))
+                        .stroke(style: StrokeStyle(lineWidth: size.rawValue * 1.5, lineCap: .round, lineJoin: .round))
                         .fill(status.color)
                         .opacity(0.6)
-                        .frame(width: 10 * size.rawValue,height: 10 * size.rawValue)
+                        .frame(width: 15 * size.rawValue,height: 15 * size.rawValue)
                         .offset(y:-2 * size.rawValue)
                         
                 }
         }
+        .padding(10)
     }
 }
 

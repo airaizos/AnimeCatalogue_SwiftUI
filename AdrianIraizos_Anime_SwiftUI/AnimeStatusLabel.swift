@@ -20,6 +20,7 @@ struct AnimeStatusLabel: View {
         } icon: {
             AnimeStatusView(status: status)
         }
+       
     }
 }
 
