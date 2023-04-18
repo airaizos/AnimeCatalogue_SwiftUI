@@ -23,28 +23,25 @@ struct AnimeDetailView: View {
                     AsyncImageNeumorphicStyle(imageURL: detailViewModel.anime.image)
                     Grid(verticalSpacing:30) {
                         GridRow(alignment:.top)  {
-                            
                             VStack {
                                 Text("rate")
                                     .foregroundColor(.gray)
                                     .font(.caption2)
                                 
                                 RatingView(rate: detailViewModel.anime.rateDouble)
-                                
                             }
-                          
                             VStack {
                                 Text("type")
                                     .foregroundColor(.gray)
                                     .font(.caption2)
-                             
+                                
                                 AnimeTypeView(type: detailViewModel.anime.typeLetter,size:.small)
                                 Text(detailViewModel.anime.type.rawValue)
                                     .foregroundColor(.black.opacity(0.7))
                                     .font(.caption2)
                             }
                             VStack {
-                                   Text("status")
+                                Text("status")
                                     .foregroundColor(.gray)
                                     .font(.caption2)
                                 AnimeStatusView(status: detailViewModel.anime.statusLetter,size: .small)
@@ -97,28 +94,31 @@ struct AnimeDetailView: View {
                                 Text("watched")
                                     .foregroundColor(.gray)
                                     .font(.caption2)
-                               
+                                
                                 WatchedShapeView(isHighlighted: detailViewModel.isFavorite(anime: detailViewModel.anime))
-                            
-                           
+                                
+                                
                             }
                             VStack {
                                 Text("Favorite")
                                     .foregroundColor(.gray)
                                     .font(.caption2)
-                            
+                                
                                 FavoriteShapeView(isHighlighted: detailViewModel.isFavorite(anime: detailViewModel.anime))
-                              
+                                
                             }
+                            
                         }
                     }
                 }
-                
                 .padding([.horizontal,.vertical])
-                
-                
-                
-                HStack {
+
+                VStack(alignment:.leading, spacing:5) {
+                    Text("summary")
+                        .font(.caption)
+                        .bold()
+                        .foregroundColor(.secondary)
+                        .padding(.horizontal)
                     ScrollView{
                         Text(detailViewModel.anime.description ?? "No description")
                             .font(.caption2)
@@ -126,11 +126,36 @@ struct AnimeDetailView: View {
                     }
                     .frame(maxHeight:100)
                 }
+                .padding(.horizontal)
+              
+                //ahora seleccionar alguna
+                VStack(alignment: .leading,spacing:5) {
+                    Text("recommended")
+                        .font(.caption)
+                        .bold()
+                        .foregroundColor(.secondary)
+                        .padding(.horizontal)
+                    ScrollView(.horizontal,showsIndicators: false) {
+                        HStack(spacing:10) {
+                            
+                            ForEach(viewModel.recommendedAnimes) { recommendend in
+                                VStack {
+                                    GeometryReader { geo in
+                                        NavigationLink(value: recommendend) {
+                                            RecommendedAnime(anime: recommendend)
+                                                .rotation3DEffect(.degrees(Double(geo.frame(in: .global).minX) / 8), axis: (x:0, y:1, z:0))
+                                                .frame(width:210, height: 90)
+                                        }
+                                    }
+                                    .frame(width: 200,height:90)
+                                }
+                                
+                            }
+                        }
+                    }
+                
+                }
                 .padding()
-                Link("More Info",destination: detailViewModel.anime.url)
-                    .tint(.indigo)
-                
-                
             }
             .navigationTitle(detailViewModel.anime.type.rawValue)
             .navigationBarTitleDisplayMode(.inline)
@@ -151,17 +176,13 @@ struct AnimeDetailView: View {
                         Image(systemName: "star.fill")
                             .foregroundColor(Color.gray)
                     }
-                  
+                    
                     .buttonStyle(NeumorphicButtonStyle(isActive: detailViewModel.isFavorite(anime: detailViewModel.anime)))
-                   
+                    
                 }
-                
-               
             }
-            
-            
         }
-     
+        
     }
 }
 

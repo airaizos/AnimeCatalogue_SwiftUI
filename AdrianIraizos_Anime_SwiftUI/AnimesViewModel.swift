@@ -27,6 +27,20 @@ final class AnimesViewModel:ObservableObject {
         }
     }
     
+    private var genres:Set<String> {
+        var generos:Set<String> = []
+        animes.compactMap(\.genres).forEach { varios in
+            let parts  = varios.split(separator: ",")
+            parts.forEach { genre in
+                generos.insert(String(genre))
+            }
+        }
+       
+        return generos
+    }
+    
+    var recommendedGenre:String = "Aventuras"
+    
     private var obraFilter:Obra = .All
     
     var animesSearch:[Anime] {
@@ -67,6 +81,24 @@ final class AnimesViewModel:ObservableObject {
         }
     }
     
+    //¿Cómo se puede optimizar?
+    var recommendedAnimes:[Anime] {
+        let recommended = animes.filter { anime in
+            if let genres = anime.genres {
+                if genres.contains(recommendedGenre) {
+                    return true
+                }
+            }
+            return false
+        }
+            .shuffled()
+        if recommended.count < 10 {
+            return Array(recommended)
+        } else {
+            return Array(recommended.prefix(upTo: 10))
+        }
+    }
+    
     init(persistence:ModelPersistence = .shared) {
         self.persistence = persistence
         self.loading = true
@@ -80,8 +112,12 @@ final class AnimesViewModel:ObservableObject {
     }
     
     func getData() async {
+        
         do {
             let animes = try persistence.loadAnimes()
+            if let recommended = genres.randomElement() {
+                self.recommendedGenre = recommended
+            }
             await MainActor.run {
                 self.animes = animes
             }
@@ -89,6 +125,4 @@ final class AnimesViewModel:ObservableObject {
             self.animes = []
         }
     }
-    
-  
 }

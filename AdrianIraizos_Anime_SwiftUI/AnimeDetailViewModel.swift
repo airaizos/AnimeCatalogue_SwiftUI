@@ -9,9 +9,12 @@ import Foundation
 final class AnimeDetailViewModel:ObservableObject {
     
     let persistence:ModelPersistence
+    
     @Published var anime:Anime
     @Published var isFavorite:Bool
     @Published var isWatched:Bool
+    
+    
     
     init(anime:Anime, persistence:ModelPersistence = .shared) {
         self.anime = anime
