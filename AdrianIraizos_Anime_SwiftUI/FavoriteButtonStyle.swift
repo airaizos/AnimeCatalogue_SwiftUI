@@ -14,22 +14,23 @@ enum Intensity {
 struct FavoriteButtonStyle:ButtonStyle {
     var color: Color = Color.yellow
     var strokeColor:Color = Color.white
-    var glowStrength:Intensity = .medium
+
     
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .font(.largeTitle)
+            .font(.body)
+            .fontWeight(.heavy)
             .foregroundColor(strokeColor)
-            .padding(20)
             .background(
                 RadialGradient(
                     gradient: Gradient(colors: [color, color.opacity(0)]),
                     center:.center,
                     startRadius: 0,
-                    endRadius: 20
+                    endRadius: 10
                     )
             )
-            .opacity(configuration.isPressed ? 0.8 : 1)
+           
+            .opacity(configuration.isPressed ? 0.5 : 1)
     }
 }
 

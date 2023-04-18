@@ -42,7 +42,15 @@ struct AnimesListView: View {
                       
                     }
                     .pickerStyle(.inline)
-                    
+                }
+                
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "star")
+                    }
+                    .buttonStyle(FavoriteButtonStyle(color:.yellow))
                 }
                 
             }

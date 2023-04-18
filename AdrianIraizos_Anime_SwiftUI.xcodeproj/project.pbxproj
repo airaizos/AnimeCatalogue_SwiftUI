@@ -40,6 +40,9 @@
 		3A33CB4029E5A26100160AC3 /* AnimeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A33CB3F29E5A26100160AC3 /* AnimeDetailView.swift */; };
 		3A33CB4229E5B67100160AC3 /* FavoriteButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A33CB4129E5B67100160AC3 /* FavoriteButtonStyle.swift */; };
 		3A3E341B29EE8FAC00B76B5E /* RecommendedAnime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3E341A29EE8FAC00B76B5E /* RecommendedAnime.swift */; };
+		3A3E341D29EEAEA600B76B5E /* AnimeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3E341C29EEAEA600B76B5E /* AnimeTabView.swift */; };
+		3A3E341F29EEB12600B76B5E /* FavoritesAnimesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3E341E29EEB12600B76B5E /* FavoritesAnimesView.swift */; };
+		3A3E342129EEB16700B76B5E /* WatchedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3E342029EEB16700B76B5E /* WatchedViewModel.swift */; };
 		3AACBF2F29ED638700D0AEF0 /* WatchedShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AACBF2E29ED638700D0AEF0 /* WatchedShapeView.swift */; };
 		3AACBF3129ED878A00D0AEF0 /* FavoriteShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AACBF3029ED878A00D0AEF0 /* FavoriteShapeView.swift */; };
 		3AACBF3329ED8AEF00D0AEF0 /* NeumorphicViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AACBF3229ED8AEF00D0AEF0 /* NeumorphicViewStyle.swift */; };
@@ -81,6 +84,9 @@
 		3A33CB3F29E5A26100160AC3 /* AnimeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeDetailView.swift; sourceTree = "<group>"; };
 		3A33CB4129E5B67100160AC3 /* FavoriteButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButtonStyle.swift; sourceTree = "<group>"; };
 		3A3E341A29EE8FAC00B76B5E /* RecommendedAnime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedAnime.swift; sourceTree = "<group>"; };
+		3A3E341C29EEAEA600B76B5E /* AnimeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeTabView.swift; sourceTree = "<group>"; };
+		3A3E341E29EEB12600B76B5E /* FavoritesAnimesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesAnimesView.swift; sourceTree = "<group>"; };
+		3A3E342029EEB16700B76B5E /* WatchedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchedViewModel.swift; sourceTree = "<group>"; };
 		3AACBF2E29ED638700D0AEF0 /* WatchedShapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchedShapeView.swift; sourceTree = "<group>"; };
 		3AACBF3029ED878A00D0AEF0 /* FavoriteShapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteShapeView.swift; sourceTree = "<group>"; };
 		3AACBF3229ED8AEF00D0AEF0 /* NeumorphicViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumorphicViewStyle.swift; sourceTree = "<group>"; };
@@ -103,6 +109,7 @@
 			children = (
 				3A25B8F529E32EB50078D264 /* AnimesViewModel.swift */,
 				3A1F39CE29E703F200656E61 /* AnimeDetailViewModel.swift */,
+				3A3E342029EEB16700B76B5E /* WatchedViewModel.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -175,6 +182,7 @@
 				3A25B8F929E330FE0078D264 /* AnimesListView.swift */,
 				3A33CB3F29E5A26100160AC3 /* AnimeDetailView.swift */,
 				3A21F0FB29E7113B00ACCC83 /* LoadingView.swift */,
+				3A3E341C29EEAEA600B76B5E /* AnimeTabView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -209,6 +217,7 @@
 				3AACBF2E29ED638700D0AEF0 /* WatchedShapeView.swift */,
 				3AACBF3029ED878A00D0AEF0 /* FavoriteShapeView.swift */,
 				3AACBF3429ED986B00D0AEF0 /* AsyncImageNeumorphicStyle.swift */,
+				3A3E341E29EEB12600B76B5E /* FavoritesAnimesView.swift */,
 			);
 			name = ViewHelpers;
 			sourceTree = "<group>";
@@ -303,6 +312,8 @@
 				3AACBF3529ED986B00D0AEF0 /* AsyncImageNeumorphicStyle.swift in Sources */,
 				3A20711C29ED46AD0000BF39 /* NeumorphicButtonStyle.swift in Sources */,
 				3A33CB3829E5712000160AC3 /* Triangle.swift in Sources */,
+				3A3E342129EEB16700B76B5E /* WatchedViewModel.swift in Sources */,
+				3A3E341D29EEAEA600B76B5E /* AnimeTabView.swift in Sources */,
 				3A25B8FF29E33A8B0078D264 /* Extensiones.swift in Sources */,
 				3A33CB3229E5503C00160AC3 /* Points.swift in Sources */,
 				3A25B90429E3433D0078D264 /* LightBackground.swift in Sources */,
@@ -325,6 +336,7 @@
 				3AACBF3329ED8AEF00D0AEF0 /* NeumorphicViewStyle.swift in Sources */,
 				3A1F39CF29E703F200656E61 /* AnimeDetailViewModel.swift in Sources */,
 				3AACBF2F29ED638700D0AEF0 /* WatchedShapeView.swift in Sources */,
+				3A3E341F29EEB12600B76B5E /* FavoritesAnimesView.swift in Sources */,
 				3A25B8F029E32C760078D264 /* Protocolos.swift in Sources */,
 				3A25B90229E33C170078D264 /* DarkBackground.swift in Sources */,
 			);
