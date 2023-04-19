@@ -7,8 +7,11 @@
 
 import Foundation
 
+protocol Persistence {
+    func loadWatchedAnimes() throws -> [Anime]
+}
 
-final class ModelPersistence {
+final class ModelPersistence:Persistence {
     static let shared = ModelPersistence()
     
     let fileLocation:FileLocation
@@ -51,6 +54,17 @@ final class ModelPersistence {
         try data.write(to: watchedDocument, options: .atomic)
     }
     
+    let watchedAnimesDocument = URL.documentsDirectory.appending(path: "watchedAnimes.json")
+
+    func loadWatchedAnimes() throws -> [Anime] {
+        guard FileManager.default.fileExists(atPath: watchedAnimesDocument.path()) else {  return [] }
+        let data = try Data(contentsOf: watchedAnimesDocument)
+        return try JSONDecoder().decode([Anime].self, from: data)
+    }
     
+    func saveWatchedAnimes(_ animes:[Anime]) throws {
+        let data = try JSONEncoder().encode(animes)
+        try data.write(to: watchedAnimesDocument, options: .atomic)
+    }
     
 }

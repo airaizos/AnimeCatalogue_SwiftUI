@@ -170,8 +170,10 @@ struct AnimeDetailView: View {
                         
                     }
                     .buttonStyle(NeumorphicButtonStyle(isActive: detailViewModel.isWatched(anime:detailViewModel.anime)))
+                    
                     Button {
                         detailViewModel.toggleFavorite(anime:detailViewModel.anime)
+                        
                     } label: {
                         Image(systemName: "star.fill")
                             .foregroundColor(Color.gray)

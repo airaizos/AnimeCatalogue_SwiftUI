@@ -15,21 +15,20 @@ final class AnimeDetailViewModel:ObservableObject {
     @Published var isWatched:Bool
     
     
-    
     init(anime:Anime, persistence:ModelPersistence = .shared) {
         self.anime = anime
         self.persistence = persistence
         
         do {
             self.favorites = try persistence.loadFavorites()
-            self.watched = try persistence.loadWatched()
+            self.watched = try persistence.loadWatchedAnimes()
         } catch {
             self.favorites = []
             self.watched = []
         }
         
         self.isFavorite = favorites.contains(anime.id)
-        self.isWatched = watched.contains(anime.id)
+        self.isWatched = watched.contains(anime)
         
     }
     
@@ -64,20 +63,20 @@ final class AnimeDetailViewModel:ObservableObject {
         favorites.contains(anime.id)
     }
     //Watched
-    private var watched:[String] {
+    private var watched:[Anime] {
         didSet {
-            try? persistence.saveWatched(ids: watched)
+            try?  persistence.saveWatchedAnimes(watched)
         }
     }
     
     func isWatched(anime:Anime) -> Bool {
-        watched.contains(anime.id)
+        watched.contains(anime)
     }
     
     func toggleWatched(anime:Anime) {
-        switch watched.contains(anime.id) {
-        case true: watched.removeAll() { $0 == anime.id }
-        case false: watched.append(anime.id)
+        switch watched.contains(anime) {
+        case true: watched.removeAll() { $0 == anime }
+        case false: watched.append(anime)
         }
     }
 }

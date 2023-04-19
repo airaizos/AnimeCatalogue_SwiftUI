@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct AnimesListView: View {
-    @EnvironmentObject var viewModel: AnimesViewModel
+    @EnvironmentObject var viewModel:AnimesViewModel
+    @State var showWatched = false
     
     var body: some View {
         NavigationStack {
@@ -46,12 +47,16 @@ struct AnimesListView: View {
                 
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button {
-                        
+                        showWatched.toggle()
                     } label: {
                         Image(systemName: "star")
                     }
                     .buttonStyle(FavoriteButtonStyle(color:.yellow))
                 }
+            }
+            
+            .sheet(isPresented: $showWatched) {
+                WatchedAnimesGridView(isPresented: $showWatched)
                 
             }
                 .toolbar {
@@ -82,5 +87,6 @@ struct AnimesListView_Previews: PreviewProvider {
     static var previews: some View {
         AnimesListView()
             .environmentObject(AnimesViewModel.animesPreview)
+            
     }
 }

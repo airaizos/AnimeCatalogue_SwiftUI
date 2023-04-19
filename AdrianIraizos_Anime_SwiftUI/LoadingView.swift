@@ -17,7 +17,7 @@ struct LoadingView: View {
                 ProgressView()
                     .progressViewStyle(.circular)
                 
-                Text("Estamos cargando tus animes")
+                Text("Cargando tus animes")
                     .font(.headline)
             }
         }

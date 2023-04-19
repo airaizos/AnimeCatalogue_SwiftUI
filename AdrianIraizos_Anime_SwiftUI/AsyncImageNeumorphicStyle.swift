@@ -9,6 +9,8 @@ import SwiftUI
 
 struct AsyncImageNeumorphicStyle: View {
     var imageURL:URL
+    var width:CGFloat = 150
+    var height:CGFloat = 210
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 12)
@@ -29,7 +31,7 @@ struct AsyncImageNeumorphicStyle: View {
                     .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
                 
                     .shadow(color: .black.opacity(0.6), radius: 10, x:10,y:10)
-                    .frame(width:150, height: 210)
+                    .frame(width:width, height: height)
             } placeholder: {
                 Image(systemName: "film")
                     .resizable()
@@ -37,7 +39,7 @@ struct AsyncImageNeumorphicStyle: View {
                     .cornerRadius(12)
             }
         }
-        .frame(width:155, height: 215)
+        .frame(width:width + 5, height: height + 5)
     }
 }
 
