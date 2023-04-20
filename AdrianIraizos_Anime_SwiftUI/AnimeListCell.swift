@@ -12,35 +12,37 @@ struct AnimeListCell: View {
     var body: some View {
         HStack(spacing:20) {
             AsyncImageNeumorphicStyle(imageURL: anime.image)
-            Spacer()
-            VStack {
-                Text(anime.title)
-                    .font(.headline)
-                    .foregroundColor(.darkStart)
-                
-              
+            VStack{
+               
+                    Text(anime.title)
+                        .font(.headline)
+                        .foregroundColor(.darkStart)
+                    
+                    
                     Text(anime.type.rawValue)
                         .font(.subheadline)
                         .fontWeight(.bold)
                         .foregroundColor(.gray)
                     
                         .shadow(color: .black, radius: 0.5,x:0.5,y:0.5)
-
+                
+                
+                
+                HStack(alignment:.center) {
+                    Spacer()
+                    RatingView(rate: anime.rateDouble)
+                    
+                    Spacer()
+                    AnimeStatusView(status: anime.statusLetter)
+                    Spacer()
+                    AnimeTypeView(type: anime.typeLetter)
+                    Spacer()
+                    
+                }
             }
-            Spacer(minLength: 0)
-            VStack(alignment:.center) {
-                Spacer()
-                RatingView(rate: anime.rateDouble)
-           
-                Spacer()
-                AnimeStatusView(status: anime.statusLetter)
-                Spacer()
-                AnimeTypeView(type: anime.typeLetter)
-                Spacer()
-            }
-           
+            .frame(maxWidth: .infinity)
         }
-        .frame(maxWidth: .infinity)
+        .padding(.horizontal)
     }
 }
 
