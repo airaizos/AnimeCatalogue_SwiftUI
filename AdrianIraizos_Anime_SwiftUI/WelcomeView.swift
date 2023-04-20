@@ -11,7 +11,7 @@ struct WelcomeView: View {
     @Binding var navigationState: NavigationState
     @State var spinning = true
     
-    let nameSpace:Namespace.ID
+    let namespace:Namespace.ID
     let totalSteps = 7
     var body: some View {
         ZStack {
@@ -19,7 +19,7 @@ struct WelcomeView: View {
                 .ignoresSafeArea()
             VStack(spacing:10) {
                     NeumorphicStrokeStyle(isHighlighted: false, shape: Circle(), image: Image("splash"))
-                    .matchedGeometryEffect(id: "splash", in: nameSpace)
+                    .matchedGeometryEffect(id: "splash", in: namespace)
                     .scaleEffect(CGSize(width: spinning ? 0.1 : 1, height: spinning ? 0.1 : 1), anchor: .center)
                     
                 Text("Welcome to Anime Library")
@@ -70,7 +70,7 @@ struct WelcomeView: View {
 
 struct WelcomeView_Previews: PreviewProvider {
     static var previews: some View {
-        WelcomeView(navigationState: .constant(.welcome),nameSpace: Namespace().wrappedValue)
+        WelcomeView(navigationState: .constant(.welcome),namespace: Namespace().wrappedValue)
     }
 }
 

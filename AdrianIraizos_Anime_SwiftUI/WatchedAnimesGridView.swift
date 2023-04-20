@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct WatchedAnimesGridView: View {
-    @Binding var isPresented:Bool
     @ObservedObject var watchedViewModel = WatchedViewModel()
     
     let gridFlexible:[GridItem] = Array(repeating: GridItem(.flexible()), count: 4)
@@ -31,15 +30,7 @@ struct WatchedAnimesGridView_Previews: PreviewProvider {
    
     static var previews: some View {
         NavigationView {
-            WatchedAnimesGridView(isPresented: .constant(true), watchedViewModel: WatchedViewModel(persistence: PersistenceTest()))
+            WatchedAnimesGridView(watchedViewModel: WatchedViewModel(persistence: PersistenceTest()))
         }
     }
 }
-
-/*
- Text("OVA").tag(1)
- Text("Pelicula").tag(2)
- Text("Especial").tag(3)
- Text("Anime").tag(4)
- Text("All").tag(0)
- */

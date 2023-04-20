@@ -14,24 +14,20 @@ struct InitialView: View {
     
     var body: some View {
         Group {
-            
-         
             switch navigationState {
                 
             case .splash:
                 LaunchScreenView(navigationState: $navigationState, namespace: namespace)
                     .transition(.opacity)
                 
-            case .welcome: WelcomeView(navigationState: $navigationState, nameSpace: namespace)
+            case .welcome: WelcomeView(navigationState: $navigationState, namespace: namespace)
                     .transition(.opacity)
                 
             case .home:
-                AnimesListView(navigationState: $navigationState, nameSpace: namespace)
+                AnimeTabView(navigationState: $navigationState, namespace: namespace)
                     .transition(.push(from: .top))
             }
-            
         }
-        
         .animation(.easeIn, value:navigationState)
     }
 }

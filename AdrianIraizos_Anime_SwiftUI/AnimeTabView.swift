@@ -9,18 +9,21 @@ import SwiftUI
 
 struct AnimeTabView: View {
     @StateObject var viewModel = AnimesViewModel()
-    @Namespace var namespace
-    @State var navigationState: NavigationState = .splash
+    @Binding var navigationState: NavigationState
+    let namespace:Namespace.ID
     
     var body: some View {
         TabView{
             Group {
-                AnimesListView(navigationState: $navigationState, nameSpace: namespace)
+                AnimesListView(navigationState: $navigationState, namespace: namespace)
                     .environmentObject(viewModel)
                     .tabItem {
                         Label("Animes",systemImage: "film")
                     }
-                    
+                WatchedAnimesGridView()
+                    .tabItem {
+                        Label("Watched",systemImage: "eye")
+                    }
             }
         }
     }
@@ -28,7 +31,7 @@ struct AnimeTabView: View {
 
 struct AnimeTabView_Previews: PreviewProvider {
     static var previews: some View {
-        AnimeTabView()
+        AnimeTabView(navigationState: .constant(.welcome),namespace: Namespace().wrappedValue)
             .environmentObject(AnimesViewModel.animesPreview)
     }
 }

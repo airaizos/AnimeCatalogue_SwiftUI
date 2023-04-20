@@ -9,9 +9,8 @@ import SwiftUI
 
 struct AnimesListView: View {
     @EnvironmentObject var viewModel:AnimesViewModel
-  //  @State var showWatched = false
     @Binding var navigationState: NavigationState
-    let nameSpace:Namespace.ID
+    let namespace:Namespace.ID
     
     var body: some View {
         NavigationStack {
@@ -54,7 +53,7 @@ struct AnimesListView: View {
                         Image("buttonImage")
                             
                             .clipShape(Circle())
-                            .matchedGeometryEffect(id: "splash", in: nameSpace)
+                            .matchedGeometryEffect(id: "splash", in: namespace)
                     }
                     .buttonStyle(FavoriteButtonStyle(color:.yellow))
                 }
@@ -87,7 +86,7 @@ struct AnimesListView: View {
 
 struct AnimesListView_Previews: PreviewProvider {
     static var previews: some View {
-        AnimesListView(navigationState: .constant(.home),nameSpace: Namespace().wrappedValue)
+        AnimesListView(navigationState: .constant(.home),namespace: Namespace().wrappedValue)
             .environmentObject(AnimesViewModel.animesPreview)
             
     }
