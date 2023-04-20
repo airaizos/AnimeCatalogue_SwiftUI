@@ -14,7 +14,7 @@ struct WelcomeView: View {
             Color.offWhite
                 .ignoresSafeArea()
             VStack {
-               
+          
                   
                      
                     NeumorphicStrokeStyle(isHighlighted: false, shape: Circle(), image: Image("splash"))
@@ -60,7 +60,8 @@ struct NeumorphicStrokeStyle<S:Shape>: View {
             .scaledToFit()
          
             .clipShape(Circle())
-          
+            .zIndex(1)
+            
             if isHighlighted {
                 shape
                     .fill(Color.offWhite)
@@ -83,6 +84,6 @@ struct NeumorphicStrokeStyle<S:Shape>: View {
                     .shadow(color:Color.white.opacity(0.7), radius: 10, x:5, y:5)
             }
         }
-        .animation(nil, value: 0)
+        .animation(.easeIn, value: 0)
     }
 }

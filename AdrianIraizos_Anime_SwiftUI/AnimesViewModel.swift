@@ -39,7 +39,7 @@ final class AnimesViewModel:ObservableObject {
         return generos
     }
     
-    var recommendedGenre:String = "Aventuras"
+    @Published var recommendedGenre:String = "Aventuras"
     
     private var obraFilter:Obra = .All
     
@@ -112,11 +112,12 @@ final class AnimesViewModel:ObservableObject {
     }
     
     func getData() async {
-        
         do {
             let animes = try persistence.loadAnimes()
             if let recommended = genres.randomElement() {
-                self.recommendedGenre = recommended
+                await MainActor.run {
+                    self.recommendedGenre = recommended
+                }
             }
             await MainActor.run {
                 self.animes = animes

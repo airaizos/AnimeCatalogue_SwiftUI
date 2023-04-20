@@ -13,7 +13,7 @@ struct AnimeListCell: View {
         HStack(spacing:20) {
             AsyncImageNeumorphicStyle(imageURL: anime.image)
             VStack{
-               
+                Spacer()
                     Text(anime.title)
                         .font(.headline)
                         .foregroundColor(.darkStart)
@@ -27,7 +27,7 @@ struct AnimeListCell: View {
                         .shadow(color: .black, radius: 0.5,x:0.5,y:0.5)
                 
                 
-                
+                Spacer()
                 HStack(alignment:.center) {
                     Spacer()
                     RatingView(rate: anime.rateDouble)
