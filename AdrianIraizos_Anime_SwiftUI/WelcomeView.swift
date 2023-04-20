@@ -8,17 +8,17 @@
 import SwiftUI
 
 struct WelcomeView: View {
-    var isActive:Bool
+    @Binding var navigationState: NavigationState
+    let nameSpace:Namespace.ID
+   @State var spinning = true
     var body: some View {
         ZStack {
             Color.offWhite
                 .ignoresSafeArea()
-            VStack {
-          
-                  
-                     
+            VStack(spacing:10) {
                     NeumorphicStrokeStyle(isHighlighted: false, shape: Circle(), image: Image("splash"))
-                        
+                    .matchedGeometryEffect(id: "splash", in: nameSpace)
+                    .scaleEffect(CGSize(width: spinning ? 0.1 : 1, height: spinning ? 0.1 : 1), anchor: .center)
                 
                 Text("Welcome to Anime Library")
                     .foregroundColor(.offWhite)
@@ -28,6 +28,7 @@ struct WelcomeView: View {
                     .shadow(radius: 3,x:5,y:5)
                 
                 Group {
+                   
                     Text("Mark your favorites anime")
                     Text("Mark all that you already watched")
                     Text("Share an anime with your friends")
@@ -35,17 +36,33 @@ struct WelcomeView: View {
                     Text("See the details")
                     
                 }
+                .foregroundColor(.b471337.opacity(0.7))
                 .font(.headline)
-                
+                Button {
+                    
+                } label: {
+                    Image(systemName: "arrow.up.forward")
+                }
+                .buttonStyle(NeumorphicButtonStyle(isActive: true))
             }
         }
+        .onAppear {
+         
+                Task {
+                    try await Task.sleep(for:.seconds(1.0))
+                   // state = .welcome
+                    
+                }
+            spinning.toggle()
+        }
+        
     }
     
 }
 
 struct WelcomeView_Previews: PreviewProvider {
     static var previews: some View {
-        WelcomeView(isActive: true)
+        WelcomeView(navigationState: .constant(.welcome),nameSpace: Namespace().wrappedValue)
     }
 }
 

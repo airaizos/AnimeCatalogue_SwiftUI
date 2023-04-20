@@ -13,7 +13,7 @@ struct AdrianIraizos_Anime_SwiftUIApp: App {
     
     var body: some Scene {
         WindowGroup {
-            AnimesListView()
+           InitialView()
                 .environmentObject(viewModel)
                 .overlay {
                     if viewModel.loading {

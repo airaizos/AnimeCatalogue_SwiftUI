@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-
-
 enum SortedBy:String,CaseIterable,Identifiable {
 
     var id:SortedBy { self }
@@ -33,5 +31,9 @@ enum infoSize:CGFloat {
         case .large: return .largeTitle
         }
     }
-    
+}
+
+
+enum NavigationState {
+    case splash, welcome, home
 }

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A14C3DC29F15086009FDF45 /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A14C3DB29F15086009FDF45 /* LaunchScreenView.swift */; };
+		3A14C3DE29F151F6009FDF45 /* FlipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A14C3DD29F151F6009FDF45 /* FlipView.swift */; };
+		3A14C3E129F15465009FDF45 /* InitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A14C3E029F15465009FDF45 /* InitialView.swift */; };
 		3A1F39CD29E6EF9800656E61 /* AnimeStatusLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F39CC29E6EF9800656E61 /* AnimeStatusLabel.swift */; };
 		3A1F39CF29E703F200656E61 /* AnimeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F39CE29E703F200656E61 /* AnimeDetailViewModel.swift */; };
 		3A20711C29ED46AD0000BF39 /* NeumorphicButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A20711B29ED46AD0000BF39 /* NeumorphicButtonStyle.swift */; };
@@ -55,6 +58,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A14C3DB29F15086009FDF45 /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
+		3A14C3DD29F151F6009FDF45 /* FlipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipView.swift; sourceTree = "<group>"; };
+		3A14C3E029F15465009FDF45 /* InitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialView.swift; sourceTree = "<group>"; };
 		3A1F39CC29E6EF9800656E61 /* AnimeStatusLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeStatusLabel.swift; sourceTree = "<group>"; };
 		3A1F39CE29E703F200656E61 /* AnimeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeDetailViewModel.swift; sourceTree = "<group>"; };
 		3A20711B29ED46AD0000BF39 /* NeumorphicButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumorphicButtonStyle.swift; sourceTree = "<group>"; };
@@ -114,6 +120,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A14C3DF29F15434009FDF45 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				3A25B8D629E3181A0078D264 /* AdrianIraizos_Anime_SwiftUIApp.swift */,
+				3A25B8DA29E3181B0078D264 /* Assets.xcassets */,
+			);
+			name = System;
+			sourceTree = "<group>";
+		};
 		3A20711A29ED45090000BF39 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,13 +158,12 @@
 		3A25B8D529E3181A0078D264 /* AdrianIraizos_Anime_SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				3A14C3DF29F15434009FDF45 /* System */,
 				3A20711A29ED45090000BF39 /* ViewModel */,
 				3A25B8FD29E33A7D0078D264 /* Helpers */,
 				3A25B8F829E330EE0078D264 /* View */,
 				3A25B8E729E3187A0078D264 /* Model */,
 				3A25B8E429E3184A0078D264 /* Resources */,
-				3A25B8D629E3181A0078D264 /* AdrianIraizos_Anime_SwiftUIApp.swift */,
-				3A25B8DA29E3181B0078D264 /* Assets.xcassets */,
 				3A25B8DC29E3181B0078D264 /* Preview Content */,
 			);
 			path = AdrianIraizos_Anime_SwiftUI;
@@ -196,6 +210,8 @@
 				3A3E341C29EEAEA600B76B5E /* AnimeTabView.swift */,
 				3A3E342229EEB4D900B76B5E /* WatchedAnimesGridView.swift */,
 				3A826B2529F04B3F00708F83 /* WelcomeView.swift */,
+				3A14C3DB29F15086009FDF45 /* LaunchScreenView.swift */,
+				3A14C3E029F15465009FDF45 /* InitialView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -231,6 +247,7 @@
 				3AACBF3029ED878A00D0AEF0 /* FavoriteShapeView.swift */,
 				3AACBF3429ED986B00D0AEF0 /* AsyncImageNeumorphicStyle.swift */,
 				3A3E341E29EEB12600B76B5E /* FavoritesAnimesView.swift */,
+				3A14C3DD29F151F6009FDF45 /* FlipView.swift */,
 			);
 			name = ViewHelpers;
 			sourceTree = "<group>";
@@ -320,6 +337,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A25B8F629E32EB50078D264 /* AnimesViewModel.swift in Sources */,
+				3A14C3DE29F151F6009FDF45 /* FlipView.swift in Sources */,
 				3A33CB4229E5B67100160AC3 /* FavoriteButtonStyle.swift in Sources */,
 				3A25B8D729E3181A0078D264 /* AdrianIraizos_Anime_SwiftUIApp.swift in Sources */,
 				3A33CB3C29E57A4B00160AC3 /* ExtensionView.swift in Sources */,
@@ -329,6 +347,7 @@
 				3A20711C29ED46AD0000BF39 /* NeumorphicButtonStyle.swift in Sources */,
 				3A33CB3829E5712000160AC3 /* Triangle.swift in Sources */,
 				3A3E342129EEB16700B76B5E /* WatchedViewModel.swift in Sources */,
+				3A14C3DC29F15086009FDF45 /* LaunchScreenView.swift in Sources */,
 				3A3E341D29EEAEA600B76B5E /* AnimeTabView.swift in Sources */,
 				3A25B8FF29E33A8B0078D264 /* Extensiones.swift in Sources */,
 				3A33CB3229E5503C00160AC3 /* Points.swift in Sources */,
@@ -341,6 +360,7 @@
 				3A33CB3629E56F2700160AC3 /* AnimeStatusView.swift in Sources */,
 				3A25B8E929E3196A0078D264 /* Anime.swift in Sources */,
 				3A25B8FC29E3369F0078D264 /* AnimeListCell.swift in Sources */,
+				3A14C3E129F15465009FDF45 /* InitialView.swift in Sources */,
 				3A33CB3A29E5727F00160AC3 /* AnimeTypeView.swift in Sources */,
 				3A1F39CD29E6EF9800656E61 /* AnimeStatusLabel.swift in Sources */,
 				3A33CB3429E5543C00160AC3 /* RatingView.swift in Sources */,
