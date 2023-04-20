@@ -33,7 +33,6 @@ enum infoSize:CGFloat {
     }
 }
 
-
 enum NavigationState {
     case splash, welcome, home
 }

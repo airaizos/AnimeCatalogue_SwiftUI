@@ -27,4 +27,14 @@ extension Color {
 }
 
 
-
+extension UIDevice {
+    static var bounds:CGRect {
+        UIApplication
+            .shared
+            .connectedScenes
+            .compactMap { $0 as? UIWindowScene }
+            .flatMap { $0.windows }
+            .first { $0.isKeyWindow }?
+            .frame ?? .zero
+    }
+}

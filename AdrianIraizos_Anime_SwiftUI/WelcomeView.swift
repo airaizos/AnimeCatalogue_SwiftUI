@@ -11,6 +11,7 @@ struct WelcomeView: View {
     @Binding var navigationState: NavigationState
     let nameSpace:Namespace.ID
    @State var spinning = true
+    let totalSteps = 7
     var body: some View {
         ZStack {
             Color.offWhite
@@ -19,31 +20,37 @@ struct WelcomeView: View {
                     NeumorphicStrokeStyle(isHighlighted: false, shape: Circle(), image: Image("splash"))
                     .matchedGeometryEffect(id: "splash", in: nameSpace)
                     .scaleEffect(CGSize(width: spinning ? 0.1 : 1, height: spinning ? 0.1 : 1), anchor: .center)
-                
+                    
                 Text("Welcome to Anime Library")
                     .foregroundColor(.offWhite)
                     .font(.largeTitle)
                     .fontWeight(.heavy)
                     .multilineTextAlignment(.center)
                     .shadow(radius: 3,x:5,y:5)
-                
+                    .modifier(OpenAnimation(launch: $spinning, step: 1, totalSteps: totalSteps))
                 Group {
                    
                     Text("Mark your favorites anime")
+                        .modifier(OpenAnimation(launch: $spinning, step: 2, totalSteps: 7))
                     Text("Mark all that you already watched")
+                        .modifier(OpenAnimation(launch: $spinning, step: 3, totalSteps: totalSteps))
                     Text("Share an anime with your friends")
+                        .modifier(OpenAnimation(launch: $spinning, step: 4, totalSteps: totalSteps))
                     Text("Search and filter animes")
+                        .modifier(OpenAnimation(launch: $spinning, step: 5, totalSteps: totalSteps))
                     Text("See the details")
+                        .modifier(OpenAnimation(launch: $spinning, step: 6, totalSteps: totalSteps))
                     
                 }
                 .foregroundColor(.b471337.opacity(0.7))
                 .font(.headline)
                 Button {
-                    
+                    navigationState = .home
                 } label: {
                     Image(systemName: "arrow.up.forward")
                 }
                 .buttonStyle(NeumorphicButtonStyle(isActive: true))
+                .modifier(OpenAnimation(launch: $spinning, step: 7, totalSteps: totalSteps))
             }
         }
         .onAppear {

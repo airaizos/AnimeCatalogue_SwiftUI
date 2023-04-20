@@ -25,7 +25,7 @@ struct InitialView: View {
                     .transition(.opacity)
                 
             case .home:
-                LaunchScreenView(state: $navigationState, namespace: namespace)
+               AnimesListView()
                         .transition(.opacity)
             }
             
