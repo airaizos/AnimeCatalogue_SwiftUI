@@ -9,7 +9,7 @@ import Foundation
 
 struct FilePreview:FileLocation {
     var fileURL: URL {
-        Bundle.main.url(forResource: "AnimeTest", withExtension: "json")!
+        Bundle.main.url(forResource: "WatchedTest", withExtension: "json")!
     }
 }
 
@@ -33,4 +33,24 @@ extension Anime {
     static let testShort = Anime(title: "Otaku no Video", description: "Kubo es la tipica persona a la que le agradaba estudiar, practicar deportes y salir con chicas. Un dia, su amigo Tanaka le propone asistir a su casa para poder ver unos vídeos. Es tal la impresión de Kubo al poder ver sus series favoritas, además de del hobbys de los amigos de Takana, que con el tiempo Kubo empezo a faltar a sus citas deportivas y deja de salir con chicas. Pero lo peor de todo es que se convierte en un ser antisocial que trata de dominar al mundo mediante las series de anime para convertirse en el Otaking y construir Otakulandia.", year: 1191, type: .Anime, rate: "4.5", status: .Finalizado, followers: 161, episodes: 2, url: URL(string:"https://www3.animeflv.net/anime/otaku-no-video")!, image: URL(string:"https://www3.animeflv.net/uploads/animes/covers/2021.jpg")!, votes: nil, genres: "Ciencia Ficción,Comedia,Drama,Historico,Magia,Mecha")
     
     static let testLong = Anime(title: "Shin no Nakama ja Nai to Yuusha no Party wo Oidasareta node, Henkyou de Slow Life suru Koto ni Shima", description: "En un mundo de fantasía en el que una chica con la Protección Divina del héroe combate contra el Señor Demonio. En ese mundo, Red, el hermano mayor de esa chica, quien posee la Protección Divina del “Guía”, que solo le otorga un nivel inicial mayor que sus compañeros, acompañó al héroe en su grupo inicial. No obstante, puesto que esa Protección Divina solo le otorga un alto nivel pero no magia ni artes marciales, gradualmente no pudo equipararse al poder de sus compañeros, y al final, un compañero hechicero señaló, “tú no eres un verdadero miembro del equipo”, al mismo tiempo que lo corría de allí con todas sus cosas. Con su corazón completamente roto, Red se distanció de la batalla contra el ejército del Rey Demonio, a pesar de saber que el destino del mundo dependía de ello, y ahora apuntó a vivir una vida tranquila en la frontera, y ganar dinero abriendo una tienda de herbolaria utilizando el conocimiento adquirido durante sus viajes.", year: 2021, type: .Anime, rate: "4.6", status: .Finalizado, followers: 19628, episodes: 13, url: URL(string: "https://www3.animeflv.net/anime/shin-no-nakama-ja-nai-to-yuusha-no-party-wo-oidasareta-node-henkyou-de-slow-life-suru-koto-ni-shimas")!, image: URL(string:"https://www3.animeflv.net/uploads/animes/covers/3533.jpg")!, votes: 1749, genres: nil)
+}
+
+
+final class PersistenceTest:Persistence {
+ static let shared = PersistenceTest()
+    
+    let fileLocation:FileLocation
+    
+     init(fileLocation: FileLocation = FilePreview()) {
+        self.fileLocation = fileLocation
+    }
+    
+    
+    func loadWatchedAnimes() throws -> [Anime] {
+    
+        let data = try Data(contentsOf: fileLocation.fileURL)
+        return try JSONDecoder().decode([Anime].self, from: data)
+    }
+    
+    
 }

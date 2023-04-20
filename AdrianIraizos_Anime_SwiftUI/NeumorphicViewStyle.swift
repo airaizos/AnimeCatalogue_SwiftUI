@@ -31,5 +31,4 @@ struct NeumorphicViewStyle<S:Shape>: View {
         }
         .animation(nil, value: 0)
     }
-    
 }

@@ -31,7 +31,7 @@ struct WatchedAnimesGridView_Previews: PreviewProvider {
    
     static var previews: some View {
         NavigationView {
-            WatchedAnimesGridView(isPresented: .constant(true), watchedViewModel: WatchedViewModel())
+            WatchedAnimesGridView(isPresented: .constant(true), watchedViewModel: WatchedViewModel(persistence: PersistenceTest()))
         }
     }
 }

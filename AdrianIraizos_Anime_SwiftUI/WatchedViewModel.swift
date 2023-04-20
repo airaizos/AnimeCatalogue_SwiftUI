@@ -9,11 +9,11 @@ import Foundation
 
 final class WatchedViewModel:ObservableObject {
     
-    let persistence:ModelPersistence
+    let persistence:Persistence
     @Published var watchedAnimes:[Anime]
     @Published var title = "titulo"
     
-    init(persistence:ModelPersistence = .shared) {
+    init(persistence:Persistence = ModelPersistence.shared) {
         self.persistence = persistence
         self.watchedAnimes = []
         Task {
@@ -30,7 +30,7 @@ final class WatchedViewModel:ObservableObject {
     func getWatchedAnimes() async {
         do {
             let watchedAnimes = try persistence.loadWatchedAnimes()
-           
+ 
             await MainActor.run {
                 self.watchedAnimes = watchedAnimes.sorted(by: { a1, a2 in
                     a1.title < a2.title
