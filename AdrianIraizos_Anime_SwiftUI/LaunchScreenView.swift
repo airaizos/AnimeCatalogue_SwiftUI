@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LaunchScreenView: View {
-    @Binding var state: NavigationState
+    @Binding var navigationState: NavigationState
     let namespace: Namespace.ID
     
     @State private var spinning = false
@@ -29,13 +29,12 @@ struct LaunchScreenView: View {
             .scaleEffect(CGSize(width: spinning ? 1 : 0.1, height: spinning ? 1 : 0.1), anchor: .center)
             .matchedGeometryEffect(id: "splash", in: namespace)
         }
-       
-      
+
         .animation(.spring(response: 1,dampingFraction: 1), value:spinning)
         .onAppear {
             Task {
                 try await Task.sleep(for:.seconds(1.0))
-                state = .welcome
+                navigationState = .welcome
             }
             spinning.toggle()
         }
@@ -45,6 +44,6 @@ struct LaunchScreenView: View {
 
 struct LaunchScreenView_Previews: PreviewProvider {
     static var previews: some View {
-        LaunchScreenView(state: .constant(.splash), namespace: Namespace().wrappedValue)
+        LaunchScreenView(navigationState: .constant(.splash), namespace: Namespace().wrappedValue)
     }
 }

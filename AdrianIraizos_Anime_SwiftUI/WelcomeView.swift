@@ -9,8 +9,9 @@ import SwiftUI
 
 struct WelcomeView: View {
     @Binding var navigationState: NavigationState
+    @State var spinning = true
+    
     let nameSpace:Namespace.ID
-   @State var spinning = true
     let totalSteps = 7
     var body: some View {
         ZStack {
@@ -52,13 +53,13 @@ struct WelcomeView: View {
                 .buttonStyle(NeumorphicButtonStyle(isActive: true))
                 .modifier(OpenAnimation(launch: $spinning, step: 7, totalSteps: totalSteps))
             }
+            .animation(.easeIn(duration: 1), value: navigationState)
         }
         .onAppear {
          
                 Task {
                     try await Task.sleep(for:.seconds(1.0))
-                   // state = .welcome
-                    
+   
                 }
             spinning.toggle()
         }

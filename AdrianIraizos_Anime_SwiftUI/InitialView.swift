@@ -10,7 +10,7 @@ import SwiftUI
 struct InitialView: View {
     @EnvironmentObject var viewModel:AnimesViewModel
     @Namespace var namespace
-    @State var navigationState: NavigationState = .splash
+    @Binding var navigationState: NavigationState
     
     var body: some View {
         Group {
@@ -18,26 +18,27 @@ struct InitialView: View {
          
             switch navigationState {
                 
-            case .splash:                LaunchScreenView(state: $navigationState, namespace: namespace)
+            case .splash:
+                LaunchScreenView(navigationState: $navigationState, namespace: namespace)
                     .transition(.opacity)
                 
             case .welcome: WelcomeView(navigationState: $navigationState, nameSpace: namespace)
                     .transition(.opacity)
                 
             case .home:
-               AnimesListView()
-                        .transition(.opacity)
+                AnimesListView(navigationState: $navigationState, nameSpace: namespace)
+                    .transition(.push(from: .top))
             }
             
         }
         
-        .animation(.default, value:navigationState)
+        .animation(.easeIn, value:navigationState)
     }
 }
 
 struct InitialView_Previews: PreviewProvider {
     static var previews: some View {
-        InitialView()
+        InitialView(navigationState: .constant(.splash))
             .environmentObject(AnimesViewModel.animesPreview)
     }
 }

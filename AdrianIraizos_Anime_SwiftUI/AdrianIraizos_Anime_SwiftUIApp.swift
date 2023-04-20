@@ -10,10 +10,10 @@ import SwiftUI
 @main
 struct AdrianIraizos_Anime_SwiftUIApp: App {
     @StateObject var viewModel = AnimesViewModel()
-    
+    @State var navigationState: NavigationState = .splash
     var body: some Scene {
         WindowGroup {
-           InitialView()
+           InitialView(navigationState: $navigationState)
                 .environmentObject(viewModel)
                 .overlay {
                     if viewModel.loading {

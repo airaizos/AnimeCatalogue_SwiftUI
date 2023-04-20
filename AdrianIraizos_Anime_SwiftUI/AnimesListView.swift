@@ -9,7 +9,9 @@ import SwiftUI
 
 struct AnimesListView: View {
     @EnvironmentObject var viewModel:AnimesViewModel
-    @State var showWatched = false
+  //  @State var showWatched = false
+    @Binding var navigationState: NavigationState
+    let nameSpace:Namespace.ID
     
     var body: some View {
         NavigationStack {
@@ -47,18 +49,18 @@ struct AnimesListView: View {
                 
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button {
-                        showWatched.toggle()
+                        navigationState = .splash
                     } label: {
-                        Image(systemName: "star")
+                        Image("buttonImage")
+                            
+                            .clipShape(Circle())
+                            .matchedGeometryEffect(id: "splash", in: nameSpace)
                     }
                     .buttonStyle(FavoriteButtonStyle(color:.yellow))
                 }
             }
-            
-            .sheet(isPresented: $showWatched) {
-                WatchedAnimesGridView(isPresented: $showWatched)
-                
-            }
+      
+           
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
                     Menu("Sort") {
@@ -85,7 +87,7 @@ struct AnimesListView: View {
 
 struct AnimesListView_Previews: PreviewProvider {
     static var previews: some View {
-        AnimesListView()
+        AnimesListView(navigationState: .constant(.home),nameSpace: Namespace().wrappedValue)
             .environmentObject(AnimesViewModel.animesPreview)
             
     }

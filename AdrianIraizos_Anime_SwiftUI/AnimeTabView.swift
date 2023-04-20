@@ -9,10 +9,13 @@ import SwiftUI
 
 struct AnimeTabView: View {
     @StateObject var viewModel = AnimesViewModel()
+    @Namespace var namespace
+    @State var navigationState: NavigationState = .splash
+    
     var body: some View {
         TabView{
             Group {
-                AnimesListView()
+                AnimesListView(navigationState: $navigationState, nameSpace: namespace)
                     .environmentObject(viewModel)
                     .tabItem {
                         Label("Animes",systemImage: "film")
