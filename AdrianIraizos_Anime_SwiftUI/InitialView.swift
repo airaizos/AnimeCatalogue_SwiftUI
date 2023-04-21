@@ -26,7 +26,7 @@ struct InitialView: View {
             case .home:
                 Group {
                     if UIDevice.current.userInterfaceIdiom == .pad {
-                        iPadAnimesListView(navigationState: $navigationState, namespace: namespace)
+                        iPadAnimeTabView(navigationState: $navigationState, namespace: namespace)
                             .transition(.push(from: .top))
                         
                     } else { AnimeTabView(navigationState: $navigationState, namespace: namespace)
