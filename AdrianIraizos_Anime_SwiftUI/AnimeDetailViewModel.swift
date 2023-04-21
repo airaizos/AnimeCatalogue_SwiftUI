@@ -5,7 +5,7 @@
 //  Created by Adrian Iraizos Mendoza on 12/4/23.
 //
 
-import Foundation
+import SwiftUI
 final class AnimeDetailViewModel:ObservableObject {
     
     let persistence:ModelPersistence
@@ -77,5 +77,13 @@ final class AnimeDetailViewModel:ObservableObject {
         case false: watched.append(anime)
         }
     }
+    
+    //Shared item
+    /*
+    func shareAnime(_ anime:Anime) -> ShareLink {
+    
+        ShareLink(item: anime.url, subject: Text("Mira este anime"), message: Text(anime.title))
+    }
+    */
 }
 

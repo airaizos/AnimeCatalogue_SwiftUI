@@ -46,6 +46,7 @@
 		3A33CB4229E5B67100160AC3 /* FavoriteButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A33CB4129E5B67100160AC3 /* FavoriteButtonStyle.swift */; };
 		3A34830029F28B790079B129 /* WatchedGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3482FF29F28B790079B129 /* WatchedGridView.swift */; };
 		3A34830229F293CE0079B129 /* ModeloColumnas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A34830129F293CE0079B129 /* ModeloColumnas.swift */; };
+		3A34830429F2D17F0079B129 /* ShareAnimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A34830329F2D17F0079B129 /* ShareAnimeView.swift */; };
 		3A3E341B29EE8FAC00B76B5E /* RecommendedAnime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3E341A29EE8FAC00B76B5E /* RecommendedAnime.swift */; };
 		3A3E341D29EEAEA600B76B5E /* AnimeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3E341C29EEAEA600B76B5E /* AnimeTabView.swift */; };
 		3A3E341F29EEB12600B76B5E /* FavoritesAnimesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3E341E29EEB12600B76B5E /* FavoritesAnimesView.swift */; };
@@ -103,6 +104,7 @@
 		3A33CB4129E5B67100160AC3 /* FavoriteButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButtonStyle.swift; sourceTree = "<group>"; };
 		3A3482FF29F28B790079B129 /* WatchedGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchedGridView.swift; sourceTree = "<group>"; };
 		3A34830129F293CE0079B129 /* ModeloColumnas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeloColumnas.swift; sourceTree = "<group>"; };
+		3A34830329F2D17F0079B129 /* ShareAnimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareAnimeView.swift; sourceTree = "<group>"; };
 		3A3E341A29EE8FAC00B76B5E /* RecommendedAnime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedAnime.swift; sourceTree = "<group>"; };
 		3A3E341C29EEAEA600B76B5E /* AnimeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeTabView.swift; sourceTree = "<group>"; };
 		3A3E341E29EEB12600B76B5E /* FavoritesAnimesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesAnimesView.swift; sourceTree = "<group>"; };
@@ -260,6 +262,7 @@
 				3A14C3DD29F151F6009FDF45 /* FlipView.swift */,
 				3A14C3E429F17A1E009FDF45 /* OpenAnimation.swift */,
 				3A14C3E629F1AA99009FDF45 /* GridBackground.swift */,
+				3A34830329F2D17F0079B129 /* ShareAnimeView.swift */,
 			);
 			name = ViewHelpers;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 				3A14C3E729F1AA99009FDF45 /* GridBackground.swift in Sources */,
 				3A3E341F29EEB12600B76B5E /* FavoritesAnimesView.swift in Sources */,
 				3A25B8F029E32C760078D264 /* Protocolos.swift in Sources */,
+				3A34830429F2D17F0079B129 /* ShareAnimeView.swift in Sources */,
 				3A25B90229E33C170078D264 /* DarkBackground.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,6 +11,7 @@ struct AnimeDetailView: View {
     @EnvironmentObject var viewModel:AnimesViewModel
     @ObservedObject var detailViewModel:AnimeDetailViewModel
     
+    @State var shared = false
     var body: some View {
         ZStack {
             Color.offWhite
@@ -169,6 +170,20 @@ struct AnimeDetailView: View {
                             
                         }
                         .buttonStyle(NeumorphicButtonStyle(isActive: true))
+                    }
+                    ToolbarItem(placement:.navigationBarTrailing) {
+                       
+                        Button {
+                         
+                            shared.toggle()
+                        
+                        } label: {
+                            Image(systemName: "square.and.arrow.up.fill")
+                                .foregroundColor(Color.gray)
+                            
+                        }
+                        .buttonStyle(NeumorphicButtonStyle(isActive: true))
+                    
                         /*
                         Button {
                             detailViewModel.toggleFavorite(anime:detailViewModel.anime)
@@ -181,6 +196,12 @@ struct AnimeDetailView: View {
                         .buttonStyle(NeumorphicButtonStyle(isActive: detailViewModel.isFavorite(anime: detailViewModel.anime)))
                         */
                     }
+                   
+                    }
+                .sheet(isPresented: $shared) {
+             
+                    
+                    ShareAnimeView(anime: detailViewModel.anime)
                 }
                 
             }
