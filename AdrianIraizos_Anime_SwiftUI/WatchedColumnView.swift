@@ -8,14 +8,16 @@
 import SwiftUI
 
 struct WatchedColumnView: View {
+    @State var grid = ModeloColumnas()
+    
     var animes:[Anime]
-    let gridFlexible:[GridItem] = Array(repeating: GridItem(.flexible()), count: 1)
+    
     var color:Color
     var title:String
     var subtitle:String = ""
     var body: some View {
         NavigationStack {
-            VStack {
+            LazyHGrid(rows: grid.gridItem) {
                 Text(title)
                     .font(.subheadline)
                     .bold()
@@ -55,3 +57,4 @@ struct WatchedColumnView_Previews: PreviewProvider {
         }
     }
 }
+

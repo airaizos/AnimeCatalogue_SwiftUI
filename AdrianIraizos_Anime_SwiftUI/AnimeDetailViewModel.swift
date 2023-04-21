@@ -29,9 +29,7 @@ final class AnimeDetailViewModel:ObservableObject {
         
         self.isFavorite = favorites.contains(anime.id)
         self.isWatched = watched.contains(anime)
-        
     }
-    
     
     func upAndDownText(_ txt: String) -> AttributedString {
         var result = AttributedString()

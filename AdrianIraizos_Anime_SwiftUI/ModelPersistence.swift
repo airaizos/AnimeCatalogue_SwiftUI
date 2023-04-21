@@ -22,7 +22,9 @@ final class ModelPersistence:Persistence {
     
     func loadAnimes() throws -> [Anime] {
         let data = try Data(contentsOf: fileLocation.fileURL)
-        return try JSONDecoder().decode([Anime].self, from: data)
+        return try JSONDecoder().decode([Anime].self, from: data).sorted(by: { a1 , a2 in
+            a1.title < a2.title
+        })
     }
     
     //MARK: Favorites
@@ -42,17 +44,6 @@ final class ModelPersistence:Persistence {
     }
     
     //MARK: Watched
-    let watchedDocument = URL.documentsDirectory.appending(path: "watched.json")
-    func loadWatched() throws -> [String] {
-        guard FileManager.default.fileExists(atPath: watchedDocument.path()) else { return [] }
-        let data = try Data(contentsOf: watchedDocument)
-        return try JSONDecoder().decode(Watched.self, from: data).ids
-    }
-    func saveWatched(ids:[String]) throws {
-        let watched = Watched(ids: ids)
-        let data = try JSONEncoder().encode(watched)
-        try data.write(to: watchedDocument, options: .atomic)
-    }
     
     let watchedAnimesDocument = URL.documentsDirectory.appending(path: "watchedAnimes.json")
 
@@ -66,5 +57,4 @@ final class ModelPersistence:Persistence {
         let data = try JSONEncoder().encode(animes)
         try data.write(to: watchedAnimesDocument, options: .atomic)
     }
-    
 }

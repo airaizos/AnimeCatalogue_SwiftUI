@@ -58,11 +58,10 @@ struct AnimesListView: View {
                     .buttonStyle(FavoriteButtonStyle(color:.yellow))
                 }
             }
-      
-           
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
-                    Menu("Sort") {
+                       
+                    Menu  {
                         Picker(selection: $viewModel.sorted, label: Text("Options")) {
                             ForEach(SortedBy.allCases) { sorted in
                                 Button {
@@ -72,6 +71,9 @@ struct AnimesListView: View {
                                 }
                             }
                         }
+                    } label: {
+                        Image(systemName: "arrow.up.arrow.down")
+                            .tint(Color.white)
                     }
                 }
             }

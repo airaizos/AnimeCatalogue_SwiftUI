@@ -14,7 +14,7 @@ struct AnimeDetailView: View {
     var body: some View {
         ZStack {
             Color.offWhite
-                .edgesIgnoringSafeArea(.all)
+                .edgesIgnoringSafeArea(.top)
     
             VStack(spacing:10) {
                     Text(detailViewModel.upAndDownText(detailViewModel.anime.title))
@@ -160,7 +160,7 @@ struct AnimeDetailView: View {
                 .navigationBarTitleDisplayMode(.inline)
                 
                 .toolbar {
-                    ToolbarItemGroup(placement:.bottomBar) {
+                    ToolbarItem(placement:.navigationBarTrailing) {
                         Button {
                             detailViewModel.toggleWatched(anime: detailViewModel.anime)
                         } label: {
@@ -168,8 +168,8 @@ struct AnimeDetailView: View {
                                 .foregroundColor(Color.gray)
                             
                         }
-                        .buttonStyle(NeumorphicButtonStyle(isActive: detailViewModel.isWatched(anime:detailViewModel.anime)))
-                        
+                        .buttonStyle(NeumorphicButtonStyle(isActive: true))
+                        /*
                         Button {
                             detailViewModel.toggleFavorite(anime:detailViewModel.anime)
                             
@@ -179,25 +179,20 @@ struct AnimeDetailView: View {
                         }
                         
                         .buttonStyle(NeumorphicButtonStyle(isActive: detailViewModel.isFavorite(anime: detailViewModel.anime)))
-                        
+                        */
                     }
-                    
                 }
                 
-             
             }
-        
         }
-      
-    
-       
 }
 
 struct AnimeDetail_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationStack {
-            AnimeDetailView(detailViewModel:AnimeDetailViewModel(anime: .test))
-                .environmentObject(AnimesViewModel())
+     
+            NavigationStack {
+                AnimeDetailView(detailViewModel:AnimeDetailViewModel(anime: .test))
+                    .environmentObject(AnimesViewModel())
         }
     }
 }

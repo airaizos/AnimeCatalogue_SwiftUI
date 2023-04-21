@@ -20,12 +20,6 @@ final class WatchedViewModel:ObservableObject {
             await getWatchedAnimes()
         }
     }
-    func getFirst() -> Anime {
-        if let primero = watchedAnimes.first {
-            return primero
-        }
-        return .test
-    }
     
     func getWatchedAnimes() async {
         do {
@@ -36,7 +30,6 @@ final class WatchedViewModel:ObservableObject {
                     a1.title < a2.title
                 })
            }
-             
         } catch {
             self.watchedAnimes = []
         }

@@ -20,7 +20,7 @@ struct AnimeTabView: View {
                     .tabItem {
                         Label("Animes",systemImage: "film")
                     }
-                WatchedAnimesGridView()
+                WatchedGridView()
                     .tabItem {
                         Label("Watched",systemImage: "eye")
                     }
