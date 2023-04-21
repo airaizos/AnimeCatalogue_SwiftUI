@@ -9,26 +9,28 @@ import SwiftUI
 
 struct AnimeGridCellView: View {
     let anime:Anime
-    let width:CGFloat = 80
+    private let width:CGFloat = 75
+    private let height:CGFloat = 105
     var titleColor:Color = .gray
+    var infoSize:infoSize = .small
     var body: some View {
         VStack(alignment:.center,spacing: 10){
-            AsyncImageNeumorphicStyle(imageURL: anime.image,width: 75,height: 105)
+            AsyncImageNeumorphicStyle(imageURL: anime.image,width: width * infoSize.rawValue,height: height * infoSize.rawValue)
                 Text(anime.title)
-                .font(.footnote)
+                .font(infoSize.fontSize)
                 .lineLimit(5)
                 .foregroundColor(titleColor)
-                .frame(width:width)
+                .frame(width:width * infoSize.rawValue)
                 .bold()
                 .multilineTextAlignment(.center)
                 .lineLimit(3, reservesSpace: true)
             }
-        .frame(width:width - 5,alignment: .top)
+    //    .frame(width:width * infoSize.rawValue,alignment: .top)
     }
 }
 
 struct AnimeGridCellView_Previews: PreviewProvider {
     static var previews: some View {
-        AnimeGridCellView(anime:.testLong)
+        AnimeGridCellView(anime:.testLong,infoSize: .extra)
     }
 }

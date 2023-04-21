@@ -20,15 +20,17 @@ enum SortedBy:String,CaseIterable,Identifiable {
 }
 
 enum infoSize:CGFloat {
-    case small = 2
-    case medium = 4
-    case large = 6
+    case small = 1
+    case medium = 1.5
+    case large = 2
+    case extra = 4
     
     var fontSize:Font {
         switch self {
         case .small: return .caption2
         case .medium: return .body
-        case .large: return .largeTitle
+        case .large: return .subheadline
+        case .extra: return .largeTitle
         }
     }
 }

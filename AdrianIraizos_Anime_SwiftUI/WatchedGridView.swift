@@ -19,7 +19,7 @@ struct WatchedGridView: View {
                     LazyVGrid(columns: grid.gridItem) {
                         ForEach(watchedViewModel.watchedAnimes) { anime in
                             NavigationLink(value: anime) {
-                                AnimeGridCellView(anime: anime,titleColor: .gray)
+                                AnimeGridCellView(anime: anime,titleColor: .gray,infoSize: grid.size)
                             }
                         }
                     }
