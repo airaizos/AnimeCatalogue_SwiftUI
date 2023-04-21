@@ -47,6 +47,7 @@
 		3A34830029F28B790079B129 /* WatchedGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3482FF29F28B790079B129 /* WatchedGridView.swift */; };
 		3A34830229F293CE0079B129 /* ModeloColumnas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A34830129F293CE0079B129 /* ModeloColumnas.swift */; };
 		3A34830429F2D17F0079B129 /* ShareAnimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A34830329F2D17F0079B129 /* ShareAnimeView.swift */; };
+		3A34830729F2D9CD0079B129 /* iPadAnimesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A34830629F2D9CD0079B129 /* iPadAnimesListView.swift */; };
 		3A3E341B29EE8FAC00B76B5E /* RecommendedAnime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3E341A29EE8FAC00B76B5E /* RecommendedAnime.swift */; };
 		3A3E341D29EEAEA600B76B5E /* AnimeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3E341C29EEAEA600B76B5E /* AnimeTabView.swift */; };
 		3A3E341F29EEB12600B76B5E /* FavoritesAnimesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3E341E29EEB12600B76B5E /* FavoritesAnimesView.swift */; };
@@ -105,6 +106,7 @@
 		3A3482FF29F28B790079B129 /* WatchedGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchedGridView.swift; sourceTree = "<group>"; };
 		3A34830129F293CE0079B129 /* ModeloColumnas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeloColumnas.swift; sourceTree = "<group>"; };
 		3A34830329F2D17F0079B129 /* ShareAnimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareAnimeView.swift; sourceTree = "<group>"; };
+		3A34830629F2D9CD0079B129 /* iPadAnimesListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iPadAnimesListView.swift; sourceTree = "<group>"; };
 		3A3E341A29EE8FAC00B76B5E /* RecommendedAnime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedAnime.swift; sourceTree = "<group>"; };
 		3A3E341C29EEAEA600B76B5E /* AnimeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeTabView.swift; sourceTree = "<group>"; };
 		3A3E341E29EEB12600B76B5E /* FavoritesAnimesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesAnimesView.swift; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 				3A33CB3F29E5A26100160AC3 /* AnimeDetailView.swift */,
 				3A3E342229EEB4D900B76B5E /* WatchedAnimesGridView.swift */,
 				3A3482FF29F28B790079B129 /* WatchedGridView.swift */,
+				3A34830529F2D9A90079B129 /* iPad */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -265,6 +268,14 @@
 				3A34830329F2D17F0079B129 /* ShareAnimeView.swift */,
 			);
 			name = ViewHelpers;
+			sourceTree = "<group>";
+		};
+		3A34830529F2D9A90079B129 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				3A34830629F2D9CD0079B129 /* iPadAnimesListView.swift */,
+			);
+			name = iPad;
 			sourceTree = "<group>";
 		};
 		3A3E341929EE8D4000B76B5E /* ViewComponents */ = {
@@ -401,6 +412,7 @@
 				3A25B8F029E32C760078D264 /* Protocolos.swift in Sources */,
 				3A34830429F2D17F0079B129 /* ShareAnimeView.swift in Sources */,
 				3A25B90229E33C170078D264 /* DarkBackground.swift in Sources */,
+				3A34830729F2D9CD0079B129 /* iPadAnimesListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -31,8 +31,10 @@ enum Estatus:String,Codable {
     case EnEmision = "En emision", Finalizado = "Finalizado", Proximamente = "Proximamente"
 }
 
-enum Obra:String,Codable {
+enum Obra:String,Codable,CaseIterable,Identifiable {
     case OVA = "OVA", Anime = "Anime", Pelicula = "Película", Especial = "Especial", All = "Todas"
+    
+    var id: Obra { self }
 }
 
 extension Anime {

@@ -126,4 +126,33 @@ final class AnimesViewModel:ObservableObject {
             self.animes = []
         }
     }
+    
+    
+    func getListFor(type: Obra) -> [Anime] {
+        switch type {
+        case .OVA: return ovas
+        case .Anime: return anime
+        case .Pelicula: return peliculas
+        case .Especial: return especial
+        case .All: return animes
+        }
+    }
+    
+    //iPad
+    
+    var ovas:[Anime] {
+       animes.filter { $0.type == .OVA}
+    }
+    
+    var peliculas:[Anime] {
+      animes.filter { $0.type == .Pelicula }
+    }
+    
+   var especial:[Anime] {
+       animes.filter { $0.type == .Especial }
+    }
+    
+    var anime:[Anime] {
+        animes.filter { $0.type == .Anime}
+    }
 }

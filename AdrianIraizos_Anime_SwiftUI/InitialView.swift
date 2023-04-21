@@ -24,8 +24,15 @@ struct InitialView: View {
                     .transition(.opacity)
                 
             case .home:
-                AnimeTabView(navigationState: $navigationState, namespace: namespace)
-                    .transition(.push(from: .top))
+                Group {
+                    if UIDevice.current.userInterfaceIdiom == .pad {
+                        iPadAnimesListView(navigationState: $navigationState, namespace: namespace)
+                            .transition(.push(from: .top))
+                        
+                    } else { AnimeTabView(navigationState: $navigationState, namespace: namespace)
+                            .transition(.push(from: .top))
+                    }
+                }
             }
         }
         .animation(.easeIn, value:navigationState)
