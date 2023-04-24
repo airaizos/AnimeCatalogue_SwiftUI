@@ -35,7 +35,7 @@ struct iPadAnimesListView: View {
             .navigationTitle(selectedObra?.rawValue ?? "Lista")
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
-                    
+                    //MARK: TODO filtro no funciona
                     Menu  {
                         Picker(selection: $viewModel.sorted, label: Text("Options")) {
                             ForEach(SortedBy.allCases) { sorted in
