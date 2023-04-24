@@ -16,6 +16,8 @@ final class AnimesViewModel:ObservableObject {
     @Published var sorted = SortedBy.title {
         didSet {
             sortedAscending.toggle()
+            UserDefaults.standard.set(sorted.rawValue, forKey: "sortedBy")
+            UserDefaults.standard.set(sortedAscending,forKey: "sortedAscending")
         }
     }
     @Published var obraPicker = 0 {
@@ -101,6 +103,11 @@ final class AnimesViewModel:ObservableObject {
         self.persistence = persistence
         self.loading = true
         self.animes = []
+        if let sortedBy = SortedBy(rawValue: UserDefaults.standard.object(forKey: "sortedBy") as? String ?? "Title"), let sortedA = UserDefaults.standard.object(forKey: "sortedAscending") as? Bool {
+            sorted = sortedBy
+            sortedAscending = sortedA
+        }
+        
         Task {
             await getData()
             await MainActor.run {
