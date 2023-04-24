@@ -27,24 +27,7 @@ final class ModelPersistence:Persistence {
         })
     }
     
-    //MARK: Favorites
-    let favoritesDocument = URL.documentsDirectory.appending(path:"favorites.json")
-    
-    func loadFavorites() throws -> [String] {
-        guard FileManager.default.fileExists(atPath: favoritesDocument.path()) else { return [] }
-        let data = try Data(contentsOf: favoritesDocument)
-        return try JSONDecoder().decode(Favorites.self, from: data).ids
-    }
-    
-    func saveFavorites(ids:[String]) throws {
-        let favorites = Favorites(ids: ids)
-        let data = try JSONEncoder().encode(favorites)
-        try data.write(to: favoritesDocument, options: .atomic)
-        
-    }
-    
     //MARK: Watched
-    
     let watchedAnimesDocument = URL.documentsDirectory.appending(path: "watchedAnimes.json")
 
     func loadWatchedAnimes() throws -> [Anime] {

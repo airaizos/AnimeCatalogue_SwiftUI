@@ -11,7 +11,7 @@ final class AnimeDetailViewModel:ObservableObject {
     let persistence:ModelPersistence
     
     @Published var anime:Anime
-    @Published var isFavorite:Bool
+  
     @Published var isWatched:Bool
     
     
@@ -20,14 +20,13 @@ final class AnimeDetailViewModel:ObservableObject {
         self.persistence = persistence
         
         do {
-            self.favorites = try persistence.loadFavorites()
+      
             self.watched = try persistence.loadWatchedAnimes()
         } catch {
-            self.favorites = []
+     
             self.watched = []
         }
         
-        self.isFavorite = favorites.contains(anime.id)
         self.isWatched = watched.contains(anime)
     }
     
@@ -42,24 +41,7 @@ final class AnimeDetailViewModel:ObservableObject {
         result.font = .largeTitle
         return result
     }
-    
-    //Favorite
-    private var favorites:[String] {
-        didSet {
-            try? persistence.saveFavorites(ids: favorites)
-        }
-    }
-    
-    func toggleFavorite(anime:Anime) {
-        switch favorites.contains(anime.id) {
-        case true: favorites.removeAll() { $0 == anime.id }
-        case false: favorites.append(anime.id)
-        }
-    }
-    
-    func isFavorite(anime:Anime) -> Bool {
-        favorites.contains(anime.id)
-    }
+
     //Watched
     private var watched:[Anime] {
         didSet {
@@ -77,13 +59,6 @@ final class AnimeDetailViewModel:ObservableObject {
         case false: watched.append(anime)
         }
     }
-    
-    //Shared item
-    /*
-    func shareAnime(_ anime:Anime) -> ShareLink {
-    
-        ShareLink(item: anime.url, subject: Text("Mira este anime"), message: Text(anime.title))
-    }
-    */
+
 }
 

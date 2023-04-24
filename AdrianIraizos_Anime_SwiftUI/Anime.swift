@@ -95,11 +95,3 @@ extension Anime {
         return formatted
     }
 }
-
-struct Favorites:Codable {
-    let ids:[String]
-}
-
-struct Watched:Codable {
-    let ids:[String]
-}

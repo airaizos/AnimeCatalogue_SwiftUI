@@ -6,17 +6,3 @@
 //
 
 import SwiftUI
-
-struct WatchedAnimesView: View {
-    var body: some View {
-        
-        
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct FavoritesAnimesView_Previews: PreviewProvider {
-    static var previews: some View {
-        WatchedAnimesView()
-    }
-}

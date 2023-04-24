@@ -31,7 +31,7 @@ struct WelcomeView: View {
                     .modifier(OpenAnimation(launch: $spinning, step: 1, totalSteps: totalSteps))
                 Group {
                    
-                    Text("Mark your favorites anime")
+                    Text("Discover animes")
                         .modifier(OpenAnimation(launch: $spinning, step: 2, totalSteps: 7))
                     Text("Mark all that you already watched")
                         .modifier(OpenAnimation(launch: $spinning, step: 3, totalSteps: totalSteps))
