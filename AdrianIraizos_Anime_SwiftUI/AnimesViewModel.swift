@@ -103,6 +103,7 @@ final class AnimesViewModel:ObservableObject {
         self.persistence = persistence
         self.loading = true
         self.animes = []
+        self.watchedAnimes = []
         if let sortedBy = SortedBy(rawValue: UserDefaults.standard.object(forKey: "sortedBy") as? String ?? "Title"), let sortedA = UserDefaults.standard.object(forKey: "sortedAscending") as? Bool {
             sorted = sortedBy
             sortedAscending = sortedA
@@ -110,6 +111,7 @@ final class AnimesViewModel:ObservableObject {
         
         Task {
             await getData()
+            await getWatchedAnimes()
             await MainActor.run {
                 self.loading = false
             }
@@ -159,4 +161,23 @@ final class AnimesViewModel:ObservableObject {
     var anime:[Anime] {
         animes.filter { $0.type == .Anime}
     }
+    
+    //Watched
+    @Published var watchedAnimes:[Anime]
+ 
+    func getWatchedAnimes() async {
+        do {
+            let watchedAnimes = try persistence.loadWatchedAnimes()
+ 
+            await MainActor.run {
+                self.watchedAnimes = watchedAnimes.sorted(by: { a1, a2 in
+                    a1.title < a2.title
+                })
+           }
+        } catch {
+            self.watchedAnimes = []
+        }
+    }
+    
+  
 }

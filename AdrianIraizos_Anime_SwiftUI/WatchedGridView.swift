@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct WatchedGridView: View {
-    @ObservedObject var watchedViewModel = WatchedViewModel()
+   // @ObservedObject var watchedViewModel = WatchedViewModel()
+    @EnvironmentObject var viewModel:AnimesViewModel
     @ObservedObject var grid = ModeloColumnas()
     var body: some View {
         ZStack{
@@ -17,7 +18,7 @@ struct WatchedGridView: View {
             NavigationStack {
                 ScrollView {
                     LazyVGrid(columns: grid.gridItem) {
-                        ForEach(watchedViewModel.watchedAnimes) { anime in
+                        ForEach(viewModel.watchedAnimes) { anime in
                             NavigationLink(value: anime) {
                                 AnimeGridCellView(anime: anime,titleColor: .gray,infoSize: grid.size)
                             }
@@ -58,7 +59,8 @@ struct WatchedGridView: View {
 struct WatchedGridView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            WatchedGridView(watchedViewModel: WatchedViewModel(persistence: PersistenceTest()), grid: ModeloColumnas())
+            WatchedGridView(grid: ModeloColumnas())
+                .environmentObject(AnimesViewModel.animesPreview)
         }
         
     }

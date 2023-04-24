@@ -11,7 +11,7 @@ final class WatchedViewModel:ObservableObject {
     
     let persistence:Persistence
     @Published var watchedAnimes:[Anime]
-    @Published var title = "titulo"
+  //  @Published var title = "titulo"
     
     init(persistence:Persistence = ModelPersistence.shared) {
         self.persistence = persistence
