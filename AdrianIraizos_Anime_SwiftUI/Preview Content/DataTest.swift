@@ -8,23 +8,21 @@
 import Foundation
 
 struct FilePreview:FileLocation {
-    var fileURL: URL {
-        Bundle.main.url(forResource: "WatchedTest", withExtension: "json")!
-    }
+    var fileAnimesURL: URL {
+           Bundle.main.url(forResource: "animeTest", withExtension: "json")!
+       }
+       var fileWatchedURL: URL {
+           Bundle.main.url(forResource: "watchedTest", withExtension: "json")!
+       }
 }
 
 extension Anime {
     static let preview = FilePreview()
-    static let animePreview = AnimesViewModel(persistence: ModelPersistence(fileLocation: FilePreview()))
-}
 
+}
 
 extension AnimesViewModel {
     static let animesPreview = AnimesViewModel(persistence: ModelPersistence(fileLocation: FilePreview()))
-}
-
-extension WatchedViewModel {
-    static let watchedPreview = WatchedViewModel(persistence: ModelPersistence(fileLocation: FilePreview()))
 }
 
 extension Anime {
@@ -36,19 +34,18 @@ extension Anime {
 }
 
 
-final class PersistenceTest:Persistence {
- static let shared = PersistenceTest()
+final class PersistenceTest:ModelPersistence {
+    static let sharedTest = PersistenceTest(fileLocation: FilePreview())
+
+    override func loadAnimes() throws -> [Anime] {
+        
+           let data = try Data(contentsOf: fileLocation.fileAnimesURL)
+           return try JSONDecoder().decode([Anime].self, from: data)
+       }
     
-    let fileLocation:FileLocation
+    override func loadWatchedAnimes() throws -> [Anime] {
     
-     init(fileLocation: FileLocation = FilePreview()) {
-        self.fileLocation = fileLocation
-    }
-    
-    
-    func loadWatchedAnimes() throws -> [Anime] {
-    
-        let data = try Data(contentsOf: fileLocation.fileURL)
+        let data = try Data(contentsOf: fileLocation.fileWatchedURL)
         return try JSONDecoder().decode([Anime].self, from: data)
     }
     

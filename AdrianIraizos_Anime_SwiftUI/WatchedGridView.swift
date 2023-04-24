@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct WatchedGridView: View {
-   // @ObservedObject var watchedViewModel = WatchedViewModel()
     @EnvironmentObject var viewModel:AnimesViewModel
     @ObservedObject var grid = ModeloColumnas()
     var body: some View {
@@ -50,9 +49,6 @@ struct WatchedGridView: View {
   
         }
         .navigationBarTitleDisplayMode(.inline)
-        
-
-      
     }
 }
 
@@ -60,9 +56,9 @@ struct WatchedGridView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
             WatchedGridView(grid: ModeloColumnas())
-                .environmentObject(AnimesViewModel.animesPreview)
+                .environmentObject(AnimesViewModel(persistence: PersistenceTest(fileLocation: FilePreview())))
+            
         }
-        
     }
 }
 

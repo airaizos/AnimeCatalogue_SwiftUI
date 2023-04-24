@@ -8,10 +8,11 @@
 import Foundation
 
 protocol Persistence {
+    func loadAnimes() throws -> [Anime]
     func loadWatchedAnimes() throws -> [Anime]
 }
 
-final class ModelPersistence:Persistence {
+class ModelPersistence:Persistence {
     static let shared = ModelPersistence()
     
     let fileLocation:FileLocation
@@ -21,23 +22,22 @@ final class ModelPersistence:Persistence {
     }
     
     func loadAnimes() throws -> [Anime] {
-        let data = try Data(contentsOf: fileLocation.fileURL)
+        let data = try Data(contentsOf: fileLocation.fileAnimesURL)
         return try JSONDecoder().decode([Anime].self, from: data).sorted(by: { a1 , a2 in
             a1.title < a2.title
         })
     }
     
     //MARK: Watched
-    let watchedAnimesDocument = URL.documentsDirectory.appending(path: "watchedAnimes.json")
-
     func loadWatchedAnimes() throws -> [Anime] {
-        guard FileManager.default.fileExists(atPath: watchedAnimesDocument.path()) else {  return [] }
-        let data = try Data(contentsOf: watchedAnimesDocument)
+        //La preview no tiene acceso al FileManager
+        guard FileManager.default.fileExists(atPath: fileLocation.fileWatchedURL.path()) else { return [] }
+        let data = try Data(contentsOf: fileLocation.fileWatchedURL)
         return try JSONDecoder().decode([Anime].self, from: data)
     }
     
     func saveWatchedAnimes(_ animes:[Anime]) throws {
         let data = try JSONEncoder().encode(animes)
-        try data.write(to: watchedAnimesDocument, options: .atomic)
+        try data.write(to: fileLocation.fileWatchedURL, options: .atomic)
     }
 }

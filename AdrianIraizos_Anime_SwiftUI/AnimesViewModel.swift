@@ -8,7 +8,7 @@
 import Foundation
 
 final class AnimesViewModel:ObservableObject {
-    let persistence:ModelPersistence
+    let persistence:Persistence
     
     @Published var loading:Bool
     @Published var animes:[Anime]

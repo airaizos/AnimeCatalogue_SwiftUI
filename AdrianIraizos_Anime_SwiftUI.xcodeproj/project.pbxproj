@@ -22,7 +22,7 @@
 		3A25B8E629E318600078D264 /* anime.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A25B8E529E318600078D264 /* anime.json */; };
 		3A25B8E929E3196A0078D264 /* Anime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A25B8E829E3196A0078D264 /* Anime.swift */; };
 		3A25B8EB29E31FAA0078D264 /* ModelPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A25B8EA29E31FAA0078D264 /* ModelPersistence.swift */; };
-		3A25B8ED29E32AD70078D264 /* AnimeTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A25B8EC29E32AD70078D264 /* AnimeTest.json */; };
+		3A25B8ED29E32AD70078D264 /* animeTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A25B8EC29E32AD70078D264 /* animeTest.json */; };
 		3A25B8F029E32C760078D264 /* Protocolos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A25B8EF29E32C760078D264 /* Protocolos.swift */; };
 		3A25B8F229E32CD30078D264 /* FileProduction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A25B8F129E32CD30078D264 /* FileProduction.swift */; };
 		3A25B8F429E32CF90078D264 /* DataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A25B8F329E32CF90078D264 /* DataTest.swift */; };
@@ -55,7 +55,7 @@
 		3A3E342129EEB16700B76B5E /* WatchedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3E342029EEB16700B76B5E /* WatchedViewModel.swift */; };
 		3A3E342329EEB4D900B76B5E /* WatchedAnimesGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3E342229EEB4D900B76B5E /* WatchedAnimesGridView.swift */; };
 		3A3E342529EED25200B76B5E /* AnimeGridCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3E342429EED25200B76B5E /* AnimeGridCellView.swift */; };
-		3A826B2229F0330300708F83 /* WatchedTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A3E342629EED7D900B76B5E /* WatchedTest.json */; };
+		3A826B2229F0330300708F83 /* watchedTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A3E342629EED7D900B76B5E /* watchedTest.json */; };
 		3A826B2429F03C7200708F83 /* WatchedColumnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A826B2329F03C7200708F83 /* WatchedColumnView.swift */; };
 		3A826B2629F04B3F00708F83 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A826B2529F04B3F00708F83 /* WelcomeView.swift */; };
 		3AACBF2F29ED638700D0AEF0 /* WatchedShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AACBF2E29ED638700D0AEF0 /* WatchedShapeView.swift */; };
@@ -82,7 +82,7 @@
 		3A25B8E529E318600078D264 /* anime.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = anime.json; sourceTree = "<group>"; };
 		3A25B8E829E3196A0078D264 /* Anime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anime.swift; sourceTree = "<group>"; };
 		3A25B8EA29E31FAA0078D264 /* ModelPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelPersistence.swift; sourceTree = "<group>"; };
-		3A25B8EC29E32AD70078D264 /* AnimeTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AnimeTest.json; sourceTree = "<group>"; };
+		3A25B8EC29E32AD70078D264 /* animeTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = animeTest.json; sourceTree = "<group>"; };
 		3A25B8EF29E32C760078D264 /* Protocolos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocolos.swift; sourceTree = "<group>"; };
 		3A25B8F129E32CD30078D264 /* FileProduction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileProduction.swift; sourceTree = "<group>"; };
 		3A25B8F329E32CF90078D264 /* DataTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTest.swift; sourceTree = "<group>"; };
@@ -115,7 +115,7 @@
 		3A3E342029EEB16700B76B5E /* WatchedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchedViewModel.swift; sourceTree = "<group>"; };
 		3A3E342229EEB4D900B76B5E /* WatchedAnimesGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchedAnimesGridView.swift; sourceTree = "<group>"; };
 		3A3E342429EED25200B76B5E /* AnimeGridCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeGridCellView.swift; sourceTree = "<group>"; };
-		3A3E342629EED7D900B76B5E /* WatchedTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = WatchedTest.json; sourceTree = "<group>"; };
+		3A3E342629EED7D900B76B5E /* watchedTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = watchedTest.json; sourceTree = "<group>"; };
 		3A826B2329F03C7200708F83 /* WatchedColumnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchedColumnView.swift; sourceTree = "<group>"; };
 		3A826B2529F04B3F00708F83 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		3AACBF2E29ED638700D0AEF0 /* WatchedShapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchedShapeView.swift; sourceTree = "<group>"; };
@@ -189,9 +189,9 @@
 			isa = PBXGroup;
 			children = (
 				3A25B8F329E32CF90078D264 /* DataTest.swift */,
-				3A25B8EC29E32AD70078D264 /* AnimeTest.json */,
+				3A25B8EC29E32AD70078D264 /* animeTest.json */,
 				3A25B8DD29E3181B0078D264 /* Preview Assets.xcassets */,
-				3A3E342629EED7D900B76B5E /* WatchedTest.json */,
+				3A3E342629EED7D900B76B5E /* watchedTest.json */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -352,10 +352,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A826B2229F0330300708F83 /* WatchedTest.json in Resources */,
+				3A826B2229F0330300708F83 /* watchedTest.json in Resources */,
 				3A25B8DE29E3181B0078D264 /* Preview Assets.xcassets in Resources */,
 				3A25B8DB29E3181B0078D264 /* Assets.xcassets in Resources */,
-				3A25B8ED29E32AD70078D264 /* AnimeTest.json in Resources */,
+				3A25B8ED29E32AD70078D264 /* animeTest.json in Resources */,
 				3A25B8E629E318600078D264 /* anime.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
