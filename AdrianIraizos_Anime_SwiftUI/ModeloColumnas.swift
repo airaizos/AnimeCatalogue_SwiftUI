@@ -15,10 +15,12 @@ final class ModeloColumnas: ObservableObject {
     private let flexibleGridItem = GridItem(.flexible(minimum: 70, maximum: 300))
     
     init() {
-        if let num = UserDefaults.standard.object(forKey: "numColumnsWatched") as? Int {
+        if let num = UserDefaults.standard.object(forKey: "numColumnsWatched") as? Int, let imageSize = infoSize(rawValue: UserDefaults.standard.object(forKey: "infoSize") as? CGFloat ?? 1.5 ) {
             gridItem = Array(repeating: flexibleGridItem, count: num)
+            size = imageSize
         } else {
             gridItem = Array(repeating: flexibleGridItem, count: grids)
+            size = .medium
         }
     }
     
@@ -27,6 +29,7 @@ final class ModeloColumnas: ObservableObject {
         setGridSize(cant)
         gridItem = Array(repeating: flexibleGridItem, count: cant)
         UserDefaults.standard.set(cant, forKey: "numColumnsWatched")
+        UserDefaults.standard.set(size.rawValue, forKey: "infoSize")
     }
     
     func setGridSize(_ cant:Int) {
