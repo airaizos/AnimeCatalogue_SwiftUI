@@ -34,52 +34,35 @@ struct AnimeDetailView: View {
                     HStack(alignment:.top) {
                         VStack {
                             Text("followers")
-                                .foregroundColor(.gray)
-                                .font(.caption2)
-                                .padding(.bottom,3)
+                                .modifier(detailLabel())
                             Text(detailViewModel.anime.followersFormatted)
-                                .font(.callout)
-                                .bold()
                         }
                         Spacer()
                         VStack {
                             Text("year")
-                                .foregroundColor(.gray)
-                                .font(.caption2)
-                                .padding(.bottom,3)
+                                .modifier(detailLabel())
                             Text("\(detailViewModel.anime.yearFormatted)")
-                           
-                                .font(.callout)
-                                .bold()
+                             
                         }
                         Spacer()
                         VStack {
                             Text("episodes")
-                                .foregroundColor(.gray)
-                                .font(.caption2)
-                                .padding(.bottom,3)
+                                .modifier(detailLabel())
                             Text("\(detailViewModel.anime.episodes)")
-                                .bold()
                         }
                         Spacer()
                         VStack {
                             Text("status")
-                                .foregroundColor(.gray)
-                                .font(.caption2)
-                                .padding(.bottom,3)
+                                .modifier(detailLabel())
                             Text("\(detailViewModel.anime.status.rawValue)")
-                                .font(.callout)
-                                .bold()
-                             
+                            
                         }
                     }
+                    .modifier(detailLabelInfo())
                     .padding(.horizontal)
-                
-                 
+
                     HStack {
                         AsyncImageNeumorphicStyle(imageURL: detailViewModel.anime.image,width: 150 * 1.5,height: 210 * 1.5)
-                     
-                        
                     }
                     .padding(.bottom)
                     HStack(alignment:.top){
@@ -87,30 +70,24 @@ struct AnimeDetailView: View {
                         VStack {
                             
                             Text("rate")
-                                .foregroundColor(.gray)
-                                .font(.caption2)
+                                .modifier(detailLabel())
                             
                             RatingView(rate: detailViewModel.anime.rateDouble)
-                            Text("\(detailViewModel.anime.votes ?? 0)")
-                                .foregroundColor(.black.opacity(0.7))
-                                .font(.caption2)
                         }
                         Spacer()
                     
                         VStack {
                             Text("watched")
-                                .foregroundColor(.gray)
-                                .font(.caption2)
+                                .modifier(detailLabel())
                             
                             WatchedShapeView(isHighlighted: detailViewModel.isFavorite(anime: detailViewModel.anime))
                         }
                         Spacer()
                         VStack {
-                            Text("favorite")
-                                .foregroundColor(.gray)
-                                .font(.caption2)
-                            
-                            FavoriteShapeView(isHighlighted: detailViewModel.isFavorite(anime: detailViewModel.anime))
+                            Text("votes")
+                                .modifier(detailLabel())
+                            Text(detailViewModel.anime.votesString)
+                                .modifier(detailLabelInfo())
                         }
                         Spacer()
                     }
@@ -124,7 +101,7 @@ struct AnimeDetailView: View {
                             .padding(.horizontal)
                         ScrollView{
                             Text(detailViewModel.anime.description ?? "No description")
-                                .font(.caption2)
+                                .modifier(detailLabelInfo())
                                 .textSelection(.enabled)
                         }
                     }
@@ -149,7 +126,6 @@ struct AnimeDetailView: View {
                                             }
                                             .frame(width: 200,height:90)
                                         }
-                                        
                                     }
                                 }
                             }
@@ -180,37 +156,19 @@ struct AnimeDetailView: View {
                         } label: {
                             Image(systemName: "square.and.arrow.up.fill")
                                 .foregroundColor(Color.gray)
-                            
                         }
                         .buttonStyle(NeumorphicButtonStyle(isActive: true))
-                    
-                        /*
-                        Button {
-                            detailViewModel.toggleFavorite(anime:detailViewModel.anime)
-                            
-                        } label: {
-                            Image(systemName: "star.fill")
-                                .foregroundColor(Color.gray)
-                        }
-                        
-                        .buttonStyle(NeumorphicButtonStyle(isActive: detailViewModel.isFavorite(anime: detailViewModel.anime)))
-                        */
                     }
-                   
                     }
                 .sheet(isPresented: $shared) {
-             
-                    
                     ShareAnimeView(anime: detailViewModel.anime)
                 }
-                
             }
         }
 }
 
 struct AnimeDetail_Previews: PreviewProvider {
     static var previews: some View {
-     
             NavigationStack {
                 AnimeDetailView(detailViewModel:AnimeDetailViewModel(anime: .test))
                     .environmentObject(AnimesViewModel())

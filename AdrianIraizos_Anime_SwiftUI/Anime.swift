@@ -85,8 +85,15 @@ extension Anime {
         guard let formatted = numberFormatter.string(for: followers) else { return "" }
         return formatted
     }
-
     
+    var votesString:String {
+        guard let votes = votes else { return "-" }
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        
+        guard let formatted = numberFormatter.string(for: votes) else { return "-" }
+        return formatted
+    }
 }
 
 struct Favorites:Codable {

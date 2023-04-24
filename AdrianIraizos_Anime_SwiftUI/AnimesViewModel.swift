@@ -127,7 +127,6 @@ final class AnimesViewModel:ObservableObject {
         }
     }
     
-    
     func getListFor(type: Obra) -> [Anime] {
         switch type {
         case .OVA: return ovas

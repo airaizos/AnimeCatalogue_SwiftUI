@@ -19,3 +19,21 @@ struct OpenAnimation:ViewModifier {
             .animation(.spring().delay(launch ? 0.1 * Double(step) : Double(totalSteps) * 0.1), value: launch)
     }
 }
+
+
+struct detailLabel:ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .foregroundColor(.gray)
+            .font(.caption2)
+            .padding(.bottom,3)
+    }
+}
+
+struct detailLabelInfo:ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.callout)
+            .bold()
+    }
+}
