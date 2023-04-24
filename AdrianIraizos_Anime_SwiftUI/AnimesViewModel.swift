@@ -13,11 +13,14 @@ final class AnimesViewModel:ObservableObject {
     @Published var loading:Bool
     @Published var animes:[Anime]
     @Published var search = ""
-    @Published var sorted = SortedBy.none
+    @Published var sorted = SortedBy.title {
+        didSet {
+            sortedAscending.toggle()
+        }
+    }
     @Published var obraPicker = 0 {
         didSet {
             switch obraPicker {
-            case 0: obraFilter = .All
             case 1: obraFilter = .OVA
             case 2: obraFilter = .Pelicula
             case 3: obraFilter = .Especial
@@ -26,6 +29,8 @@ final class AnimesViewModel:ObservableObject {
             }
         }
     }
+    
+    var sortedAscending = true
     
     private var genres:Set<String> {
         var generos:Set<String> = []
@@ -52,19 +57,12 @@ final class AnimesViewModel:ObservableObject {
             }
         } .sorted { a1, a2 in
             switch sorted {
-            case .none: return true
-            case .titleA: return a1.title < a2.title
-            case .titleD: return a1.title > a2.title
-            case .yearA: return a1.year < a2.year
-            case .yearD: return a2.year > a2.year
-            case .rateA: return a1.rate < a2.rate
-            case .rateD: return a1.rate > a2.rate
-            case .followersA: return a1.followers < a2.followers
-            case .followersD: return a1.followers > a2.followers
-            case .episodesA: return a1.episodes < a2.episodes
-            case .episodesD: return a1.episodes > a2.episodes
-            case .votesA: return a1.votes ?? 0 < a2.votes ?? 0
-            case .votesD: return a1.votes ?? 0 > a2.votes ?? 0
+            case .title: if sortedAscending { return a1.title < a2.title } else { return a1.title > a2.title }
+            case .year: if sortedAscending { return a1.year < a2.year } else { return a2.year > a2.year }
+            case .rate: if sortedAscending { return a1.rate < a2.rate } else { return a1.rate > a2.rate }
+            case .followers: if sortedAscending { return a1.followers < a2.followers } else { return a1.followers > a2.followers }
+            case .episodes: if sortedAscending { return a1.episodes < a2.episodes } else { return a1.episodes > a2.episodes }
+            case .votes: if sortedAscending { return a1.votes ?? 0 < a2.votes ?? 0 } else { return a1.votes ?? 0 > a2.votes ?? 0 }
             }
         }
     }
@@ -120,7 +118,7 @@ final class AnimesViewModel:ObservableObject {
                 }
             }
             await MainActor.run {
-                self.animes = animes
+                self.animes = animes.sorted { $0.title < $1.title}
             }
         } catch {
             self.animes = []

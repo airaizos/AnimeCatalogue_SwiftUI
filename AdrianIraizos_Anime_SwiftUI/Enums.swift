@@ -10,13 +10,12 @@ import SwiftUI
 enum SortedBy:String,CaseIterable,Identifiable {
 
     var id:SortedBy { self }
-    case none = "None"
-    case titleA = "Title ⇈", titleD = "Title ⇊"
-    case yearA = "Year ⇈", yearD = "Year ⇊"
-    case rateA = "Rate ⇈", rateD = "Rate ⇊"
-    case followersA = "Followers ⇈", followersD = "Followers ⇊"
-    case episodesA = "Episodes ⇈", episodesD = "Episodes ⇊"
-    case votesA = "Votes ⇈", votesD = "Votes ⇊"
+    case title = "Title"
+    case year = "Year"
+    case rate = "Rate"
+    case followers = "Followers"
+    case episodes = "Episodes"
+    case votes = "Votes"
 }
 
 enum infoSize:CGFloat {

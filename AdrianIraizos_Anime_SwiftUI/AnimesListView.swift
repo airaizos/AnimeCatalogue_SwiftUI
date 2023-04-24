@@ -67,6 +67,7 @@ struct AnimesListView: View {
                             Picker(selection: $viewModel.sorted, label: Text("Options")) {
                                 ForEach(SortedBy.allCases) { sorted in
                                     Button {
+                                       
                                         viewModel.sorted = sorted
                                     } label: {
                                         Text(sorted.rawValue)
@@ -76,11 +77,11 @@ struct AnimesListView: View {
                         } label: {
                             Image(systemName: "arrow.up.arrow.down")
                                 .tint(Color.white)
+                            Text("\(viewModel.sorted.rawValue) \(viewModel.sortedAscending ? "↑" : "↓")")
+                                .modifier(detailLabel())
                         }
                     }
-                
             }
-            
         }
         .task(priority: .high) {
             await viewModel.getData()
