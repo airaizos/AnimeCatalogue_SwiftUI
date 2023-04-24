@@ -17,7 +17,7 @@ struct AnimeDetailView: View {
             Color.offWhite
                 .edgesIgnoringSafeArea(.top)
     
-            VStack(spacing:10) {
+            VStack {
                     Text(detailViewModel.upAndDownText(detailViewModel.anime.title))
                         .font(.largeTitle)
                         .multilineTextAlignment(.center)
@@ -80,7 +80,7 @@ struct AnimeDetailView: View {
                             Text("watched")
                                 .modifier(detailLabel())
                             
-                            WatchedShapeView(isHighlighted: detailViewModel.isFavorite(anime: detailViewModel.anime))
+                            WatchedShapeView(isHighlighted: detailViewModel.isWatched(anime: detailViewModel.anime))
                         }
                         Spacer()
                         VStack {
@@ -91,29 +91,25 @@ struct AnimeDetailView: View {
                         }
                         Spacer()
                     }
-                   
-                    
+
                     VStack(alignment:.leading, spacing:5) {
                         Text("summary")
-                            .font(.caption)
-                            .bold()
-                            .foregroundColor(.secondary)
+                            .modifier(detailLabel())
                             .padding(.horizontal)
                         ScrollView{
                             Text(detailViewModel.anime.description ?? "No description")
                                 .modifier(detailLabelInfo())
                                 .textSelection(.enabled)
+                                .multilineTextAlignment(.center)
                         }
                     }
-                  
+                  Divider()
                         VStack(alignment: .leading,spacing:5) {
                             Text("recommended for you")
-                                .font(.caption)
-                                .bold()
-                                .foregroundColor(.secondary)
+                                .modifier(detailLabel())
                                 .padding(.horizontal)
                             ScrollView(.horizontal,showsIndicators: false) {
-                                HStack(spacing:10) {
+                                HStack(spacing:15) {
                                     
                                     ForEach(viewModel.recommendedAnimes) { recommendend in
                                         VStack {
@@ -131,35 +127,29 @@ struct AnimeDetailView: View {
                             }
                         }
                     }
-                    .padding(.horizontal)
+                .padding([.vertical,.horizontal])
                 }
                 .navigationTitle(detailViewModel.anime.type.rawValue)
                 .navigationBarTitleDisplayMode(.inline)
                 
                 .toolbar {
-                    ToolbarItem(placement:.navigationBarTrailing) {
-                        Button {
-                            detailViewModel.toggleWatched(anime: detailViewModel.anime)
-                        } label: {
-                            Image(systemName: "eye")
-                                .foregroundColor(Color.gray)
-                            
-                        }
-                        .buttonStyle(NeumorphicButtonStyle(isActive: true))
+                    ToolbarItemGroup(placement: .navigationBarTrailing) {
+                            Button {
+                                detailViewModel.toggleWatched(anime: detailViewModel.anime)
+                            } label: {
+                                Image(systemName: "eye")
+                                    .foregroundColor(Color.gray)
+                            }
+                            .buttonStyle(NeumorphicButtonStyle(isActive: true))
+                            Button {
+                                shared.toggle()
+                            } label: {
+                                Image(systemName: "square.and.arrow.up.fill")
+                                    .foregroundColor(Color.gray)
+                            }
+                            .buttonStyle(NeumorphicButtonStyle(isActive: true))
                     }
-                    ToolbarItem(placement:.navigationBarTrailing) {
-                       
-                        Button {
-                         
-                            shared.toggle()
-                        
-                        } label: {
-                            Image(systemName: "square.and.arrow.up.fill")
-                                .foregroundColor(Color.gray)
-                        }
-                        .buttonStyle(NeumorphicButtonStyle(isActive: true))
-                    }
-                    }
+                }
                 .sheet(isPresented: $shared) {
                     ShareAnimeView(anime: detailViewModel.anime)
                 }

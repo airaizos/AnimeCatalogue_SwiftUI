@@ -30,7 +30,7 @@ struct AnimeListCell: View {
                 Spacer()
                 HStack(alignment:.center) {
                     Spacer()
-                    RatingView(rate: anime.rateDouble)
+                    RatingView(rate: anime.rateDouble,isGray: false)
                     
                     Spacer()
                     AnimeStatusView(status: anime.statusLetter)

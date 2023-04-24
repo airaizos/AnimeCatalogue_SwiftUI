@@ -9,29 +9,54 @@ import SwiftUI
 
 struct RatingView: View {
     var rate:Double
+    var isGray:Bool = true
     var body: some View {
         ZStack {
-            Text(String(format: "%.1f",rate))
-                .font(.caption2)
-                .bold()
-                .background {
-                    Star(points:Int(rate), innerRadio: 3)
-                        .fill(RadialGradient(
-                            gradient: Gradient(colors: [.yellow, .yellow.opacity(0.5)]),
-                            center:.center,
-                            startRadius: 0,
-                            endRadius: 20
+            if isGray {
+                Text(String(format: "%.1f",rate))
+                    .font(.caption2)
+                    .bold()
+                    .background {
+                        NeumorphicViewStyle(isHighlighted: false, shape: Star(points:Int(rate), innerRadio: 3))
+                    }
+                    .background {
+                        Star(points:Int(rate), innerRadio: 3)
+                            .fill(RadialGradient(
+                                gradient: Gradient(colors: [.yellow, .yellow.opacity(0.5)]),
+                                center:.center,
+                                startRadius: 0,
+                                endRadius: 20
                             ))
-                        .opacity(0.6)
-                        .frame(width: 15)
-                }
+                            .opacity(0.6)
+                            .frame(width: 15)
+                            .shadow(color: .black, radius: 1, x: 1, y: 1)
+                    }
+                    .padding(9)
+            } else {
+                Text(String(format: "%.1f",rate))
+                    .font(.caption2)
+                    .bold()
+                    .background {
+                        Star(points:Int(rate), innerRadio: 3)
+                            .fill(RadialGradient(
+                                gradient: Gradient(colors: [.yellow, .yellow.opacity(0.5)]),
+                                center:.center,
+                                startRadius: 0,
+                                endRadius: 20
+                            ))
+                            .opacity(0.6)
+                            .frame(width: 15)
+                           
+                    }
+                    .padding(9)
+            }
         }
-        .padding(9)
+       
     }
 }
 
 struct RatingView_Previews: PreviewProvider {
     static var previews: some View {
-        RatingView(rate: 4.7)
+        RatingView(rate: 4.7,isGray:true)
     }
 }
