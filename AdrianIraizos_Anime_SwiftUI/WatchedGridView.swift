@@ -10,6 +10,7 @@ import SwiftUI
 struct WatchedGridView: View {
     @EnvironmentObject var viewModel:AnimesViewModel
     @ObservedObject var grid = ModeloColumnas()
+    
     var body: some View {
         ZStack{
             Color.offWhite
@@ -20,6 +21,7 @@ struct WatchedGridView: View {
                         ForEach(viewModel.watchedAnimes) { anime in
                             NavigationLink(value: anime) {
                                 AnimeGridCellView(anime: anime,titleColor: .gray,infoSize: grid.size)
+                                    .frame(alignment: .top)
                             }
                         }
                     }
@@ -30,9 +32,8 @@ struct WatchedGridView: View {
                 }
                 .navigationTitle("Watched")
                 .toolbar{
+                    
                     ToolbarItem(placement: .navigationBarTrailing) {
-                        
-                       
                         Menu{
                             ForEach(1..<5) { num in
                                 Button("\(num)") {
@@ -42,11 +43,9 @@ struct WatchedGridView: View {
                         } label: {
                             Image(systemName: "lane")
                         }
-                        
                     }
                 }
             }
-  
         }
         .navigationBarTitleDisplayMode(.inline)
     }

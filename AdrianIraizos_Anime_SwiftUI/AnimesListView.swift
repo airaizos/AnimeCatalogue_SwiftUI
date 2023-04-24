@@ -67,7 +67,6 @@ struct AnimesListView: View {
                             Picker(selection: $viewModel.sorted, label: Text("Options")) {
                                 ForEach(SortedBy.allCases) { sorted in
                                     Button {
-                                       
                                         viewModel.sorted = sorted
                                     } label: {
                                         Text(sorted.rawValue)

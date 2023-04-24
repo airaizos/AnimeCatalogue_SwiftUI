@@ -18,14 +18,12 @@ struct AnimeGridCellView: View {
             AsyncImageNeumorphicStyle(imageURL: anime.image,width: width * infoSize.rawValue,height: height * infoSize.rawValue)
                 Text(anime.title)
                 .font(infoSize.fontSize)
-                .lineLimit(5)
+                .lineLimit(4,reservesSpace: true)
                 .foregroundColor(titleColor)
                 .frame(width:width * infoSize.rawValue)
                 .bold()
                 .multilineTextAlignment(.center)
-                .lineLimit(3, reservesSpace: true)
             }
-    //    .frame(width:width * infoSize.rawValue,alignment: .top)
     }
 }
 

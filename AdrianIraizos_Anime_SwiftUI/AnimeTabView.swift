@@ -18,7 +18,7 @@ struct AnimeTabView: View {
                 AnimesListView(navigationState: $navigationState, namespace: namespace)
                     .environmentObject(viewModel)
                     .tabItem {
-                        Label("Animes",systemImage: "film")
+                        Label("Animes",systemImage: "australsign")
                     }
                 WatchedGridView()
                     .tabItem {
