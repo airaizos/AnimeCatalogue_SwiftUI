@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct InitialView: View {
-    @EnvironmentObject var viewModel:AnimesViewModel
+    @StateObject var viewModel = AnimesViewModel()
     @Namespace var namespace
     @Binding var navigationState: NavigationState
     
@@ -25,7 +25,7 @@ struct InitialView: View {
                 
             case .home:
                 Group {
-                    if UIDevice.current.userInterfaceIdiom == .pad || UIDevice.current.userInterfaceIdiom == .mac  {
+                    if UIDevice.current.userInterfaceIdiom == .pad {
                         iPadAnimeTabView(navigationState: $navigationState, namespace: namespace)
                             .transition(.push(from: .top))
                         

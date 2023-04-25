@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct iPadAnimeTabView: View {
-    @StateObject var viewModel = AnimesViewModel()
+    @EnvironmentObject var viewModel:AnimesViewModel
     @Binding var navigationState: NavigationState
     let namespace:Namespace.ID
     
@@ -21,6 +21,7 @@ struct iPadAnimeTabView: View {
                         Label("Animes",systemImage: "australsign")
                     }
                 WatchedGridView()
+                  
                     .tabItem {
                         Label("Watched",systemImage: "eye")
                     }

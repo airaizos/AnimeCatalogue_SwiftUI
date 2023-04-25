@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AnimeDetailView: View {
     @EnvironmentObject var viewModel:AnimesViewModel
-  //  @ObservedObject var detailViewModel:AnimeDetailViewModel
+
     let anime:Anime
     
     @State var shared = false
@@ -150,11 +150,13 @@ struct AnimeDetailView: View {
                             }
                             .buttonStyle(NeumorphicButtonStyle(isActive: true))
                     }
+                    
                 }
                 .sheet(isPresented: $shared) {
                     ShareAnimeView(anime: anime)
                 }
             }
+   
         }
 }
 

@@ -15,9 +15,8 @@ struct iPadAnimesListView: View {
     
     @State var visibility: NavigationSplitViewVisibility = .all
     @State var selectedObra:Obra?
-    //@State private var filteredAnimes:[Anime] = []
-    
     @State var selectedAnime:Anime?
+    
     var body: some View {
         NavigationSplitView(columnVisibility: $visibility) {
             List(Obra.allCases, selection: $selectedObra) { obra in
@@ -49,6 +48,8 @@ struct iPadAnimesListView: View {
                     } label: {
                         Image(systemName: "arrow.up.arrow.down")
                             .tint(Color.gray)
+                        Text("\(viewModel.sorted.rawValue) \(viewModel.sortedAscending ? "↑" : "↓")")
+                            .modifier(detailLabel())
                     }
                 }
             }
@@ -57,14 +58,13 @@ struct iPadAnimesListView: View {
                 AnimeDetailView(anime: selected)
             }
         }
+        .task(priority: .high) {
+            await viewModel.getData()
+        }
         .background(Color.offWhite)
         .searchable(text: $viewModel.search)
-      
-        
-  
-         
-        
     }
+     
 }
 
 struct iPadAnimesListView_Previews: PreviewProvider {

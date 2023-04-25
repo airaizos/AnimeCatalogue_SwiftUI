@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AnimeTabView: View {
-    @StateObject var viewModel = AnimesViewModel()
+    @EnvironmentObject var viewModel:AnimesViewModel
     @Binding var navigationState: NavigationState
     let namespace:Namespace.ID
     

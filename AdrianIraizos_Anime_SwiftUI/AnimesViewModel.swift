@@ -19,6 +19,7 @@ final class AnimesViewModel:ObservableObject {
             sortedAscending.toggle()
             UserDefaults.standard.set(sorted.rawValue, forKey: "sortedBy")
             UserDefaults.standard.set(sortedAscending,forKey: "sortedAscending")
+            watchedAnimes = watched.sortAnime(sorted: sorted, sortedAscending: sortedAscending)
         }
     }
     @Published var obraPicker = 0 {
@@ -48,7 +49,7 @@ final class AnimesViewModel:ObservableObject {
     }
     
     func toggleWatched(anime:Anime) {
-        switch watchedAnimes.contains(anime) {
+        switch watched.contains(anime) {
         case true: watched.removeAll() { $0 == anime }
         case false: watched.append(anime)
         }
@@ -182,11 +183,18 @@ final class AnimesViewModel:ObservableObject {
     
     //Watched
  
-    @Published var watched:[Anime]
-  
-   var watchedAnimes:[Anime] {
-        watched.sortAnime(sorted: sorted, sortedAscending: sortedAscending)
-   }
+    var watched:[Anime] {
+        didSet {
+            watchedAnimes = watched.sortAnime(sorted: sorted, sortedAscending: sortedAscending)
+            do {
+                try persistence.saveWatchedAnimes(watched)
+            } catch {
+                print("error")
+            }
+        }
+    }
+    
+    @Published var watchedAnimes:[Anime] = []
     
     func getWatchedAnimes() async {
         do {

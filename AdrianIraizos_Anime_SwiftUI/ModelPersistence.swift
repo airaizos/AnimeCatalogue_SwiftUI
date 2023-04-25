@@ -10,6 +10,7 @@ import Foundation
 protocol Persistence {
     func loadAnimes() throws -> [Anime]
     func loadWatchedAnimes() throws -> [Anime]
+    func saveWatchedAnimes(_ animes:[Anime]) throws
 }
 
 class ModelPersistence:Persistence {
