@@ -15,7 +15,7 @@ struct iPadAnimesListView: View {
     
     @State var visibility: NavigationSplitViewVisibility = .all
     @State var selectedObra:Obra?
-    @State private var filteredAnimes:[Anime] = []
+    //@State private var filteredAnimes:[Anime] = []
     
     @State var selectedAnime:Anime?
     var body: some View {
@@ -23,11 +23,12 @@ struct iPadAnimesListView: View {
             List(Obra.allCases, selection: $selectedObra) { obra in
                 NavigationLink(obra.rawValue, value: obra)
             }
+            .onChange(of: selectedObra) { obra in
+                viewModel.obraFilter = obra ?? .Anime
+            }
             .navigationTitle("Tipo")
         } content: {
-            
-            
-            List(filteredAnimes,selection: $selectedAnime) { anime in
+            List(viewModel.animesSearch,selection: $selectedAnime) { anime in
                 
                 NavigationLink(anime.title,value: anime)
                 
@@ -52,25 +53,17 @@ struct iPadAnimesListView: View {
                 }
             }
         } detail: {
-            
             if let selected  = selectedAnime {
                 AnimeDetailView(anime: selected)
             }
         }
         .background(Color.offWhite)
-  
         .searchable(text: $viewModel.search)
-     
-        .onChange(of: selectedObra) { obra in
-            if let obra = obra {
-                filteredAnimes = viewModel.getListFor(type: obra)
-            } else {
-                filteredAnimes = viewModel.anime
-            }
-        }
-        .task(priority: .high) {
-            await viewModel.getData()
-        }
+      
+        
+  
+         
+        
     }
 }
 

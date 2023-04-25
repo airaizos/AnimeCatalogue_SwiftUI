@@ -73,7 +73,7 @@ final class AnimesViewModel:ObservableObject {
     
     @Published var recommendedGenre:String = "Aventuras"
     
-    private var obraFilter:Obra = .All
+    @Published var obraFilter:Obra = .All
     
     var animesSearch:[Anime] {
         
