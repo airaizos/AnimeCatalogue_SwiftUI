@@ -11,7 +11,8 @@ final class AnimesViewModel:ObservableObject {
     let persistence:Persistence
     
     @Published var loading:Bool
-    @Published var animes:[Anime]
+    var animes:[Anime]
+    
     @Published var search = ""
     @Published var sorted = SortedBy.title {
         didSet {
@@ -32,6 +33,31 @@ final class AnimesViewModel:ObservableObject {
         }
     }
     
+    //Detail
+    
+    func upAndDownText(_ txt: String) -> AttributedString {
+        var result = AttributedString()
+        
+        for (index,letter) in txt.enumerated() {
+            var letterString = AttributedString(String(letter))
+            letterString.baselineOffset = sin(Double(index)) * 2
+            result += letterString
+        }
+        result.font = .largeTitle
+        return result
+    }
+    
+    func toggleWatched(anime:Anime) {
+        switch watchedAnimes.contains(anime) {
+        case true: watched.removeAll() { $0 == anime }
+        case false: watched.append(anime)
+        }
+    }
+    
+    func isWatched(anime:Anime) -> Bool {
+        watched.contains(anime)
+    }
+    
     var sortedAscending = true
     
     private var genres:Set<String> {
@@ -42,7 +68,6 @@ final class AnimesViewModel:ObservableObject {
                 generos.insert(String(genre))
             }
         }
-       
         return generos
     }
     
@@ -57,16 +82,8 @@ final class AnimesViewModel:ObservableObject {
             case true: return true
             case false: return anime.searchableInfo.lowercased().contains(search.lowercased())
             }
-        } .sorted { a1, a2 in
-            switch sorted {
-            case .title: if sortedAscending { return a1.title < a2.title } else { return a1.title > a2.title }
-            case .year: if sortedAscending { return a1.year < a2.year } else { return a2.year > a2.year }
-            case .rate: if sortedAscending { return a1.rate < a2.rate } else { return a1.rate > a2.rate }
-            case .followers: if sortedAscending { return a1.followers < a2.followers } else { return a1.followers > a2.followers }
-            case .episodes: if sortedAscending { return a1.episodes < a2.episodes } else { return a1.episodes > a2.episodes }
-            case .votes: if sortedAscending { return a1.votes ?? 0 < a2.votes ?? 0 } else { return a1.votes ?? 0 > a2.votes ?? 0 }
-            }
         }
+        .sortAnime(sorted: sorted, sortedAscending: sortedAscending)
     }
     
     var animesFilter:[Anime] {
@@ -103,7 +120,8 @@ final class AnimesViewModel:ObservableObject {
         self.persistence = persistence
         self.loading = true
         self.animes = []
-        self.watchedAnimes = []
+        self.watched = []
+        //Habria que hacer dos independientes para que en cada vista persistiera su propio orden
         if let sortedBy = SortedBy(rawValue: UserDefaults.standard.object(forKey: "sortedBy") as? String ?? "Title"), let sortedA = UserDefaults.standard.object(forKey: "sortedAscending") as? Bool {
             sorted = sortedBy
             sortedAscending = sortedA
@@ -163,21 +181,28 @@ final class AnimesViewModel:ObservableObject {
     }
     
     //Watched
-    @Published var watchedAnimes:[Anime]
  
+    @Published var watched:[Anime]
+  
+   var watchedAnimes:[Anime] {
+        watched.sortAnime(sorted: sorted, sortedAscending: sortedAscending)
+   }
+    
     func getWatchedAnimes() async {
         do {
-            let watchedAnimes = try persistence.loadWatchedAnimes()
+            let loadedWatchedAnimes = try persistence.loadWatchedAnimes()
  
             await MainActor.run {
-                self.watchedAnimes = watchedAnimes.sorted(by: { a1, a2 in
+                self.watched = loadedWatchedAnimes.sorted(by: { a1, a2 in
                     a1.title < a2.title
                 })
            }
         } catch {
-            self.watchedAnimes = []
+            self.watched = []
         }
     }
     
   
 }
+
+

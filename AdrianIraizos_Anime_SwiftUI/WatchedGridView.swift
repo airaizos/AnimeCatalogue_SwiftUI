@@ -26,14 +26,14 @@ struct WatchedGridView: View {
                         }
                     }
                     .navigationDestination(for: Anime.self, destination: { value in
-                        AnimeDetailView(detailViewModel: AnimeDetailViewModel(anime: value))
+                        AnimeDetailView(anime: value)
                     })
                     .padding(.vertical)
                 }
                 .navigationTitle("Watched")
                 .toolbar{
                     
-                    ToolbarItem(placement: .navigationBarTrailing) {
+                    ToolbarItem(placement: .navigationBarLeading) {
                         Menu{
                             ForEach(1..<5) { num in
                                 Button("\(num)") {
@@ -42,6 +42,26 @@ struct WatchedGridView: View {
                             }
                         } label: {
                             Image(systemName: "lane")
+                                .tint(Color.white)
+                        }
+                    }
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        
+                        Menu  {
+                            Picker(selection: $viewModel.sorted, label: Text("Options")) {
+                                ForEach(SortedBy.allCases) { sorted in
+                                    Button {
+                                        viewModel.sorted = sorted
+                                    } label: {
+                                        Text(sorted.rawValue)
+                                    }
+                                }
+                            }
+                        } label: {
+                            Image(systemName: "arrow.up.arrow.down")
+                                .tint(Color.white)
+                            Text("\(viewModel.sorted.rawValue) \(viewModel.sortedAscending ? "↑" : "↓")")
+                                .modifier(detailLabel())
                         }
                     }
                 }

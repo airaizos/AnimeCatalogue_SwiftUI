@@ -35,7 +35,6 @@ struct iPadAnimesListView: View {
             .navigationTitle(selectedObra?.rawValue ?? "Lista")
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
-                    //MARK: TODO filtro no funciona
                     Menu  {
                         Picker(selection: $viewModel.sorted, label: Text("Options")) {
                             ForEach(SortedBy.allCases) { sorted in
@@ -55,33 +54,13 @@ struct iPadAnimesListView: View {
         } detail: {
             
             if let selected  = selectedAnime {
-                AnimeDetailView(detailViewModel: AnimeDetailViewModel(anime: selected))
+                AnimeDetailView(anime: selected)
             }
         }
         .background(Color.offWhite)
-      //  .navigationTitle("Animes")
+  
         .searchable(text: $viewModel.search)
-        /*
-        .toolbar {
-            ToolbarItem(placement: .primaryAction) {
-                
-                Menu  {
-                    Picker(selection: $viewModel.sorted, label: Text("Options")) {
-                        ForEach(SortedBy.allCases) { sorted in
-                            Button {
-                                viewModel.sorted = sorted
-                            } label: {
-                                Text(sorted.rawValue)
-                            }
-                        }
-                    }
-                } label: {
-                    Image(systemName: "arrow.up.arrow.down")
-                        .tint(Color.gray)
-                }
-            }
-        }
-        */
+     
         .onChange(of: selectedObra) { obra in
             if let obra = obra {
                 filteredAnimes = viewModel.getListFor(type: obra)

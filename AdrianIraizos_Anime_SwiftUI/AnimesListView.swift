@@ -28,7 +28,7 @@ struct AnimesListView: View {
                         .padding(10)
                     }
                     .navigationDestination(for: Anime.self) { value in
-                        AnimeDetailView(detailViewModel: AnimeDetailViewModel(anime: value))
+                        AnimeDetailView(anime: value)
                     }
                 }
                 .background(Color.offWhite)

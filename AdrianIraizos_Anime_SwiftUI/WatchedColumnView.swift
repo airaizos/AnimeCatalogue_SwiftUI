@@ -43,7 +43,7 @@ struct WatchedColumnView: View {
                 }
             }
             .navigationDestination(for: Anime.self) { value in
-                AnimeDetailView(detailViewModel: AnimeDetailViewModel(anime: value))
+                AnimeDetailView(anime: value)
             }
             
         }

@@ -9,7 +9,8 @@ import SwiftUI
 
 struct AnimeDetailView: View {
     @EnvironmentObject var viewModel:AnimesViewModel
-    @ObservedObject var detailViewModel:AnimeDetailViewModel
+  //  @ObservedObject var detailViewModel:AnimeDetailViewModel
+    let anime:Anime
     
     @State var shared = false
     var body: some View {
@@ -18,11 +19,11 @@ struct AnimeDetailView: View {
                 .edgesIgnoringSafeArea(.top)
     
             VStack {
-                    Text(detailViewModel.upAndDownText(detailViewModel.anime.title))
+                    Text(viewModel.upAndDownText(anime.title))
                         .font(.largeTitle)
                         .multilineTextAlignment(.center)
                         .frame(maxWidth: .infinity)
-                Text(detailViewModel.anime.genres ?? "")
+                Text(anime.genres ?? "")
                     .font(.caption2)
                     .foregroundColor(.cyan)
                     .multilineTextAlignment(.center)
@@ -35,26 +36,26 @@ struct AnimeDetailView: View {
                         VStack {
                             Text("followers")
                                 .modifier(detailLabel())
-                            Text(detailViewModel.anime.followersFormatted)
+                            Text(anime.followersFormatted)
                         }
                         Spacer()
                         VStack {
                             Text("year")
                                 .modifier(detailLabel())
-                            Text("\(detailViewModel.anime.yearFormatted)")
+                            Text("\(anime.yearFormatted)")
                              
                         }
                         Spacer()
                         VStack {
                             Text("episodes")
                                 .modifier(detailLabel())
-                            Text("\(detailViewModel.anime.episodes)")
+                            Text("\(anime.episodes)")
                         }
                         Spacer()
                         VStack {
                             Text("status")
                                 .modifier(detailLabel())
-                            Text("\(detailViewModel.anime.status.rawValue)")
+                            Text("\(anime.status.rawValue)")
                             
                         }
                     }
@@ -62,7 +63,7 @@ struct AnimeDetailView: View {
                     .padding(.horizontal)
 
                     HStack {
-                        AsyncImageNeumorphicStyle(imageURL: detailViewModel.anime.image,width: 150 * 1.5,height: 210 * 1.5)
+                        AsyncImageNeumorphicStyle(imageURL: anime.image,width: 150 * 1.5,height: 210 * 1.5)
                     }
                     .padding(.bottom)
                     HStack(alignment:.top){
@@ -72,7 +73,7 @@ struct AnimeDetailView: View {
                             Text("rate")
                                 .modifier(detailLabel())
                             
-                            RatingView(rate: detailViewModel.anime.rateDouble)
+                            RatingView(rate: anime.rateDouble)
                         }
                         Spacer()
                     
@@ -80,13 +81,13 @@ struct AnimeDetailView: View {
                             Text("watched")
                                 .modifier(detailLabel())
                             
-                            WatchedShapeView(isHighlighted: detailViewModel.isWatched(anime: detailViewModel.anime))
+                            WatchedShapeView(isHighlighted: viewModel.isWatched(anime: anime))
                         }
                         Spacer()
                         VStack {
                             Text("votes")
                                 .modifier(detailLabel())
-                            Text(detailViewModel.anime.votesString)
+                            Text(anime.votesString)
                                 .modifier(detailLabelInfo())
                         }
                         Spacer()
@@ -97,7 +98,7 @@ struct AnimeDetailView: View {
                             .modifier(detailLabel())
                             .padding(.horizontal)
                         ScrollView{
-                            Text(detailViewModel.anime.description ?? "No description")
+                            Text(anime.description ?? "No description")
                                 .modifier(detailLabelInfo())
                                 .textSelection(.enabled)
                                 .multilineTextAlignment(.center)
@@ -129,13 +130,13 @@ struct AnimeDetailView: View {
                     }
                 .padding([.vertical,.horizontal])
                 }
-                .navigationTitle(detailViewModel.anime.type.rawValue)
+                .navigationTitle(anime.type.rawValue)
                 .navigationBarTitleDisplayMode(.inline)
                 
                 .toolbar {
                     ToolbarItemGroup(placement: .navigationBarTrailing) {
                             Button {
-                                detailViewModel.toggleWatched(anime: detailViewModel.anime)
+                                viewModel.toggleWatched(anime: anime)
                             } label: {
                                 Image(systemName: "eye")
                                     .foregroundColor(Color.gray)
@@ -151,7 +152,7 @@ struct AnimeDetailView: View {
                     }
                 }
                 .sheet(isPresented: $shared) {
-                    ShareAnimeView(anime: detailViewModel.anime)
+                    ShareAnimeView(anime: anime)
                 }
             }
         }
@@ -160,7 +161,7 @@ struct AnimeDetailView: View {
 struct AnimeDetail_Previews: PreviewProvider {
     static var previews: some View {
             NavigationStack {
-                AnimeDetailView(detailViewModel:AnimeDetailViewModel(anime: .test))
+                AnimeDetailView(anime: .test)
                     .environmentObject(AnimesViewModel())
         }
     }
