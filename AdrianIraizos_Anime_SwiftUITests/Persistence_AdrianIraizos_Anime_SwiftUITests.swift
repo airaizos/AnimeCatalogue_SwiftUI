@@ -19,6 +19,10 @@ final class AdrianIraizos_Anime_SwiftUITests: XCTestCase {
     override func setUpWithError() throws {
         persistence = PersistenceTest(fileLocation: FilePreview())
     }
+    
+    override func tearDown() {
+        persistence = nil
+    }
       
     //loadAnimes 6
     func testIsLoadingSixAnimes() throws  {

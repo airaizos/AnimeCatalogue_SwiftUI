@@ -56,42 +56,30 @@ extension Anime {
         }
     }
     
-    var rateDouble:Double {
-        Double(rate) ?? 0
+    var rateDouble: Double { Double(rate) ?? 0 }
+    
+    var searchableInfo:String { ("\(title)\(description ?? "")\(image)\(url)") }
+    var yearFormatted:String { "\(year)" }
+    
+    var id:String { "\(title)\(year)\(type)" }
+    
+    var numberFormatter: NumberFormatter {
+        let nf = NumberFormatter()
+        nf.numberStyle = .decimal
+        return nf
     }
     
-    var searchableInfo:String {
-        guard let description = description else { return "" }
-        return ("\(title)\(description)\(image)\(url)")
-    }
-    var yearFormatted:String {
-        let df = DateFormatter()
-        df.dateFormat = "yyyy"
-        
-        guard let result = df.date(from: "\(year)") else { return "" }
-        
-        let yearString = df.string(from: result)
-        return yearString
+    var followersFormatted: String {
+       numberFormatter.string(for: followers) ?? ""
     }
     
-    var id:String {
-        "\(title)\(year)\(type)"
+    var votesString: String {
+        numberFormatter.string(for: votes)  ?? ""
     }
     
-    var followersFormatted:String {
-        let numberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = .decimal
-        
-        guard let formatted = numberFormatter.string(for: followers) else { return "" }
-        return formatted
-    }
     
-    var votesString:String {
-        guard let votes = votes else { return "-" }
-        let numberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = .decimal
-        
-        guard let formatted = numberFormatter.string(for: votes) else { return "-" }
-        return formatted
-    }
+    //var ovas:[Anime] { animes.filter { $0.type == .OVA } }
+    
+    
 }
+

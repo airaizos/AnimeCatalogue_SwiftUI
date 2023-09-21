@@ -10,5 +10,4 @@ import Foundation
 protocol FileLocation {
     var fileAnimesURL: URL { get }
     var fileWatchedURL: URL { get }
-    
 }

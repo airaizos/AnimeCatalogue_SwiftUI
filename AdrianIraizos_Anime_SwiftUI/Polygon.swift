@@ -37,9 +37,6 @@ struct Polygon: Shape {
                 path.addLine(to: startPoint)
             }
         }
-        
-        
         return path
-        
     }
 }

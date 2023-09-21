@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "2EA23D58-7EAA-4495-A720-A9E1E4F3A3F5"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5550B138-0536-4504-9FB6-5C0A609F2B0D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AdrianIraizos_Anime_SwiftUI/ModeloColumnas.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "ModeloColumnas"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "5550B138-0536-4504-9FB6-5C0A609F2B0D - d2a4096a9288ffad"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "property wrapper backing initializer of AdrianIraizos_Anime_SwiftUI.ModeloColumnas.grids : Swift.Int"
+                  moduleName = "AdrianIraizos_Anime_SwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adrian/Desktop/xCode/Bootcamp/Ejercicios/AdrianIraizos_Anime_SwiftUI/AdrianIraizos_Anime_SwiftUI/ModeloColumnas.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "5550B138-0536-4504-9FB6-5C0A609F2B0D - 4ed86d8c61432f99"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdrianIraizos_Anime_SwiftUI.ModeloColumnas.grids.getter : Swift.Int"
+                  moduleName = "AdrianIraizos_Anime_SwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adrian/Desktop/xCode/Bootcamp/Ejercicios/AdrianIraizos_Anime_SwiftUI/AdrianIraizos_Anime_SwiftUI/ModeloColumnas.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "112">
+               </Location>
+               <Location
+                  uuid = "5550B138-0536-4504-9FB6-5C0A609F2B0D - 1a4e65a35ae41b2d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdrianIraizos_Anime_SwiftUI.ModeloColumnas.grids.setter : Swift.Int"
+                  moduleName = "AdrianIraizos_Anime_SwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adrian/Desktop/xCode/Bootcamp/Ejercicios/AdrianIraizos_Anime_SwiftUI/AdrianIraizos_Anime_SwiftUI/ModeloColumnas.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "120">
+               </Location>
+               <Location
+                  uuid = "5550B138-0536-4504-9FB6-5C0A609F2B0D - 451066672ab972b4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdrianIraizos_Anime_SwiftUI.ModeloColumnas.grids.modify : Swift.Int"
+                  moduleName = "AdrianIraizos_Anime_SwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adrian/Desktop/xCode/Bootcamp/Ejercicios/AdrianIraizos_Anime_SwiftUI/AdrianIraizos_Anime_SwiftUI/ModeloColumnas.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "5550B138-0536-4504-9FB6-5C0A609F2B0D - bce3889bc15ca9a3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdrianIraizos_Anime_SwiftUI.ModeloColumnas.grids.modify : Swift.Int with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "AdrianIraizos_Anime_SwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adrian/Desktop/xCode/Bootcamp/Ejercicios/AdrianIraizos_Anime_SwiftUI/AdrianIraizos_Anime_SwiftUI/ModeloColumnas.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "5550B138-0536-4504-9FB6-5C0A609F2B0D - f6dde733a9ae303e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdrianIraizos_Anime_SwiftUI.ModeloColumnas.$grids.getter : Combine.Published&lt;Swift.Int&gt;.Publisher"
+                  moduleName = "AdrianIraizos_Anime_SwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adrian/Desktop/xCode/Bootcamp/Ejercicios/AdrianIraizos_Anime_SwiftUI/AdrianIraizos_Anime_SwiftUI/ModeloColumnas.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "96">
+               </Location>
+               <Location
+                  uuid = "5550B138-0536-4504-9FB6-5C0A609F2B0D - 370a50879568c41a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdrianIraizos_Anime_SwiftUI.ModeloColumnas.$grids.setter : Combine.Published&lt;Swift.Int&gt;.Publisher"
+                  moduleName = "AdrianIraizos_Anime_SwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adrian/Desktop/xCode/Bootcamp/Ejercicios/AdrianIraizos_Anime_SwiftUI/AdrianIraizos_Anime_SwiftUI/ModeloColumnas.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "196">
+               </Location>
+               <Location
+                  uuid = "5550B138-0536-4504-9FB6-5C0A609F2B0D - 83942c9055a102f8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdrianIraizos_Anime_SwiftUI.ModeloColumnas.$grids.modify : Combine.Published&lt;Swift.Int&gt;.Publisher"
+                  moduleName = "AdrianIraizos_Anime_SwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adrian/Desktop/xCode/Bootcamp/Ejercicios/AdrianIraizos_Anime_SwiftUI/%3Ccompiler-generated%3E"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  uuid = "5550B138-0536-4504-9FB6-5C0A609F2B0D - 8a5d7fa02b79c928"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdrianIraizos_Anime_SwiftUI.ModeloColumnas.$grids.modify : Combine.Published&lt;Swift.Int&gt;.Publisher with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "AdrianIraizos_Anime_SwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adrian/Desktop/xCode/Bootcamp/Ejercicios/AdrianIraizos_Anime_SwiftUI/AdrianIraizos_Anime_SwiftUI/ModeloColumnas.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  uuid = "5550B138-0536-4504-9FB6-5C0A609F2B0D - 6d24808d3ab6625c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdrianIraizos_Anime_SwiftUI.ModeloColumnas.init() -&gt; AdrianIraizos_Anime_SwiftUI.ModeloColumnas"
+                  moduleName = "AdrianIraizos_Anime_SwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adrian/Desktop/xCode/Bootcamp/Ejercicios/AdrianIraizos_Anime_SwiftUI/AdrianIraizos_Anime_SwiftUI/ModeloColumnas.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "460">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FF0E26AD-5A6A-49F8-8D39-87442252BCDD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AdrianIraizos_Anime_SwiftUI/WatchedGridView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "FF0E26AD-5A6A-49F8-8D39-87442252BCDD - 2d3cc15894753b98"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;AdrianIraizos_Anime_SwiftUI.Anime&gt;, Swift.String, SwiftUI.NavigationLink&lt;&lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, Swift.Never&gt;&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.toolbar&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ToolbarContent&gt;(content: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0, SwiftUI.NavigationStack&lt;SwiftUI.NavigationPath, &lt;&lt;opaque return type of SwiftUI.View.toolbar&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ToolbarContent&gt;(content: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0&gt;)&gt; in AdrianIraizos_Anime_SwiftUI.WatchedGridView.body.getter : some"
+                  moduleName = "AdrianIraizos_Anime_SwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adrian/Desktop/xCode/Bootcamp/Ejercicios/AdrianIraizos_Anime_SwiftUI/AdrianIraizos_Anime_SwiftUI/WatchedGridView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "180">
+               </Location>
+               <Location
+                  uuid = "FF0E26AD-5A6A-49F8-8D39-87442252BCDD - b6377e7382bdcc04"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (AdrianIraizos_Anime_SwiftUI.Anime) -&gt; SwiftUI.NavigationLink&lt;&lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, Swift.Never&gt; in closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;AdrianIraizos_Anime_SwiftUI.Anime&gt;, Swift.String, SwiftUI.NavigationLink&lt;&lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, Swift.Never&gt;&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.toolbar&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ToolbarContent&gt;(content: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0, SwiftUI.NavigationStack&lt;SwiftUI.NavigationPath, &lt;&lt;opaque return type of SwiftUI.View.toolbar&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ToolbarContent&gt;(content: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0&gt;)&gt; in AdrianIraizos_Anime_SwiftUI.WatchedGridView.body.getter : some"
+                  moduleName = "AdrianIraizos_Anime_SwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adrian/Desktop/xCode/Bootcamp/Ejercicios/AdrianIraizos_Anime_SwiftUI/AdrianIraizos_Anime_SwiftUI/WatchedGridView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "328">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "71198499-8E17-4368-84B7-1F87AB2D1D1B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AdrianIraizos_Anime_SwiftUI/ModelPersistence.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "loadWatchedAnimes()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B5B99229-A414-4258-B182-403B81CE37CC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AdrianIraizos_Anime_SwiftUI/ModelPersistence.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "saveWatchedAnimes(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B5B99229-A414-4258-B182-403B81CE37CC - 35b33561a2acf92f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdrianIraizos_Anime_SwiftUI.ModelPersistence.saveWatchedAnimes(Swift.Array&lt;AdrianIraizos_Anime_SwiftUI.Anime&gt;) throws -&gt; ()"
+                  moduleName = "AdrianIraizos_Anime_SwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adrian/Desktop/xCode/Bootcamp/Ejercicios/AdrianIraizos_Anime_SwiftUI/AdrianIraizos_Anime_SwiftUI/ModelPersistence.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "272">
+               </Location>
+               <Location
+                  uuid = "B5B99229-A414-4258-B182-403B81CE37CC - 35b33561a2acf8ce"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdrianIraizos_Anime_SwiftUI.ModelPersistence.saveWatchedAnimes(Swift.Array&lt;AdrianIraizos_Anime_SwiftUI.Anime&gt;) throws -&gt; ()"
+                  moduleName = "AdrianIraizos_Anime_SwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adrian/Desktop/xCode/Bootcamp/Ejercicios/AdrianIraizos_Anime_SwiftUI/AdrianIraizos_Anime_SwiftUI/ModelPersistence.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "272">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4DFC6036-5E6F-4DFA-8227-BB8B5EBB0E76"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AdrianIraizos_Anime_SwiftUI/AnimeDetailView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

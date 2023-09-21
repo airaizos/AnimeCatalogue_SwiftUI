@@ -44,8 +44,6 @@ struct Star: Shape {
                 path.addLine(to: startPoint)
             }
         }
-        
-        
         return path
     }
 }
