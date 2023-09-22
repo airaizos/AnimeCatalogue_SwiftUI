@@ -9,22 +9,23 @@ import SwiftUI
 
 struct WatchedShapeView: View {
     var isHighlighted:Bool
+    var isOn: String
+    var isOff: String
+    var shape: Polygon
     
     var body: some View {
-        Image(systemName: isHighlighted ? "eye" : "eye.slash")
-            .font(.subheadline)
-            .foregroundColor(.gray)
+        Image(systemName: isHighlighted ? isOn : isOff)
+            .fontWeight(.ultraLight)
+            .font(.title2)
             .padding(5)
-            .contentShape(Polygon(sides:6))
             .background(
-             NeumorphicViewStyle(isHighlighted: isHighlighted, shape: Polygon(sides: 6))
-            )
+             NeumorphicViewStyle(isHighlighted: isHighlighted, shape: shape))
     }
 }
 
 struct WatchedSHapeView_Previews: PreviewProvider {
     static var previews: some View {
-        WatchedShapeView(isHighlighted: true)
+        WatchedShapeView(isHighlighted: true, isOn: "eye", isOff: "eye.slash", shape: Polygon(sides: 6))
             
     }
 }

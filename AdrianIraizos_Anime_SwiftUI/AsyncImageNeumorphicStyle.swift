@@ -33,7 +33,7 @@ struct AsyncImageNeumorphicStyle: View {
                     .shadow(color: .black.opacity(0.6), radius: 10, x:10,y:10)
                     .frame(width:width, height: height)
             } placeholder: {
-                Image(systemName: "film")
+                Image("placeholder")
                     .resizable()
                     .scaledToFit()
                     .cornerRadius(12)
@@ -46,5 +46,6 @@ struct AsyncImageNeumorphicStyle: View {
 struct AsyncImageNeumorphicStyle_Previews: PreviewProvider {
     static var previews: some View {
         AsyncImageNeumorphicStyle(imageURL: URL(string:"https://www3.animeflv.net/uploads/animes/covers/1115.jpg")!)
+        //https://www3.animeflv.net/uploads/animes/covers/1115.jpg
     }
 }

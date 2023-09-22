@@ -15,7 +15,8 @@ struct AnimeListCell: View {
             VStack{
                 Spacer()
                     Text(anime.title)
-                        .font(.headline)
+                        .font(.title2)
+                        .fontWeight(.light)
                         .foregroundColor(.darkStart)
                     
                     

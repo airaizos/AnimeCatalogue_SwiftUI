@@ -57,7 +57,7 @@ struct AnimesListView: View {
                                 .clipShape(Circle())
                                 .matchedGeometryEffect(id: "splash", in: namespace)
                         }
-                        .buttonStyle(FavoriteButtonStyle(color:.yellow))
+                        
                     }
                 }
                 .toolbar {

@@ -46,7 +46,6 @@ final class AnimesViewModel: ObservableObject {
         return generos
     }
     
-    
     func filterBy(_ type:Obra) -> [Anime] {
         animes.filter { $0.type == type }
     }
@@ -119,17 +118,6 @@ final class AnimesViewModel: ObservableObject {
     }
     
     //Detail
-    func upAndDownText(_ txt: String) -> AttributedString {
-        var result = AttributedString()
-        
-        for (index,letter) in txt.enumerated() {
-            var letterString = AttributedString(String(letter))
-            letterString.baselineOffset = sin(Double(index)) * 2
-            result += letterString
-        }
-        result.font = .largeTitle
-        return result
-    }
     
     func toggleWatched(anime:Anime) {
         switch watched.contains(anime) {
@@ -157,7 +145,6 @@ final class AnimesViewModel: ObservableObject {
             self.animes = []
         }
     }
-    
     
     //Watched
     var watched:[Anime] {

@@ -14,17 +14,9 @@ struct RecommendedAnime: View {
             Text(anime.title)
                 .font(.caption2)
                 .foregroundColor(.secondary)
-            AsyncImage(url: anime.image) { image in
-                image
-                    .resizable()
-                    .scaledToFit()
-                    .opacity(0.8)
-            } placeholder: {
-                Image(systemName: "popcorn")
-            }
-            .cornerRadius(12)
+            AsyncImageNeumorphicStyle(imageURL: anime.image,width: 65,height: 90)
         }
-        .frame(width: 190, height: 90)
+        .frame(width: 200)
     }
 }
 

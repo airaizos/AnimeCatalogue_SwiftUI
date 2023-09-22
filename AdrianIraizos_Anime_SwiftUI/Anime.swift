@@ -78,7 +78,9 @@ extension Anime {
     }
     
     
-    //var ovas:[Anime] { animes.filter { $0.type == .OVA } }
+    var genreView:String {
+        genres?.replacingOccurrences(of: ",", with: ", ") ?? ""
+    }
     
     
 }

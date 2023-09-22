@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AnimeStatusView: View {
     var status:(letra:String,color:Color)
-    var size:infoSize = .small
+    var size:infoSize = .large
     
     var body: some View {
         ZStack(alignment:.bottom){

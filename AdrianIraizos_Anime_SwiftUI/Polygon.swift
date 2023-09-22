@@ -40,3 +40,6 @@ struct Polygon: Shape {
         return path
     }
 }
+
+let rounde = RoundedRectangle(cornerRadius: 10)
+let pol = Polygon(sides: 6)

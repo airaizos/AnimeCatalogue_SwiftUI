@@ -24,7 +24,6 @@ final class ModeloColumnas: ObservableObject {
         }
     }
     
-    
     func setGridNum(_ cant:Int) {
         setGridSize(cant)
         gridItem = Array(repeating: flexibleGridItem, count: cant)

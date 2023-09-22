@@ -9,6 +9,8 @@ import SwiftUI
 
 @main
 struct AdrianIraizos_Anime_SwiftUIApp: App {
+    @Environment(\.userDevice) var device
+    
     @StateObject var viewModel = AnimesViewModel()
     @State var navigationState: NavigationState = .splash
     var body: some Scene {

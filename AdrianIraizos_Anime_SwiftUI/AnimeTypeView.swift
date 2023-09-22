@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AnimeTypeView: View {
     let type:(letra:String,color:Color)
-    var size:infoSize = .small
+    var size:infoSize = .large
     var body: some View {
         ZStack(alignment:.bottom){
             Text(type.letra)
