@@ -42,7 +42,7 @@ struct WatchedGridView: View {
                             }
                         } label: {
                             Image(systemName: "lane")
-                                .tint(Color.white)
+                                .tint(Color.black)
                         }
                     }
                     ToolbarItem(placement: .navigationBarTrailing) {
@@ -58,9 +58,9 @@ struct WatchedGridView: View {
                                 }
                             }
                         } label: {
-                            Image(systemName: "arrow.up.arrow.down")
-                                .tint(Color.white)
+                            
                             Text("\(viewModel.sorted.rawValue) \(viewModel.sortedAscending ? "↑" : "↓")")
+                                .foregroundColor(.black)
                                 .modifier(detailLabel())
                         }
                     }

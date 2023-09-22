@@ -31,6 +31,7 @@ extension View {
             let newOrder = colors.sorted(by: { $0.key < $1.key })
             return newOrder.map { $0.value }
         }
+        
         ///  los colores de grandient deben ser un ArrayLiteral, no he podido crearlos a través de un método
         return ZStack {
             ForEach(0..<2) { i in
@@ -44,7 +45,6 @@ extension View {
         }
         .offset(y: -(size * 0.25))
     }
-    
     
     func innerShadow<S: Shape>(using shape: S, angle: Angle = .degrees(0), color: Color = .black, width: CGFloat = 6, blur: CGFloat = 7 ) -> some View {
         
@@ -72,7 +72,6 @@ extension View {
                     .mask(shape)
                 )
                     
-
                 .shadow(color: color, radius: radius / 3)
                 .shadow(color: color, radius: radius / 3)
                 .shadow(color: color, radius: radius / 3)

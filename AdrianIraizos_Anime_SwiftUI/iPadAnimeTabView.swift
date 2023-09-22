@@ -34,5 +34,6 @@ struct iPadAnimeTabView_Previews: PreviewProvider {
     static var previews: some View {
         AnimeTabView(navigationState: .constant(.welcome),namespace: Namespace().wrappedValue)
             .environmentObject(AnimesViewModel.animesPreview)
+            .previewDevice(PreviewDevice(rawValue: "iPad (10th generation)"))
     }
 }

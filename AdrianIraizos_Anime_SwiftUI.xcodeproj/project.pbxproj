@@ -27,13 +27,13 @@
 		3A25B8E929E3196A0078D264 /* Anime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A25B8E829E3196A0078D264 /* Anime.swift */; };
 		3A25B8EB29E31FAA0078D264 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A25B8EA29E31FAA0078D264 /* Persistence.swift */; };
 		3A25B8ED29E32AD70078D264 /* animeTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A25B8EC29E32AD70078D264 /* animeTest.json */; };
-		3A25B8F029E32C760078D264 /* Protocolos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A25B8EF29E32C760078D264 /* Protocolos.swift */; };
+		3A25B8F029E32C760078D264 /* FileLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A25B8EF29E32C760078D264 /* FileLocation.swift */; };
 		3A25B8F229E32CD30078D264 /* FileProduction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A25B8F129E32CD30078D264 /* FileProduction.swift */; };
 		3A25B8F429E32CF90078D264 /* DataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A25B8F329E32CF90078D264 /* DataTest.swift */; };
 		3A25B8F629E32EB50078D264 /* AnimesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A25B8F529E32EB50078D264 /* AnimesViewModel.swift */; };
 		3A25B8FA29E330FE0078D264 /* AnimesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A25B8F929E330FE0078D264 /* AnimesListView.swift */; };
 		3A25B8FC29E3369F0078D264 /* AnimeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A25B8FB29E3369F0078D264 /* AnimeListCell.swift */; };
-		3A25B8FF29E33A8B0078D264 /* Extensiones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A25B8FE29E33A8B0078D264 /* Extensiones.swift */; };
+		3A25B8FF29E33A8B0078D264 /* ExtColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A25B8FE29E33A8B0078D264 /* ExtColor.swift */; };
 		3A25B90229E33C170078D264 /* DarkBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A25B90129E33C170078D264 /* DarkBackground.swift */; };
 		3A25B90429E3433D0078D264 /* LightBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A25B90329E3433C0078D264 /* LightBackground.swift */; };
 		3A3205A829F8133B001FE0FA /* Persistence_AdrianIraizos_Anime_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3205A729F8133B001FE0FA /* Persistence_AdrianIraizos_Anime_SwiftUITests.swift */; };
@@ -46,7 +46,7 @@
 		3A33CB3629E56F2700160AC3 /* AnimeStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A33CB3529E56F2700160AC3 /* AnimeStatusView.swift */; };
 		3A33CB3829E5712000160AC3 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A33CB3729E5712000160AC3 /* Triangle.swift */; };
 		3A33CB3A29E5727F00160AC3 /* AnimeTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A33CB3929E5727F00160AC3 /* AnimeTypeView.swift */; };
-		3A33CB3C29E57A4B00160AC3 /* ExtensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A33CB3B29E57A4B00160AC3 /* ExtensionView.swift */; };
+		3A33CB3C29E57A4B00160AC3 /* ExtView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A33CB3B29E57A4B00160AC3 /* ExtView.swift */; };
 		3A33CB3E29E59D3800160AC3 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A33CB3D29E59D3800160AC3 /* Enums.swift */; };
 		3A33CB4029E5A26100160AC3 /* AnimeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A33CB3F29E5A26100160AC3 /* AnimeDetailView.swift */; };
 		3A34830029F28B790079B129 /* WatchedGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3482FF29F28B790079B129 /* WatchedGridView.swift */; };
@@ -61,6 +61,9 @@
 		3AACBF2F29ED638700D0AEF0 /* WatchedShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AACBF2E29ED638700D0AEF0 /* WatchedShapeView.swift */; };
 		3AACBF3329ED8AEF00D0AEF0 /* NeumorphicViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AACBF3229ED8AEF00D0AEF0 /* NeumorphicViewStyle.swift */; };
 		3AACBF3529ED986B00D0AEF0 /* AsyncImageNeumorphicStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AACBF3429ED986B00D0AEF0 /* AsyncImageNeumorphicStyle.swift */; };
+		3AF60E412ABDAD190054BE52 /* ExtDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF60E402ABDAD190054BE52 /* ExtDevice.swift */; };
+		3AF60E432ABDAD2C0054BE52 /* ExtArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF60E422ABDAD2C0054BE52 /* ExtArray.swift */; };
+		3AF60E472ABDADA50054BE52 /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF60E462ABDADA50054BE52 /* ViewModifiers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,13 +99,13 @@
 		3A25B8E829E3196A0078D264 /* Anime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anime.swift; sourceTree = "<group>"; };
 		3A25B8EA29E31FAA0078D264 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		3A25B8EC29E32AD70078D264 /* animeTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = animeTest.json; sourceTree = "<group>"; };
-		3A25B8EF29E32C760078D264 /* Protocolos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocolos.swift; sourceTree = "<group>"; };
+		3A25B8EF29E32C760078D264 /* FileLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileLocation.swift; sourceTree = "<group>"; };
 		3A25B8F129E32CD30078D264 /* FileProduction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileProduction.swift; sourceTree = "<group>"; };
 		3A25B8F329E32CF90078D264 /* DataTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTest.swift; sourceTree = "<group>"; };
 		3A25B8F529E32EB50078D264 /* AnimesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimesViewModel.swift; sourceTree = "<group>"; };
 		3A25B8F929E330FE0078D264 /* AnimesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimesListView.swift; sourceTree = "<group>"; };
 		3A25B8FB29E3369F0078D264 /* AnimeListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeListCell.swift; sourceTree = "<group>"; };
-		3A25B8FE29E33A8B0078D264 /* Extensiones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensiones.swift; sourceTree = "<group>"; };
+		3A25B8FE29E33A8B0078D264 /* ExtColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtColor.swift; sourceTree = "<group>"; };
 		3A25B90129E33C170078D264 /* DarkBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkBackground.swift; sourceTree = "<group>"; };
 		3A25B90329E3433C0078D264 /* LightBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightBackground.swift; sourceTree = "<group>"; };
 		3A3205A529F8133B001FE0FA /* AdrianIraizos_Anime_SwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdrianIraizos_Anime_SwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,7 +119,7 @@
 		3A33CB3529E56F2700160AC3 /* AnimeStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeStatusView.swift; sourceTree = "<group>"; };
 		3A33CB3729E5712000160AC3 /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
 		3A33CB3929E5727F00160AC3 /* AnimeTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeTypeView.swift; sourceTree = "<group>"; };
-		3A33CB3B29E57A4B00160AC3 /* ExtensionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionView.swift; sourceTree = "<group>"; };
+		3A33CB3B29E57A4B00160AC3 /* ExtView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtView.swift; sourceTree = "<group>"; };
 		3A33CB3D29E59D3800160AC3 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		3A33CB3F29E5A26100160AC3 /* AnimeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeDetailView.swift; sourceTree = "<group>"; };
 		3A3482FF29F28B790079B129 /* WatchedGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchedGridView.swift; sourceTree = "<group>"; };
@@ -131,6 +134,9 @@
 		3AACBF2E29ED638700D0AEF0 /* WatchedShapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchedShapeView.swift; sourceTree = "<group>"; };
 		3AACBF3229ED8AEF00D0AEF0 /* NeumorphicViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumorphicViewStyle.swift; sourceTree = "<group>"; };
 		3AACBF3429ED986B00D0AEF0 /* AsyncImageNeumorphicStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageNeumorphicStyle.swift; sourceTree = "<group>"; };
+		3AF60E402ABDAD190054BE52 /* ExtDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtDevice.swift; sourceTree = "<group>"; };
+		3AF60E422ABDAD2C0054BE52 /* ExtArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtArray.swift; sourceTree = "<group>"; };
+		3AF60E462ABDADA50054BE52 /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,7 +222,7 @@
 		3A14C3DF29F15434009FDF45 /* System */ = {
 			isa = PBXGroup;
 			children = (
-				3A25B8D629E3181A0078D264 /* AdrianIraizos_Anime_SwiftUIApp.swift */,
+				3A25B8E429E3184A0078D264 /* Resources */,
 				3A25B8DA29E3181B0078D264 /* Assets.xcassets */,
 				3A14C3E229F177E2009FDF45 /* Info.plist */,
 				3A11B4AB2ABC7E4D008F8172 /* ValoresEnvironment.swift */,
@@ -253,12 +259,12 @@
 		3A25B8D529E3181A0078D264 /* AdrianIraizos_Anime_SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				3A14C3DF29F15434009FDF45 /* System */,
-				3A20711A29ED45090000BF39 /* ViewModel */,
-				3A25B8FD29E33A7D0078D264 /* Helpers */,
-				3A25B8F829E330EE0078D264 /* View */,
+				3A25B8D629E3181A0078D264 /* AdrianIraizos_Anime_SwiftUIApp.swift */,
 				3A25B8E729E3187A0078D264 /* Model */,
-				3A25B8E429E3184A0078D264 /* Resources */,
+				3A25B8F829E330EE0078D264 /* View */,
+				3A20711A29ED45090000BF39 /* ViewModel */,
+				3A14C3DF29F15434009FDF45 /* System */,
+				3A25B8FD29E33A7D0078D264 /* Helpers */,
 				3A25B8DC29E3181B0078D264 /* Preview Content */,
 			);
 			path = AdrianIraizos_Anime_SwiftUI;
@@ -312,15 +318,9 @@
 		3A25B8FD29E33A7D0078D264 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				3A25B8FE29E33A8B0078D264 /* Extensiones.swift */,
-				3A33CB2B29E5441000160AC3 /* Star.swift */,
-				3A33CB2D29E544CF00160AC3 /* Polygon.swift */,
-				3A33CB2F29E545D000160AC3 /* Rhombus.swift */,
-				3A33CB3129E5503C00160AC3 /* Points.swift */,
-				3A33CB3729E5712000160AC3 /* Triangle.swift */,
-				3A33CB3B29E57A4B00160AC3 /* ExtensionView.swift */,
+				3AF60E442ABDAD390054BE52 /* Extensiones */,
 				3A33CB3D29E59D3800160AC3 /* Enums.swift */,
-				3A25B8EF29E32C760078D264 /* Protocolos.swift */,
+				3A25B8EF29E32C760078D264 /* FileLocation.swift */,
 				3A25B8F129E32CD30078D264 /* FileProduction.swift */,
 			);
 			name = Helpers;
@@ -357,6 +357,8 @@
 		3A3E341929EE8D4000B76B5E /* ViewComponents */ = {
 			isa = PBXGroup;
 			children = (
+				3AF60E452ABDAD950054BE52 /* ViewModifiers */,
+				3AF60E3F2ABDACCE0054BE52 /* Shapes */,
 				3AC72FA82ABC8AE5000B0984 /* Grids */,
 				3A11B4A82ABC6036008F8172 /* Detail */,
 				3A11B4A72ABC6014008F8172 /* List */,
@@ -372,6 +374,37 @@
 				3A14C3E629F1AA99009FDF45 /* GridBackground.swift */,
 			);
 			name = Grids;
+			sourceTree = "<group>";
+		};
+		3AF60E3F2ABDACCE0054BE52 /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				3A33CB2B29E5441000160AC3 /* Star.swift */,
+				3A33CB2D29E544CF00160AC3 /* Polygon.swift */,
+				3A33CB2F29E545D000160AC3 /* Rhombus.swift */,
+				3A33CB3129E5503C00160AC3 /* Points.swift */,
+				3A33CB3729E5712000160AC3 /* Triangle.swift */,
+			);
+			name = Shapes;
+			sourceTree = "<group>";
+		};
+		3AF60E442ABDAD390054BE52 /* Extensiones */ = {
+			isa = PBXGroup;
+			children = (
+				3AF60E402ABDAD190054BE52 /* ExtDevice.swift */,
+				3AF60E422ABDAD2C0054BE52 /* ExtArray.swift */,
+				3A25B8FE29E33A8B0078D264 /* ExtColor.swift */,
+				3A33CB3B29E57A4B00160AC3 /* ExtView.swift */,
+			);
+			name = Extensiones;
+			sourceTree = "<group>";
+		};
+		3AF60E452ABDAD950054BE52 /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				3AF60E462ABDADA50054BE52 /* ViewModifiers.swift */,
+			);
+			name = ViewModifiers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -480,7 +513,7 @@
 				3A25B8F629E32EB50078D264 /* AnimesViewModel.swift in Sources */,
 				3A14C3DE29F151F6009FDF45 /* FlipView.swift in Sources */,
 				3A25B8D729E3181A0078D264 /* AdrianIraizos_Anime_SwiftUIApp.swift in Sources */,
-				3A33CB3C29E57A4B00160AC3 /* ExtensionView.swift in Sources */,
+				3A33CB3C29E57A4B00160AC3 /* ExtView.swift in Sources */,
 				3A25B8FA29E330FE0078D264 /* AnimesListView.swift in Sources */,
 				3A21F0FC29E7113B00ACCC83 /* LoadingView.swift in Sources */,
 				3A34830929F2EE380079B129 /* iPadAnimeTabView.swift in Sources */,
@@ -491,10 +524,11 @@
 				3A11B49F2ABC57FB008F8172 /* NewmorphicStrokeStyle.swift in Sources */,
 				3A14C3DC29F15086009FDF45 /* LaunchScreenView.swift in Sources */,
 				3A3E341D29EEAEA600B76B5E /* AnimeTabView.swift in Sources */,
-				3A25B8FF29E33A8B0078D264 /* Extensiones.swift in Sources */,
+				3A25B8FF29E33A8B0078D264 /* ExtColor.swift in Sources */,
 				3A33CB3229E5503C00160AC3 /* Points.swift in Sources */,
 				3A25B90429E3433D0078D264 /* LightBackground.swift in Sources */,
 				3A14C3E529F17A1E009FDF45 /* OpenAnimation.swift in Sources */,
+				3AF60E432ABDAD2C0054BE52 /* ExtArray.swift in Sources */,
 				3A33CB2C29E5441000160AC3 /* Star.swift in Sources */,
 				3A11B4A62ABC5D75008F8172 /* WelcomeLogoView.swift in Sources */,
 				3A33CB2E29E544CF00160AC3 /* Polygon.swift in Sources */,
@@ -511,6 +545,7 @@
 				3A25B8F429E32CF90078D264 /* DataTest.swift in Sources */,
 				3A11B4AA2ABC615C008F8172 /* ModeloColumnas.swift in Sources */,
 				3A25B8EB29E31FAA0078D264 /* Persistence.swift in Sources */,
+				3AF60E472ABDADA50054BE52 /* ViewModifiers.swift in Sources */,
 				3A33CB4029E5A26100160AC3 /* AnimeDetailView.swift in Sources */,
 				3A33CB3029E545D000160AC3 /* Rhombus.swift in Sources */,
 				3A34830029F28B790079B129 /* WatchedGridView.swift in Sources */,
@@ -520,7 +555,8 @@
 				3AACBF2F29ED638700D0AEF0 /* WatchedShapeView.swift in Sources */,
 				3A14C3E729F1AA99009FDF45 /* GridBackground.swift in Sources */,
 				3A11B4AC2ABC7E4D008F8172 /* ValoresEnvironment.swift in Sources */,
-				3A25B8F029E32C760078D264 /* Protocolos.swift in Sources */,
+				3AF60E412ABDAD190054BE52 /* ExtDevice.swift in Sources */,
+				3A25B8F029E32C760078D264 /* FileLocation.swift in Sources */,
 				3A34830429F2D17F0079B129 /* ShareAnimeView.swift in Sources */,
 				3A25B90229E33C170078D264 /* DarkBackground.swift in Sources */,
 				3A34830729F2D9CD0079B129 /* iPadAnimesListView.swift in Sources */,

@@ -46,9 +46,8 @@ struct iPadAnimesListView: View {
                             }
                         }
                     } label: {
-                        Image(systemName: "arrow.up.arrow.down")
-                            .tint(Color.gray)
                         Text("\(viewModel.sorted.rawValue) \(viewModel.sortedAscending ? "↑" : "↓")")
+                            .tint(Color.black)
                             .modifier(detailLabel())
                     }
                 }
@@ -71,6 +70,6 @@ struct iPadAnimesListView_Previews: PreviewProvider {
     static var previews: some View {
         AnimesListView(navigationState: .constant(.home),namespace: Namespace().wrappedValue)
             .environmentObject(AnimesViewModel.animesPreview)
-        
+            .previewDevice(PreviewDevice(rawValue: "iPad (10th generation)"))
     }
 }

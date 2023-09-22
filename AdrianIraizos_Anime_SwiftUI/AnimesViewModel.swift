@@ -118,7 +118,6 @@ final class AnimesViewModel: ObservableObject {
     }
     
     //Detail
-    
     func toggleWatched(anime:Anime) {
         switch watched.contains(anime) {
         case true: watched.removeAll() { $0 == anime }
