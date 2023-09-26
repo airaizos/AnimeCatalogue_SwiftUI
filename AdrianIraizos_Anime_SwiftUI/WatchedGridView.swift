@@ -18,7 +18,7 @@ struct WatchedGridView: View {
             NavigationStack {
                 ScrollView {
                     LazyVGrid(columns: grid.gridItem) {
-                        ForEach(viewModel.watchedAnimes) { anime in
+                        ForEach(viewModel.watched) { anime in
                             NavigationLink(value: anime) {
                                 AnimeGridCellView(anime: anime,titleColor: .gray,infoSize: grid.size)
                                     .frame(alignment: .top)

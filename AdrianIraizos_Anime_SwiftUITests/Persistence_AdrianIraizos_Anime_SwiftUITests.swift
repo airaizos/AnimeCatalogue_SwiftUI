@@ -28,7 +28,6 @@ final class Persistence_Anime_Tests: XCTestCase {
         
         XCTAssertEqual(animes.count, 6)
     }
-    
  
     func test_IsLoading_WatchedAnimes() throws{
         let watched = try persistence.loadWatchedAnimes()

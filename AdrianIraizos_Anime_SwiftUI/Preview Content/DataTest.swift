@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct FilePreview:FileLocation {
+struct FilePreview: FileLocation {
     var fileAnimesURL: URL {
-           Bundle.main.url(forResource: "animeTest", withExtension: "json")!
+           Bundle.main.url(forResource: "animePreview", withExtension: "json")!
        }
        var fileWatchedURL: URL {
-           Bundle.main.url(forResource: "watchedTest", withExtension: "json")!
+           Bundle.main.url(forResource: "watchedPreview", withExtension: "json")!
        }
 }
 

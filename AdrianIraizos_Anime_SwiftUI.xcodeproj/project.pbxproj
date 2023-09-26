@@ -41,13 +41,11 @@
 		3A3205AF29F8223E001FE0FA /* ViewModel_AdrianIraizos_Anime_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3205AE29F8223E001FE0FA /* ViewModel_AdrianIraizos_Anime_SwiftUITests.swift */; };
 		3A33CB2C29E5441000160AC3 /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A33CB2B29E5441000160AC3 /* Star.swift */; };
 		3A33CB2E29E544CF00160AC3 /* Polygon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A33CB2D29E544CF00160AC3 /* Polygon.swift */; };
-		3A33CB3029E545D000160AC3 /* Rhombus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A33CB2F29E545D000160AC3 /* Rhombus.swift */; };
 		3A33CB3229E5503C00160AC3 /* Points.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A33CB3129E5503C00160AC3 /* Points.swift */; };
 		3A33CB3429E5543C00160AC3 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A33CB3329E5543C00160AC3 /* RatingView.swift */; };
 		3A33CB3629E56F2700160AC3 /* AnimeStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A33CB3529E56F2700160AC3 /* AnimeStatusView.swift */; };
 		3A33CB3829E5712000160AC3 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A33CB3729E5712000160AC3 /* Triangle.swift */; };
 		3A33CB3A29E5727F00160AC3 /* AnimeTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A33CB3929E5727F00160AC3 /* AnimeTypeView.swift */; };
-		3A33CB3C29E57A4B00160AC3 /* ExtView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A33CB3B29E57A4B00160AC3 /* ExtView.swift */; };
 		3A33CB3E29E59D3800160AC3 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A33CB3D29E59D3800160AC3 /* Enums.swift */; };
 		3A33CB4029E5A26100160AC3 /* AnimeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A33CB3F29E5A26100160AC3 /* AnimeDetailView.swift */; };
 		3A34830029F28B790079B129 /* WatchedGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3482FF29F28B790079B129 /* WatchedGridView.swift */; };
@@ -57,9 +55,11 @@
 		3A3E341B29EE8FAC00B76B5E /* RecommendedAnime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3E341A29EE8FAC00B76B5E /* RecommendedAnime.swift */; };
 		3A3E341D29EEAEA600B76B5E /* AnimeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3E341C29EEAEA600B76B5E /* AnimeTabView.swift */; };
 		3A3E342529EED25200B76B5E /* AnimeGridCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3E342429EED25200B76B5E /* AnimeGridCellView.swift */; };
-		3A5874D12AC2EB5E00FFBA18 /* watchedTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A3E342629EED7D900B76B5E /* watchedTest.json */; };
-		3A5874D22AC2EB5E00FFBA18 /* animeTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A25B8EC29E32AD70078D264 /* animeTest.json */; };
 		3A5874D52AC2F55D00FFBA18 /* AnimesViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5874D42AC2F55D00FFBA18 /* AnimesViewModelTest.swift */; };
+		3A5874D82AC324AD00FFBA18 /* watchedTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A5874D72AC324AD00FFBA18 /* watchedTest.json */; };
+		3A5874D92AC324B200FFBA18 /* animeTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A5874D62AC3248E00FFBA18 /* animeTest.json */; };
+		3A5874DA2AC324D000FFBA18 /* animePreview.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A25B8EC29E32AD70078D264 /* animePreview.json */; };
+		3A5874DB2AC324D000FFBA18 /* watchedPreview.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A3E342629EED7D900B76B5E /* watchedPreview.json */; };
 		3A826B2629F04B3F00708F83 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A826B2529F04B3F00708F83 /* WelcomeView.swift */; };
 		3AACBF2F29ED638700D0AEF0 /* WatchedShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AACBF2E29ED638700D0AEF0 /* WatchedShapeView.swift */; };
 		3AACBF3329ED8AEF00D0AEF0 /* NeumorphicViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AACBF3229ED8AEF00D0AEF0 /* NeumorphicViewStyle.swift */; };
@@ -103,7 +103,7 @@
 		3A25B8E529E318600078D264 /* anime.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = anime.json; sourceTree = "<group>"; };
 		3A25B8E829E3196A0078D264 /* Anime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anime.swift; sourceTree = "<group>"; };
 		3A25B8EA29E31FAA0078D264 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		3A25B8EC29E32AD70078D264 /* animeTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = animeTest.json; sourceTree = "<group>"; };
+		3A25B8EC29E32AD70078D264 /* animePreview.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = animePreview.json; sourceTree = "<group>"; };
 		3A25B8EF29E32C760078D264 /* FileLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileLocation.swift; sourceTree = "<group>"; };
 		3A25B8F129E32CD30078D264 /* FileProduction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileProduction.swift; sourceTree = "<group>"; };
 		3A25B8F329E32CF90078D264 /* DataTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTest.swift; sourceTree = "<group>"; };
@@ -118,13 +118,11 @@
 		3A3205AE29F8223E001FE0FA /* ViewModel_AdrianIraizos_Anime_SwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel_AdrianIraizos_Anime_SwiftUITests.swift; sourceTree = "<group>"; };
 		3A33CB2B29E5441000160AC3 /* Star.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Star.swift; sourceTree = "<group>"; };
 		3A33CB2D29E544CF00160AC3 /* Polygon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Polygon.swift; sourceTree = "<group>"; };
-		3A33CB2F29E545D000160AC3 /* Rhombus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rhombus.swift; sourceTree = "<group>"; };
 		3A33CB3129E5503C00160AC3 /* Points.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Points.swift; sourceTree = "<group>"; };
 		3A33CB3329E5543C00160AC3 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		3A33CB3529E56F2700160AC3 /* AnimeStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeStatusView.swift; sourceTree = "<group>"; };
 		3A33CB3729E5712000160AC3 /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
 		3A33CB3929E5727F00160AC3 /* AnimeTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeTypeView.swift; sourceTree = "<group>"; };
-		3A33CB3B29E57A4B00160AC3 /* ExtView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtView.swift; sourceTree = "<group>"; };
 		3A33CB3D29E59D3800160AC3 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		3A33CB3F29E5A26100160AC3 /* AnimeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeDetailView.swift; sourceTree = "<group>"; };
 		3A3482FF29F28B790079B129 /* WatchedGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchedGridView.swift; sourceTree = "<group>"; };
@@ -134,8 +132,10 @@
 		3A3E341A29EE8FAC00B76B5E /* RecommendedAnime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedAnime.swift; sourceTree = "<group>"; };
 		3A3E341C29EEAEA600B76B5E /* AnimeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeTabView.swift; sourceTree = "<group>"; };
 		3A3E342429EED25200B76B5E /* AnimeGridCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeGridCellView.swift; sourceTree = "<group>"; };
-		3A3E342629EED7D900B76B5E /* watchedTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = watchedTest.json; sourceTree = "<group>"; };
+		3A3E342629EED7D900B76B5E /* watchedPreview.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = watchedPreview.json; sourceTree = "<group>"; };
 		3A5874D42AC2F55D00FFBA18 /* AnimesViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimesViewModelTest.swift; sourceTree = "<group>"; };
+		3A5874D62AC3248E00FFBA18 /* animeTest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = animeTest.json; sourceTree = "<group>"; };
+		3A5874D72AC324AD00FFBA18 /* watchedTest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = watchedTest.json; sourceTree = "<group>"; };
 		3A826B2529F04B3F00708F83 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		3AACBF2E29ED638700D0AEF0 /* WatchedShapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchedShapeView.swift; sourceTree = "<group>"; };
 		3AACBF3229ED8AEF00D0AEF0 /* NeumorphicViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumorphicViewStyle.swift; sourceTree = "<group>"; };
@@ -166,6 +166,8 @@
 		3A0A76DC2AC1A2C200D79F83 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				3A5874D62AC3248E00FFBA18 /* animeTest.json */,
+				3A5874D72AC324AD00FFBA18 /* watchedTest.json */,
 				3A0A76DD2AC1A2D300D79F83 /* PersistenceTests.swift */,
 				3A0A76DF2AC1A2F800D79F83 /* FileTests.swift */,
 				3A5874D42AC2F55D00FFBA18 /* AnimesViewModelTest.swift */,
@@ -276,10 +278,10 @@
 			isa = PBXGroup;
 			children = (
 				3A25B8D629E3181A0078D264 /* AdrianIraizos_Anime_SwiftUIApp.swift */,
-				3A5874D32AC2ECBE00FFBA18 /* Persistence */,
 				3A25B8E729E3187A0078D264 /* Model */,
 				3A25B8F829E330EE0078D264 /* View */,
 				3A20711A29ED45090000BF39 /* ViewModel */,
+				3A5874D32AC2ECBE00FFBA18 /* Persistence */,
 				3A14C3DF29F15434009FDF45 /* System */,
 				3A25B8FD29E33A7D0078D264 /* Helpers */,
 				3A25B8DC29E3181B0078D264 /* Preview Content */,
@@ -291,6 +293,8 @@
 			isa = PBXGroup;
 			children = (
 				3A25B8F329E32CF90078D264 /* DataTest.swift */,
+				3A25B8EC29E32AD70078D264 /* animePreview.json */,
+				3A3E342629EED7D900B76B5E /* watchedPreview.json */,
 				3A25B8DD29E3181B0078D264 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -353,8 +357,6 @@
 		3A3205A629F8133B001FE0FA /* AdrianIraizos_Anime_SwiftUITests */ = {
 			isa = PBXGroup;
 			children = (
-				3A25B8EC29E32AD70078D264 /* animeTest.json */,
-				3A3E342629EED7D900B76B5E /* watchedTest.json */,
 				3A0A76DC2AC1A2C200D79F83 /* Helpers */,
 				3A3205A729F8133B001FE0FA /* Persistence_AdrianIraizos_Anime_SwiftUITests.swift */,
 				3A3205AE29F8223E001FE0FA /* ViewModel_AdrianIraizos_Anime_SwiftUITests.swift */,
@@ -406,7 +408,6 @@
 			children = (
 				3A33CB2B29E5441000160AC3 /* Star.swift */,
 				3A33CB2D29E544CF00160AC3 /* Polygon.swift */,
-				3A33CB2F29E545D000160AC3 /* Rhombus.swift */,
 				3A33CB3129E5503C00160AC3 /* Points.swift */,
 				3A33CB3729E5712000160AC3 /* Triangle.swift */,
 			);
@@ -419,7 +420,6 @@
 				3AF60E402ABDAD190054BE52 /* ExtDevice.swift */,
 				3AF60E422ABDAD2C0054BE52 /* ExtArray.swift */,
 				3A25B8FE29E33A8B0078D264 /* ExtColor.swift */,
-				3A33CB3B29E57A4B00160AC3 /* ExtView.swift */,
 			);
 			name = Extensiones;
 			sourceTree = "<group>";
@@ -513,6 +513,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A5874DB2AC324D000FFBA18 /* watchedPreview.json in Resources */,
+				3A5874DA2AC324D000FFBA18 /* animePreview.json in Resources */,
 				3A25B8DE29E3181B0078D264 /* Preview Assets.xcassets in Resources */,
 				3A25B8DB29E3181B0078D264 /* Assets.xcassets in Resources */,
 				3A25B8E629E318600078D264 /* anime.json in Resources */,
@@ -523,8 +525,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A5874D22AC2EB5E00FFBA18 /* animeTest.json in Resources */,
-				3A5874D12AC2EB5E00FFBA18 /* watchedTest.json in Resources */,
+				3A5874D92AC324B200FFBA18 /* animeTest.json in Resources */,
+				3A5874D82AC324AD00FFBA18 /* watchedTest.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,7 +540,6 @@
 				3A25B8F629E32EB50078D264 /* AnimesViewModel.swift in Sources */,
 				3A14C3DE29F151F6009FDF45 /* FlipView.swift in Sources */,
 				3A25B8D729E3181A0078D264 /* AdrianIraizos_Anime_SwiftUIApp.swift in Sources */,
-				3A33CB3C29E57A4B00160AC3 /* ExtView.swift in Sources */,
 				3A25B8FA29E330FE0078D264 /* AnimesListView.swift in Sources */,
 				3A21F0FC29E7113B00ACCC83 /* LoadingView.swift in Sources */,
 				3A34830929F2EE380079B129 /* iPadAnimeTabView.swift in Sources */,
@@ -572,7 +573,6 @@
 				3A25B8EB29E31FAA0078D264 /* Persistence.swift in Sources */,
 				3AF60E472ABDADA50054BE52 /* ViewModifiers.swift in Sources */,
 				3A33CB4029E5A26100160AC3 /* AnimeDetailView.swift in Sources */,
-				3A33CB3029E545D000160AC3 /* Rhombus.swift in Sources */,
 				3A34830029F28B790079B129 /* WatchedGridView.swift in Sources */,
 				3A3E342529EED25200B76B5E /* AnimeGridCellView.swift in Sources */,
 				3AACBF3329ED8AEF00D0AEF0 /* NeumorphicViewStyle.swift in Sources */,

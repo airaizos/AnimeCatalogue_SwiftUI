@@ -14,7 +14,6 @@ protocol Persistence {
 }
 
 class ModelPersistence: Persistence {
-    static let shared = ModelPersistence()
 
     var fileLocation:FileLocation
     

@@ -78,7 +78,7 @@ class AnimesViewModel: ObservableObject {
             sortedAscending.toggle()
             UserDefaults.standard.set(sorted.rawValue, forKey: "sortedBy")
             UserDefaults.standard.set(sortedAscending,forKey: "sortedAscending")
-            watchedAnimes = watched.sortAnime(sorted: sorted, sortedAscending: sortedAscending)
+            watched = watched.sortAnime(sorted: sorted, sortedAscending: sortedAscending)
         }
     }
     @Published var obraPicker = 0 {
@@ -94,10 +94,11 @@ class AnimesViewModel: ObservableObject {
     }
     @Published var recommendedGenre:String = "Aventuras"
     @Published var obraFilter:Obra = .All
-    @Published var watchedAnimes:[Anime] = []
+    @Published var watched:[Anime] = []
+    
     
     //MARK: - Init
-    init(persistence: ModelPersistence = .shared) {
+    init(persistence: ModelPersistence = ModelPersistence()) {
         self.persistence = persistence
         self.loading = true
         self.animes = []
@@ -146,17 +147,16 @@ class AnimesViewModel: ObservableObject {
         }
     }
     
-    //Watched
-    var watched:[Anime] {
-        didSet {
-            watchedAnimes = watched.sortAnime(sorted: sorted, sortedAscending: sortedAscending)
-            do {
-                try persistence.saveWatchedAnimes(watched)
-            } catch {
-                print("error")
-            }
-        }
-    }
+//    var watched:[Anime] {
+//        didSet {
+//            watchedAnimes = watched.sortAnime(sorted: sorted, sortedAscending: sortedAscending)
+//            do {
+//                try persistence.saveWatchedAnimes(watched)
+//            } catch {
+//                print("error")
+//            }
+//        }
+//    }
     
     func getWatchedAnimes() async {
         do {

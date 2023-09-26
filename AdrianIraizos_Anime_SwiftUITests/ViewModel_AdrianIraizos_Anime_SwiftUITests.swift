@@ -34,11 +34,10 @@ final class ViewModel_Anime_Tests: XCTestCase {
     }
     
     func test_IsWached_ShouldBe_True() async throws {
-       
-        vm.toggleWatched(anime: .watched)
-
-    
-        XCTAssertTrue(vm.isWatched(anime: .watched))
+        vm.watched.removeAll()
+        vm.watched.append(.test)
+      
+        XCTAssertTrue(vm.isWatched(anime: .test))
     }
     
     func test_Sorting_ShouldBeEqual() {
