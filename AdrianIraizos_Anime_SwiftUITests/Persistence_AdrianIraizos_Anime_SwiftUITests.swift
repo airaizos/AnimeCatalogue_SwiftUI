@@ -47,4 +47,5 @@ final class AdrianIraizos_Anime_SwiftUITests: XCTestCase {
         XCTAssertTrue(nuevosAnimes.contains(test))
         XCTAssertEqual(animes.count, nuevosAnimes.count)
     }
+    
 }

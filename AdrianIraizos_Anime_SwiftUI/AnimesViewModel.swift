@@ -7,8 +7,9 @@
 
 import Foundation
 
-final class AnimesViewModel: ObservableObject {
+class AnimesViewModel: ObservableObject {
     let persistence: Persistence
+    
     var animes:[Anime]
     var sortedAscending = true
     
@@ -35,7 +36,7 @@ final class AnimesViewModel: ObservableObject {
         }
     }
     
-    private var genres:Set<String> {
+    var genres:Set<String> {
         var generos:Set<String> = []
         animes.compactMap(\.genres).forEach { varios in
             let parts  = varios.split(separator: ",")
