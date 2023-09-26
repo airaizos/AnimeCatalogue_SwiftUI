@@ -10,7 +10,7 @@ import Foundation
 @testable import AdrianIraizos_Anime_SwiftUI
 struct FileTests: FileLocation {
     
-    let bundle = Bundle(for: AdrianIraizos_Anime_SwiftUITests.self)
+    let bundle = Bundle(for: Persistence_Anime_Tests.self)
     
     var fileAnimesURL: URL {
         bundle.url(forResource: "animeTest", withExtension: "json")!

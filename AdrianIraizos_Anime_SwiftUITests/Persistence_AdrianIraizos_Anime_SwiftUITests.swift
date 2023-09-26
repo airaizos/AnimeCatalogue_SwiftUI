@@ -8,7 +8,7 @@
 import XCTest
 @testable import AdrianIraizos_Anime_SwiftUI
 
-final class AdrianIraizos_Anime_SwiftUITests: XCTestCase {
+final class Persistence_Anime_Tests: XCTestCase {
     var persistence: ModelPersistence!
     var fileLocation: FileLocation!
  
