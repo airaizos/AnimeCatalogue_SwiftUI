@@ -13,7 +13,7 @@ protocol Persistence {
     func saveWatchedAnimes(_ animes:[Anime]) throws
 }
 
-class ModelPersistence:Persistence {
+class ModelPersistence: Persistence {
     static let shared = ModelPersistence()
     
     let fileLocation:FileLocation

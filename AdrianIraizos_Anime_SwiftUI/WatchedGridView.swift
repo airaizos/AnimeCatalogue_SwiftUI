@@ -75,7 +75,7 @@ struct WatchedGridView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
             WatchedGridView(grid: ModeloColumnas())
-                .environmentObject(AnimesViewModel(persistence: PersistenceTest(fileLocation: FilePreview())))
+                .environmentObject(AnimesViewModel(persistence: ModelPersistence(fileLocation: FilePreview())))
             
         }
     }

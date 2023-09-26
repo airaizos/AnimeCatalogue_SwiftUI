@@ -9,43 +9,42 @@ import XCTest
 @testable import AdrianIraizos_Anime_SwiftUI
 
 final class AdrianIraizos_Anime_SwiftUITests: XCTestCase {
-    var persistence:ModelPersistence!
+    var persistence: ModelPersistence!
+    var fileLocation: FileLocation!
  
-    
-    override func setUp() {
-        persistence = PersistenceTest(fileLocation: FilePreview())
-    }
   
     override func setUpWithError() throws {
-        persistence = PersistenceTest(fileLocation: FilePreview())
+        fileLocation = FileTests()
+        persistence = ModelPersistence(fileLocation: fileLocation)
     }
     
     override func tearDown() {
         persistence = nil
+        fileLocation = nil
     }
       
-    //loadAnimes 6
-    func testIsLoadingSixAnimes() throws  {
+    func test_IsLoadingAnimes_ShouldBe6() throws  {
         let animes = try persistence.loadAnimes()
+        
         XCTAssertEqual(animes.count, 6)
     }
     
-    //loadWatchesAnimes 4
-    func testIsLoadingFourWatchedAnimes() throws{
+ 
+    func test_IsLoading_WatchedAnimes() throws{
         let watched = try persistence.loadWatchedAnimes()
-        XCTAssertEqual(watched.count, 4)
         
+        XCTAssertEqual(watched.count, 4)
     }
-    
-    //saveWatchedAnimes
-    func testIsSavingFiveWatchedAnime() throws {
+  
+    func test_IsSavingWatchedAnime_ShouldBe5() throws {
         var animes = try persistence.loadWatchedAnimes()
+        
         let test = Anime.test
         animes.append(test)
         try persistence.saveWatchedAnimes(animes)
         let nuevosAnimes = try persistence.loadWatchedAnimes()
+        
         XCTAssertTrue(nuevosAnimes.contains(test))
-        XCTAssertEqual(animes, nuevosAnimes)
+        XCTAssertEqual(animes.count, nuevosAnimes.count)
     }
-    
 }

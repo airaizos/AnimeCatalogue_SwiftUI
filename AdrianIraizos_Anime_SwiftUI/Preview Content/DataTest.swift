@@ -40,20 +40,3 @@ extension Anime {
 }
 
 
-final class PersistenceTest:ModelPersistence {
-    static let sharedTest = PersistenceTest(fileLocation: FilePreview())
-
-    override func loadAnimes() throws -> [Anime] {
-        
-           let data = try Data(contentsOf: fileLocation.fileAnimesURL)
-           return try JSONDecoder().decode([Anime].self, from: data)
-       }
-    
-    override func loadWatchedAnimes() throws -> [Anime] {
-    
-        let data = try Data(contentsOf: fileLocation.fileWatchedURL)
-        return try JSONDecoder().decode([Anime].self, from: data)
-    }
-    
-    
-}

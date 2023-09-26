@@ -25,21 +25,24 @@ final class ViewModel_AdrianIraizos_Anime_SwiftUITests: XCTestCase {
     //isWatched
     func test_IsWached_ShouldBeFalse() {
         let animeNotWatched = Anime.test
+        
         XCTAssertFalse(vm.isWatched(anime: animeNotWatched))
     }
     
     func test_IsWached_ShouldBe_True() async throws {
         await vm.getData()
+        
         vm.watched.append(.watched)
     
         XCTAssertTrue(vm.isWatched(anime: .watched))
     }
     
-    //sortedAscending
     func test_Sorting_ShouldBeEqual() {
-        var animesSortedByTitleSortedAscendingFalse:[Anime] = [.test,.testShort,.testLong]
-        var animes:[Anime] = [.test,.testLong,.testShort]
+        let animesSortedByTitleSortedAscendingFalse:[Anime] = [.test,.testShort,.testLong]
+        let animes:[Anime] = [.test,.testLong,.testShort]
+        
         .sortAnime(sorted: .title, sortedAscending: true)
+        
         XCTAssertEqual(animesSortedByTitleSortedAscendingFalse, animes)
         
     }
