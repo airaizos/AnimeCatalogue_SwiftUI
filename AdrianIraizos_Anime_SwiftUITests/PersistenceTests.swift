@@ -7,19 +7,14 @@
 
 import Foundation
 
-@testable import AdrianIraizos_Anime_SwiftUI
-final class PersistenceTest:ModelPersistence {
-    static let sharedTest = PersistenceTest(fileLocation: FileTests())
+//Subclass para tests
 
-    override func loadAnimes() throws -> [Anime] {
-        
-           let data = try Data(contentsOf: fileLocation.fileAnimesURL)
-           return try JSONDecoder().decode([Anime].self, from: data)
-       }
-    
-    override func loadWatchedAnimes() throws -> [Anime] {
-    
-        let data = try Data(contentsOf: fileLocation.fileWatchedURL)
-        return try JSONDecoder().decode([Anime].self, from: data)
+@testable import AdrianIraizos_Anime_SwiftUI
+final class PersistenceTest: ModelPersistence {
+
+    override init(fileLocation: FileLocation = FileTests()) {
+        super.init()
+        self.fileLocation = fileLocation
     }
+    
 }

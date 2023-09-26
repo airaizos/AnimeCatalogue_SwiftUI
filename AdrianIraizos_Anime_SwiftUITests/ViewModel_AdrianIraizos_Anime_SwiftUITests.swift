@@ -22,7 +22,7 @@ final class ViewModel_AdrianIraizos_Anime_SwiftUITests: XCTestCase {
         vm = nil
     }
     
-    //isWatched
+
     func test_IsWached_ShouldBeFalse() {
         let animeNotWatched = Anime.test
         
@@ -54,4 +54,10 @@ final class ViewModel_AdrianIraizos_Anime_SwiftUITests: XCTestCase {
         XCTAssertEqual(vm.recommendedAnimes.count, 2)
         
     }
+    
+    func test_AnimesFilter() {
+        
+        
+    }
+    
 }

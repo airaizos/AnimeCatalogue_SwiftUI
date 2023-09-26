@@ -16,7 +16,7 @@ protocol Persistence {
 class ModelPersistence: Persistence {
     static let shared = ModelPersistence()
     
-    let fileLocation:FileLocation
+    var fileLocation:FileLocation
     
     init(fileLocation:FileLocation = FileProduction()) {
         self.fileLocation = fileLocation

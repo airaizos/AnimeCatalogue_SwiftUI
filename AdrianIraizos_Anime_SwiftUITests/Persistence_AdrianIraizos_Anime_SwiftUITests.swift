@@ -15,7 +15,7 @@ final class AdrianIraizos_Anime_SwiftUITests: XCTestCase {
   
     override func setUpWithError() throws {
         fileLocation = FileTests()
-        persistence = ModelPersistence(fileLocation: fileLocation)
+        persistence = PersistenceTest(fileLocation: fileLocation)
     }
     
     override func tearDown() {

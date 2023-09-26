@@ -96,7 +96,7 @@ final class AnimesViewModel: ObservableObject {
     @Published var watchedAnimes:[Anime] = []
     
     //MARK: - Init
-    init(persistence:ModelPersistence = .shared) {
+    init(persistence: ModelPersistence = .shared) {
         self.persistence = persistence
         self.loading = true
         self.animes = []
