@@ -16,6 +16,7 @@ struct AnimesListView: View {
     
     var body: some View {
             NavigationStack {
+                
                 ScrollView {
                     LazyVStack {
                         ForEach(viewModel.animesSearch) { anime in
@@ -46,6 +47,8 @@ struct AnimesListView: View {
                             
                         }
                         .pickerStyle(.inline)
+                        .background(RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.offWhite, lineWidth: 1))
                     }
                     
                     ToolbarItem(placement: .navigationBarLeading) {
@@ -60,6 +63,7 @@ struct AnimesListView: View {
                         
                     }
                 }
+                
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
                         
@@ -80,14 +84,17 @@ struct AnimesListView: View {
                                 .modifier(detailLabel())
                         }
                     }
+                    
+                }
             }
-        }
-        .task(priority: .high) {
-            await viewModel.getData()
-        }
+            .task(priority: .high) {
+                await viewModel.getData()
+            }
         
     }
 }
+
+
 
 struct AnimesListView_Previews: PreviewProvider {
     static var previews: some View {

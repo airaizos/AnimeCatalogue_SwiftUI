@@ -13,20 +13,22 @@ struct AnimeTabView: View {
     let namespace:Namespace.ID
     
     var body: some View {
-        TabView{
-            Group {
-                AnimesListView(navigationState: $navigationState, namespace: namespace)
-                    .environmentObject(viewModel)
-                    .tabItem {
-                        Label("Animes",systemImage: "australsign")
-                    }
-                WatchedGridView()
-                    .tabItem {
-                        Label("Watched",systemImage: "eye")
-                    }
+            TabView{
+                Group {
+                    AnimesListView(navigationState: $navigationState, namespace: namespace)
+                        .environmentObject(viewModel)
+                        .tabItem {
+                            Label("Animes",systemImage: "australsign")
+                        }
+                    WatchedGridView()
+                        .tabItem {
+                            Label("Watched",systemImage: "eye")
+                        }
+                        .badge(viewModel.watched.count)
+                }
             }
+            .tint(.b13254)
         }
-    }
 }
 
 struct AnimeTabView_Previews: PreviewProvider {

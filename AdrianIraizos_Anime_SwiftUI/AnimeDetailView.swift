@@ -9,24 +9,24 @@ import SwiftUI
 
 struct AnimeDetailView: View {
     @EnvironmentObject var viewModel:AnimesViewModel
-
+    
     let anime:Anime
     
     @State var shared = false
     var body: some View {
         ZStack {
             Color.offWhite
-                .edgesIgnoringSafeArea(.top)
-    
+                .ignoresSafeArea()
+            
             VStack {
-                    Text(anime.title)
+                Text(anime.title)
                     .modifier(titleLabelInfo())
                 
                 Text(anime.genreView)
                     .modifier(subtitleLabelInfo())
                 
                 ScrollView(showsIndicators:false) {
-                        
+                    
                     HStack(alignment:.top) {
                         VStack {
                             Text("followers")
@@ -38,7 +38,7 @@ struct AnimeDetailView: View {
                             Text("year")
                                 .modifier(detailLabel())
                             Text("\(anime.yearFormatted)")
-                             
+                            
                         }
                         Spacer()
                         VStack {
@@ -56,7 +56,7 @@ struct AnimeDetailView: View {
                     }
                     .modifier(detailLabelInfo())
                     .padding(.horizontal)
-
+                    
                     HStack {
                         AsyncImageNeumorphicStyle(imageURL: anime.image,width: 150 * 1.5,height: 210 * 1.5)
                     }
@@ -71,10 +71,10 @@ struct AnimeDetailView: View {
                                 .modifier(detailLabel())
                             
                             RatingView(rate: anime.rateDouble)
-                              
+                            
                         }
                         Spacer()
-                    
+                        
                         VStack {
                             Text("watched")
                                 .modifier(detailLabel())
@@ -90,12 +90,12 @@ struct AnimeDetailView: View {
                         VStack {
                             Text("votes")
                                 .modifier(detailLabel())
-                          
+                            
                             Text(anime.votesString)
                                 .modifier(detailLabelInfo())
                                 .padding(.top)
                         }
-                       
+                        
                         Spacer()
                         VStack {
                             Text("shared")
@@ -104,14 +104,14 @@ struct AnimeDetailView: View {
                                 shared.toggle()
                             } label: {
                                 WatchedShapeView(isHighlighted: true,isOn: "square.and.arrow.up.fill", isOff: "square.and.arrow.up.fill",shape: Polygon(sides: 10))
-
+                                
                             }
                             
                             .buttonStyle(NeumorphicButtonStyle(isActive: true))
                         }
                         Spacer()
                     }
-          
+                    
                     VStack(alignment:.leading, spacing:10) {
                         Text("summary")
                             .modifier(detailLabel())
@@ -124,63 +124,45 @@ struct AnimeDetailView: View {
                         }
                     }
                     .padding(.top)
-                  Divider()
-                        VStack(alignment: .leading,spacing:5) {
-                            Text("recommended for you")
-                                .modifier(detailLabel())
-                                .padding(.horizontal)
-                            ScrollView(.horizontal,showsIndicators: false) {
-                                HStack(spacing:15) {
+                    Divider()
+                    VStack(alignment: .leading,spacing:5) {
+                        Text("recommended for you")
+                            .modifier(detailLabel())
+                            .padding(.horizontal)
+                        ScrollView(.horizontal,showsIndicators: false) {
+                            HStack(spacing:15) {
+                                
+                                ForEach(viewModel.recommendedAnimes) { recommendend in
                                     
-                                    ForEach(viewModel.recommendedAnimes) { recommendend in
-                                     
-                                                NavigationLink(value: recommendend) {
-                                                    RecommendedAnime(anime: recommendend)
-                                                        .padding(.vertical,30)
-                                            }
-                                        
+                                    NavigationLink(value: recommendend) {
+                                        RecommendedAnime(anime: recommendend)
+                                            .padding(.vertical,30)
                                     }
+                                    
                                 }
                             }
                         }
                     }
+                    .onChange(of: viewModel.watched) { value in
+                        try?  viewModel.persistence.saveWatchedAnimes(value)
+                    }
+                }
                 .padding([.vertical,.horizontal])
-                }
-                .navigationTitle(anime.type.rawValue)
-                .navigationBarTitleDisplayMode(.inline)
-                
-//                .toolbar {
-//                    ToolbarItemGroup(placement: .navigationBarTrailing) {
-//                            Button {
-//                                viewModel.toggleWatched(anime: anime)
-//                            } label: {
-//                                Image(systemName: "eye")
-//                                    .foregroundColor(Color.gray)
-//                            }
-//                            .buttonStyle(NeumorphicButtonStyle(isActive: true))
-//                            Button {
-//                                shared.toggle()
-//                            } label: {
-//                                Image(systemName: "square.and.arrow.up.fill")
-//                                    .foregroundColor(Color.gray)
-//                            }
-//                            .buttonStyle(NeumorphicButtonStyle(isActive: true))
-//                    }
-//                    
-//                }
-                .sheet(isPresented: $shared) {
-                    ShareAnimeView(anime: anime)
-                }
             }
-   
+            .navigationTitle(anime.type.rawValue)
+            .navigationBarTitleDisplayMode(.inline)
+            .sheet(isPresented: $shared) {
+                ShareAnimeView(anime: anime)
+            }
         }
+    }
 }
 
 struct AnimeDetail_Previews: PreviewProvider {
     static var previews: some View {
-            NavigationStack {
-                AnimeDetailView(anime: .test)
-                    .environmentObject(AnimesViewModel())
+        NavigationStack {
+            AnimeDetailView(anime: .test)
+                .environmentObject(AnimesViewModel())
         }
     }
 }

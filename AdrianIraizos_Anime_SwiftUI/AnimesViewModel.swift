@@ -96,7 +96,6 @@ class AnimesViewModel: ObservableObject {
     @Published var obraFilter:Obra = .All
     @Published var watched:[Anime] = []
     
-    
     //MARK: - Init
     init(persistence: ModelPersistence = ModelPersistence()) {
         self.persistence = persistence
