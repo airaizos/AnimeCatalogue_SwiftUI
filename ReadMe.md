@@ -18,3 +18,8 @@ Catálogo de Animes
 * Posibilidad de compartir un anime
 * Soporte para iPad
 * Test Unitarios
+
+![](https://github.com/airaizos/AnimeCatalogue_SwiftUI/blob/df26d8eff88faf33a8d32325f075bc041a713280/anime0.png)
+![](https://github.com/airaizos/AnimeCatalogue_SwiftUI/blob/df26d8eff88faf33a8d32325f075bc041a713280/anime1.png)
+![](https://github.com/airaizos/AnimeCatalogue_SwiftUI/blob/df26d8eff88faf33a8d32325f075bc041a713280/anime2.png)
+![](https://github.com/airaizos/AnimeCatalogue_SwiftUI/blob/df26d8eff88faf33a8d32325f075bc041a713280/anime3.png)
