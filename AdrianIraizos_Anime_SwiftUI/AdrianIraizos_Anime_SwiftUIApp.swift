@@ -24,6 +24,7 @@ struct AdrianIraizos_Anime_SwiftUIApp: App {
                     }
                 }
                 .animation(.default, value: viewModel.loading)
+                .tint(.black)
         }
     }
 }

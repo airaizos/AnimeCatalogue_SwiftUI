@@ -17,7 +17,6 @@ struct AnimeDetailView: View {
         ZStack {
             Color.offWhite
                 .ignoresSafeArea()
-            
             VStack {
                 Text(anime.title)
                     .modifier(titleLabelInfo())
@@ -55,7 +54,6 @@ struct AnimeDetailView: View {
                         }
                     }
                     .modifier(detailLabelInfo())
-                    .padding(.horizontal)
                     
                     HStack {
                         AsyncImageNeumorphicStyle(imageURL: anime.image,width: 150 * 1.5,height: 210 * 1.5)
@@ -64,21 +62,16 @@ struct AnimeDetailView: View {
                     
                     //
                     HStack(alignment:.firstTextBaseline){
-                        Spacer()
+                     
                         VStack {
-                            
                             Text("rate")
                                 .modifier(detailLabel())
-                            
                             RatingView(rate: anime.rateDouble)
-                            
                         }
-                        Spacer()
-                        
+                      Spacer()
                         VStack {
                             Text("watched")
                                 .modifier(detailLabel())
-                            
                             Button {
                                 viewModel.toggleWatched(anime: anime)
                             } label: {
@@ -86,7 +79,7 @@ struct AnimeDetailView: View {
                             }
                             .buttonStyle(NeumorphicButtonStyle(isActive: true))
                         }
-                        Spacer()
+                      Spacer()
                         VStack {
                             Text("votes")
                                 .modifier(detailLabel())
@@ -95,8 +88,7 @@ struct AnimeDetailView: View {
                                 .modifier(detailLabelInfo())
                                 .padding(.top)
                         }
-                        
-                        Spacer()
+                      Spacer()
                         VStack {
                             Text("shared")
                                 .modifier(detailLabel())
@@ -109,7 +101,7 @@ struct AnimeDetailView: View {
                             
                             .buttonStyle(NeumorphicButtonStyle(isActive: true))
                         }
-                        Spacer()
+                    
                     }
                     
                     VStack(alignment:.leading, spacing:10) {

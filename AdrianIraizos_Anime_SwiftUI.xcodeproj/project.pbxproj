@@ -250,14 +250,6 @@
 			name = System;
 			sourceTree = "<group>";
 		};
-		3A20711A29ED45090000BF39 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				3A25B8F529E32EB50078D264 /* AnimesViewModel.swift */,
-			);
-			name = ViewModel;
-			sourceTree = "<group>";
-		};
 		3A25B8CA29E3181A0078D264 = {
 			isa = PBXGroup;
 			children = (
@@ -281,12 +273,12 @@
 			isa = PBXGroup;
 			children = (
 				3A25B8D629E3181A0078D264 /* AdrianIraizos_Anime_SwiftUIApp.swift */,
-				3A25B8E729E3187A0078D264 /* Model */,
-				3A25B8F829E330EE0078D264 /* View */,
-				3A20711A29ED45090000BF39 /* ViewModel */,
-				3A5874D32AC2ECBE00FFBA18 /* Persistence */,
+				3AB4421B2B7E271A00E0275D /* View */,
+				3AB4421A2B7E26EB00E0275D /* Helpers */,
+				3AB442192B7E26CE00E0275D /* Persistence */,
+				3AB442182B7E26A500E0275D /* ViewModel */,
+				3AB442172B7E269000E0275D /* Model */,
 				3A14C3DF29F15434009FDF45 /* System */,
-				3A25B8FD29E33A7D0078D264 /* Helpers */,
 				3A25B8DC29E3181B0078D264 /* Preview Content */,
 			);
 			path = AdrianIraizos_Anime_SwiftUI;
@@ -311,42 +303,6 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		3A25B8E729E3187A0078D264 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				3A25B8E829E3196A0078D264 /* Anime.swift */,
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
-		3A25B8F829E330EE0078D264 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				3A3E341929EE8D4000B76B5E /* ViewComponents */,
-				3A25B90029E33B5F0078D264 /* ViewHelpers */,
-				3A14C3DB29F15086009FDF45 /* LaunchScreenView.swift */,
-				3A826B2529F04B3F00708F83 /* WelcomeView.swift */,
-				3A14C3E029F15465009FDF45 /* InitialView.swift */,
-				3A3E341C29EEAEA600B76B5E /* AnimeTabView.swift */,
-				3A25B8F929E330FE0078D264 /* AnimesListView.swift */,
-				3A33CB3F29E5A26100160AC3 /* AnimeDetailView.swift */,
-				3A3482FF29F28B790079B129 /* WatchedGridView.swift */,
-				3A34830529F2D9A90079B129 /* iPad */,
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
-		3A25B8FD29E33A7D0078D264 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				3AF60E442ABDAD390054BE52 /* Extensiones */,
-				3A33CB3D29E59D3800160AC3 /* Enums.swift */,
-				3A25B8EF29E32C760078D264 /* FileLocation.swift */,
-				3A25B8F129E32CD30078D264 /* FileProduction.swift */,
-			);
-			name = Helpers;
-			sourceTree = "<group>";
-		};
 		3A25B90029E33B5F0078D264 /* ViewHelpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -355,6 +311,7 @@
 				3A11B4AD2ABC86E5008F8172 /* Animations */,
 			);
 			name = ViewHelpers;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		3A3205A629F8133B001FE0FA /* AdrianIraizos_Anime_SwiftUITests */ = {
@@ -374,6 +331,7 @@
 				3A34830629F2D9CD0079B129 /* iPadAnimesListView.swift */,
 			);
 			name = iPad;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		3A3E341929EE8D4000B76B5E /* ViewComponents */ = {
@@ -388,14 +346,59 @@
 				3A11B4A42ABC5D51008F8172 /* Welcome */,
 			);
 			name = ViewComponents;
+			path = ..;
 			sourceTree = "<group>";
 		};
-		3A5874D32AC2ECBE00FFBA18 /* Persistence */ = {
+		3AB442172B7E269000E0275D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3A25B8E829E3196A0078D264 /* Anime.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3AB442182B7E26A500E0275D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3A25B8F529E32EB50078D264 /* AnimesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3AB442192B7E26CE00E0275D /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
 				3A25B8EA29E31FAA0078D264 /* Persistence.swift */,
 			);
-			name = Persistence;
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		3AB4421A2B7E26EB00E0275D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				3AF60E442ABDAD390054BE52 /* Extensiones */,
+				3A33CB3D29E59D3800160AC3 /* Enums.swift */,
+				3A25B8EF29E32C760078D264 /* FileLocation.swift */,
+				3A25B8F129E32CD30078D264 /* FileProduction.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		3AB4421B2B7E271A00E0275D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3A3E341929EE8D4000B76B5E /* ViewComponents */,
+				3A25B90029E33B5F0078D264 /* ViewHelpers */,
+				3A14C3DB29F15086009FDF45 /* LaunchScreenView.swift */,
+				3A826B2529F04B3F00708F83 /* WelcomeView.swift */,
+				3A14C3E029F15465009FDF45 /* InitialView.swift */,
+				3A3E341C29EEAEA600B76B5E /* AnimeTabView.swift */,
+				3A25B8F929E330FE0078D264 /* AnimesListView.swift */,
+				3A33CB3F29E5A26100160AC3 /* AnimeDetailView.swift */,
+				3A3482FF29F28B790079B129 /* WatchedGridView.swift */,
+				3A34830529F2D9A90079B129 /* iPad */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		3AC72FA82ABC8AE5000B0984 /* Grids */ = {
@@ -425,6 +428,7 @@
 				3A25B8FE29E33A8B0078D264 /* ExtColor.swift */,
 			);
 			name = Extensiones;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		3AF60E452ABDAD950054BE52 /* ViewModifiers */ = {
