@@ -31,7 +31,7 @@ class AnimesViewModel: ObservableObject {
             case .Anime: return anime.type == .Anime
             case .Pelicula: return anime.type == .Pelicula
             case .Especial: return anime.type == .Especial
-            case .All: return true
+            case .Todos: return true
             }
         }
     }
@@ -88,12 +88,12 @@ class AnimesViewModel: ObservableObject {
             case 2: obraFilter = .Pelicula
             case 3: obraFilter = .Especial
             case 4: obraFilter = .Anime
-            default: obraFilter = .All
+            default: obraFilter = .Todos
             }
         }
     }
     @Published var recommendedGenre:String = "Aventuras"
-    @Published var obraFilter:Obra = .All
+    @Published var obraFilter:Obra = .Todos
     @Published var watched:[Anime] = []
     
     //MARK: - Init

@@ -179,23 +179,6 @@
 			name = Helpers;
 			sourceTree = "<group>";
 		};
-		3A11B4AD2ABC86E5008F8172 /* Animations */ = {
-			isa = PBXGroup;
-			children = (
-				3A14C3DD29F151F6009FDF45 /* FlipView.swift */,
-				3A14C3E429F17A1E009FDF45 /* OpenAnimation.swift */,
-			);
-			name = Animations;
-			sourceTree = "<group>";
-		};
-		3A11B4AF2ABC8A28008F8172 /* Grids */ = {
-			isa = PBXGroup;
-			children = (
-				3A11B4A92ABC615C008F8172 /* ModeloColumnas.swift */,
-			);
-			name = Grids;
-			sourceTree = "<group>";
-		};
 		3A14C3DF29F15434009FDF45 /* System */ = {
 			isa = PBXGroup;
 			children = (
@@ -264,8 +247,9 @@
 			isa = PBXGroup;
 			children = (
 				3A34830329F2D17F0079B129 /* ShareAnimeView.swift */,
-				3A11B4AF2ABC8A28008F8172 /* Grids */,
-				3A11B4AD2ABC86E5008F8172 /* Animations */,
+				3A11B4A92ABC615C008F8172 /* ModeloColumnas.swift */,
+				3A14C3DD29F151F6009FDF45 /* FlipView.swift */,
+				3A14C3E429F17A1E009FDF45 /* OpenAnimation.swift */,
 			);
 			name = ViewHelpers;
 			path = ..;

@@ -12,7 +12,7 @@ struct AnimesListView: View {
     @Binding var navigationState: NavigationState
     let namespace:Namespace.ID
     
-    @State var selectedObra:Obra = .All
+    @State var selectedObra:Obra = .Todos
     
     var body: some View {
         ScrollView {
@@ -20,8 +20,6 @@ struct AnimesListView: View {
                 ForEach(viewModel.animesSearch) { anime in
                     NavigationLink(value: anime) {
                         AnimeListCell(anime: anime)
-                            .padding(10)
-                            .background(LightBackground(isHighlighted: true, shape: RoundedRectangle(cornerRadius: 10)))
                     }
                 }
                 .padding(10)

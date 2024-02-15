@@ -11,36 +11,38 @@ struct AnimeListCell: View {
     let title: String
     let type: Obra
     let rate: Double
-    let statusIcon: IconLabel
-    let typeIcon: IconLabel
+    let statusIcon: String
+    let typeIcon: String
     let imageURL: URL
     var body: some View {
-        HStack(spacing:20) {
-            AsyncImageNeumorphicStyle(imageURL: imageURL)
-            VStack{
-                Spacer()
+        VStack{
+            HStack {
+                AsyncImageNeumorphicStyle(imageURL: imageURL)
+                VStack{
                     Text(title)
                         .font(.title2)
+                        .minimumScaleFactor(0.5)
                         .fontWeight(.light)
                         .foregroundColor(.darkStart)
-                    Text(type.rawValue)
-                        .font(.subheadline)
-                        .fontWeight(.bold)
-                        .foregroundColor(.gray)
-                    
-                        .shadow(color: .black, radius: 0.5,x:0.5,y:0.5)
-                Spacer()
-                HStack(alignment:.center) {
-                    RatingView(rate: rate,isGray: false)
-                    
-                    Spacer()
-                    AnimeStatusView(statusIcon: statusIcon)
-                    Spacer()
-                    AnimeTypeView(iconLabel: typeIcon)
                 }
+                .frame(maxWidth: .infinity)
             }
-            .frame(maxWidth: .infinity)
+            HStack(alignment:.center,spacing: 0) {
+                Spacer()
+                Text(type.rawValue)
+                    .font(.subheadline)
+                    .fontWeight(.bold)
+                    .foregroundColor(.gray)
+                
+                    .shadow(color: .black, radius: 0.5,x:0.5,y:0.5)
+                Spacer()
+                AnimeStatusView(letter: "\(rate)")
+                AnimeStatusView(letter: statusIcon)
+                AnimeStatusView(letter: typeIcon)
+            }
         }
+        .padding()
+        .background(LightBackground(isHighlighted: true, shape: RoundedRectangle(cornerRadius: 10)))
         .padding(.horizontal)
     }
 }

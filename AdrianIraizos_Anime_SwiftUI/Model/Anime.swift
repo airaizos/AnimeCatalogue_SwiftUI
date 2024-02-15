@@ -32,29 +32,19 @@ enum Estatus:String,Codable {
 }
 
 enum Obra:String,Codable,CaseIterable,Identifiable {
-    case OVA = "OVA", Anime = "Anime", Pelicula = "Película", Especial = "Especial", All = "Todas"
+    case OVA = "OVA", Anime = "Anime", Pelicula = "Película", Especial = "Especial", Todos = "Todas"
     
     var id: Obra { self }
 }
 
 extension Anime {
 
-    var statusIcon: IconLabel {
-        switch status {
-        case .EnEmision: return IconLabel("E",.blue)
-        case .Finalizado: return IconLabel("F",.red)
-        case .Proximamente: return IconLabel("P",.green)
-        }
+    var statusIcon: String {
+        status.rawValue.prefix(1).uppercased()
     }
     
-    var typeIcon:IconLabel {
-        switch type {
-        case .OVA: return IconLabel("O",.indigo)
-        case .Anime:return IconLabel("A",.orange)
-        case .Pelicula: return IconLabel("M",.brown)
-        case .Especial: return IconLabel("E",.purple)
-        case .All: return IconLabel("T",.black)
-        }
+    var typeIcon: String {
+        type.rawValue.prefix(1).uppercased()
     }
     
     var rateDouble: Double { Double(rate) ?? 0 }
