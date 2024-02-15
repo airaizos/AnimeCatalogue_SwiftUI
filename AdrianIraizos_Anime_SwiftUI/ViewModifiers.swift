@@ -13,6 +13,31 @@ struct detailLabel: ViewModifier {
             .foregroundColor(.gray)
             .font(.body)
             .padding(.bottom,3)
+            .background(
+                  RoundedRectangle(cornerRadius: 12)
+                      .fill(Color.offWhite)
+                      .shadow(color: Color.gray.opacity(0.4), radius: 20, x: -10, y: -10)
+                      .shadow(color: Color.white.opacity(0.9), radius: 20, x: 10, y: 10)
+                      .overlay(
+                          RoundedRectangle(cornerRadius: 12)
+                              .stroke(Color.gray.opacity(0.4), lineWidth: 1)
+                              .blur(radius: 1)
+                              .offset(x: 2, y: 2)
+                              .mask(RoundedRectangle(cornerRadius: 12).fill(LinearGradient(colors: [Color.black,Color.clear], startPoint: .topLeading, endPoint: .bottomTrailing)))
+                             
+                      )
+                      .overlay(
+                          RoundedRectangle(cornerRadius: 12)
+                              .stroke(Color.white.opacity(0.9), lineWidth: 1)
+                              .blur(radius: 1)
+                              .offset(x: -2, y: -2)
+                              .mask(RoundedRectangle(cornerRadius: 12).fill(LinearGradient(colors: [Color.black,Color.clear], startPoint: .topLeading, endPoint: .bottomTrailing)))
+                          
+                      )
+                      .padding(.horizontal,-20)
+              )
+           
+              .clipShape(RoundedRectangle(cornerRadius: 12))
     }
 }
 

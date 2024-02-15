@@ -29,7 +29,8 @@ struct InitialView: View {
                         iPadAnimeTabView(navigationState: $navigationState, namespace: namespace)
                             .transition(.push(from: .top))
                         
-                    } else { AnimeTabView(navigationState: $navigationState, namespace: namespace)
+                    } else {
+                        AnimeTabView(navigationState: $navigationState, namespace: namespace)
                             .transition(.push(from: .top))
                     }
                 }

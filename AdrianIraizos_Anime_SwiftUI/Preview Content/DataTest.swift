@@ -37,6 +37,8 @@ extension Anime {
     static var watched = Anime(title: "Ajin Part 1: Shoudou",
                                description: "Los Ajin son humanos que no pueden morir que aparecieron por primera vez en un campo de batalla en África hace 17 años. Desde entonces, se han ido descubriendo más entre el resto de miembros de la sociedad humana. Al ser tan poco comunes, el gobierno está dispuesto a recompensar generosamente a cualquiera que capture a uno para sus experimentos. En el presente, la vida de un estudiante de instituto normal llamado Kei da un giro de 180 grados cuando después de un accidente mortal descubre ser un Ajin. Con ayuda de su mejor amigo, Kei intentará ocultar al resto lo que es realmente, hasta que un grupo de Ajin lo encuentra y le ofrece unirse a ellos para preparar una ofensiva contra la humanidad.",
                                year: 2015, type: .Pelicula, rate: "4.4", status: .Finalizado, followers: 1033, episodes: 1, url: URL(string:"https://www3.animeflv.net/anime/ajin-part-1-shoudou")!, image: URL(string:"https://www3.animeflv.net/uploads/animes/covers/2402.jpg")!, votes: 92, genres: nil)
+    
+    static var samples: [Anime] = [.test, .testLong, .testShort, .watched]
 }
 
 

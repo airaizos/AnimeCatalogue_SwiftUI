@@ -29,7 +29,6 @@ struct LaunchScreenView: View {
             .scaleEffect(CGSize(width: spinning ? 1 : 0.1, height: spinning ? 1 : 0.1), anchor: .center)
             .matchedGeometryEffect(id: "splash", in: namespace)
         }
-
         .animation(.spring(response: 1,dampingFraction: 1), value:spinning)
         .onAppear {
             Task {

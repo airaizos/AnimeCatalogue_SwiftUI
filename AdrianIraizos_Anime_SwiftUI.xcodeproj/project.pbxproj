@@ -65,6 +65,7 @@
 		3AACBF2F29ED638700D0AEF0 /* WatchedShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AACBF2E29ED638700D0AEF0 /* WatchedShapeView.swift */; };
 		3AACBF3329ED8AEF00D0AEF0 /* NeumorphicViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AACBF3229ED8AEF00D0AEF0 /* NeumorphicViewStyle.swift */; };
 		3AACBF3529ED986B00D0AEF0 /* AsyncImageNeumorphicStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AACBF3429ED986B00D0AEF0 /* AsyncImageNeumorphicStyle.swift */; };
+		3AB4421D2B7E535E00E0275D /* RecommendedAnimesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB4421C2B7E535E00E0275D /* RecommendedAnimesList.swift */; };
 		3AF60E412ABDAD190054BE52 /* ExtDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF60E402ABDAD190054BE52 /* ExtDevice.swift */; };
 		3AF60E432ABDAD2C0054BE52 /* ExtArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF60E422ABDAD2C0054BE52 /* ExtArray.swift */; };
 		3AF60E472ABDADA50054BE52 /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF60E462ABDADA50054BE52 /* ViewModifiers.swift */; };
@@ -142,6 +143,7 @@
 		3AACBF2E29ED638700D0AEF0 /* WatchedShapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchedShapeView.swift; sourceTree = "<group>"; };
 		3AACBF3229ED8AEF00D0AEF0 /* NeumorphicViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumorphicViewStyle.swift; sourceTree = "<group>"; };
 		3AACBF3429ED986B00D0AEF0 /* AsyncImageNeumorphicStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageNeumorphicStyle.swift; sourceTree = "<group>"; };
+		3AB4421C2B7E535E00E0275D /* RecommendedAnimesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedAnimesList.swift; sourceTree = "<group>"; };
 		3AF60E402ABDAD190054BE52 /* ExtDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtDevice.swift; sourceTree = "<group>"; };
 		3AF60E422ABDAD2C0054BE52 /* ExtArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtArray.swift; sourceTree = "<group>"; };
 		3AF60E462ABDADA50054BE52 /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 				3A33CB3529E56F2700160AC3 /* AnimeStatusView.swift */,
 				3A3E342429EED25200B76B5E /* AnimeGridCellView.swift */,
 				3A25B8FB29E3369F0078D264 /* AnimeListCell.swift */,
+				3AB4421C2B7E535E00E0275D /* RecommendedAnimesList.swift */,
 			);
 			name = List;
 			sourceTree = "<group>";
@@ -561,6 +564,7 @@
 				3A25B8FF29E33A8B0078D264 /* ExtColor.swift in Sources */,
 				3A33CB3229E5503C00160AC3 /* Points.swift in Sources */,
 				3A25B90429E3433D0078D264 /* LightBackground.swift in Sources */,
+				3AB4421D2B7E535E00E0275D /* RecommendedAnimesList.swift in Sources */,
 				3A14C3E529F17A1E009FDF45 /* OpenAnimation.swift in Sources */,
 				3AF60E432ABDAD2C0054BE52 /* ExtArray.swift in Sources */,
 				3A33CB2C29E5441000160AC3 /* Star.swift in Sources */,

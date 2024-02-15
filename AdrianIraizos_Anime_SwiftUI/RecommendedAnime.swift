@@ -8,15 +8,24 @@
 import SwiftUI
 
 struct RecommendedAnime: View {
-    var anime:Anime
+    let title: String
+    let imageURL: URL
+    
     var body: some View {
-        HStack {
-            Text(anime.title)
+        VStack {
+            AsyncImageNeumorphicStyle(imageURL: imageURL,width: 65,height: 90)
+            Text(title)
                 .font(.caption2)
                 .foregroundColor(.secondary)
-            AsyncImageNeumorphicStyle(imageURL: anime.image,width: 65,height: 90)
         }
-        .frame(width: 200)
+        .frame(width: 100)
+    }
+}
+
+extension RecommendedAnime {
+    init(anime: Anime) {
+        title = anime.title
+        imageURL = anime.image
     }
 }
 

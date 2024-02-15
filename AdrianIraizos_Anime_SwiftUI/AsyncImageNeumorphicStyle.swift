@@ -15,23 +15,29 @@ struct AsyncImageNeumorphicStyle: View {
         ZStack {
             RoundedRectangle(cornerRadius: 12)
                 .fill(Color.offWhite)
-                .shadow(color:Color.black.opacity(0.2), radius: 10, x:10, y:10)
-                .shadow(color:Color.white.opacity(0.7), radius: 10, x:5, y:5)
+
+                .overlay(
+                    RoundedRectangle(cornerRadius: 12)
+                        .stroke(Color.gray, lineWidth: 4)
+                        .blur(radius: 4)
+                        .offset(x: 5, y: 5)
+                        .mask(RoundedRectangle(cornerRadius: 12).fill(LinearGradient(colors: [Color.black,Color.black,Color.clear], startPoint: .topLeading, endPoint: .bottomTrailing)))
+                    )
+                .overlay(
+                    RoundedRectangle(cornerRadius: 12)
+                        .stroke(Color.white, lineWidth: 1)
+                        .blur(radius: 1)
+                        .offset(x: -10, y: -10)
+                .clipShape(RoundedRectangle(cornerRadius: 12))
+                )
             AsyncImage(url: imageURL) { image in
                 image
                     .resizable()
                     .scaledToFit()
                     .clipShape(RoundedRectangle(cornerRadius: 12))
-                    .overlay {
-                        RoundedRectangle(cornerRadius: 20, style: .continuous)
-                            .stroke(.black.opacity(0.5), lineWidth: 9)
-                            .blendMode(.overlay)
-                    }
-                    
+
                     .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
-                
-                    .shadow(color: .black.opacity(0.6), radius: 10, x:10,y:10)
-                    .frame(width:width, height: height)
+                    .frame(width: width, height: height)
             } placeholder: {
                 Image("placeholder")
                     .resizable()
@@ -39,7 +45,8 @@ struct AsyncImageNeumorphicStyle: View {
                     .cornerRadius(12)
             }
         }
-        .frame(width:width + 5, height: height + 5)
+
+        .frame(width:width + 10, height: height + 10)
     }
 }
 
