@@ -179,39 +179,6 @@
 			name = Helpers;
 			sourceTree = "<group>";
 		};
-		3A11B4A42ABC5D51008F8172 /* Welcome */ = {
-			isa = PBXGroup;
-			children = (
-				3A21F0FB29E7113B00ACCC83 /* LoadingView.swift */,
-				3A11B4A22ABC5A57008F8172 /* WelcomeViewText.swift */,
-				3A11B4A02ABC584A008F8172 /* WelcomeText.swift */,
-				3A11B4A52ABC5D75008F8172 /* WelcomeLogoView.swift */,
-			);
-			name = Welcome;
-			sourceTree = "<group>";
-		};
-		3A11B4A72ABC6014008F8172 /* List */ = {
-			isa = PBXGroup;
-			children = (
-				3A33CB3929E5727F00160AC3 /* AnimeTypeView.swift */,
-				3A33CB3529E56F2700160AC3 /* AnimeStatusView.swift */,
-				3A3E342429EED25200B76B5E /* AnimeGridCellView.swift */,
-				3A25B8FB29E3369F0078D264 /* AnimeListCell.swift */,
-				3AB4421C2B7E535E00E0275D /* RecommendedAnimesList.swift */,
-			);
-			name = List;
-			sourceTree = "<group>";
-		};
-		3A11B4A82ABC6036008F8172 /* Detail */ = {
-			isa = PBXGroup;
-			children = (
-				3A33CB3329E5543C00160AC3 /* RatingView.swift */,
-				3AACBF2E29ED638700D0AEF0 /* WatchedShapeView.swift */,
-				3A3E341A29EE8FAC00B76B5E /* RecommendedAnime.swift */,
-			);
-			name = Detail;
-			sourceTree = "<group>";
-		};
 		3A11B4AD2ABC86E5008F8172 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,19 +186,6 @@
 				3A14C3E429F17A1E009FDF45 /* OpenAnimation.swift */,
 			);
 			name = Animations;
-			sourceTree = "<group>";
-		};
-		3A11B4AE2ABC8A03008F8172 /* Neumorphic */ = {
-			isa = PBXGroup;
-			children = (
-				3A25B90129E33C170078D264 /* DarkBackground.swift */,
-				3A25B90329E3433C0078D264 /* LightBackground.swift */,
-				3A11B49E2ABC57FB008F8172 /* NewmorphicStrokeStyle.swift */,
-				3AACBF3429ED986B00D0AEF0 /* AsyncImageNeumorphicStyle.swift */,
-				3AACBF3229ED8AEF00D0AEF0 /* NeumorphicViewStyle.swift */,
-				3A20711B29ED46AD0000BF39 /* NeumorphicButtonStyle.swift */,
-			);
-			name = Neumorphic;
 			sourceTree = "<group>";
 		};
 		3A11B4AF2ABC8A28008F8172 /* Grids */ = {
@@ -340,13 +294,13 @@
 		3A3E341929EE8D4000B76B5E /* ViewComponents */ = {
 			isa = PBXGroup;
 			children = (
-				3AF60E452ABDAD950054BE52 /* ViewModifiers */,
-				3AF60E3F2ABDACCE0054BE52 /* Shapes */,
-				3AC72FA82ABC8AE5000B0984 /* Grids */,
-				3A11B4A82ABC6036008F8172 /* Detail */,
-				3A11B4A72ABC6014008F8172 /* List */,
-				3A11B4AE2ABC8A03008F8172 /* Neumorphic */,
-				3A11B4A42ABC5D51008F8172 /* Welcome */,
+				3AB442262B7E5BF200E0275D /* Welcome */,
+				3AB442252B7E5BDD00E0275D /* Neumorphic */,
+				3AB442242B7E5BCA00E0275D /* List */,
+				3AB442232B7E5BBD00E0275D /* Detail */,
+				3AB442222B7E5BB200E0275D /* Grids */,
+				3AB442202B7E5B8C00E0275D /* Shapes */,
+				3AB4421F2B7E5B7C00E0275D /* ViewModifiers */,
 			);
 			name = ViewComponents;
 			path = ..;
@@ -404,15 +358,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		3AC72FA82ABC8AE5000B0984 /* Grids */ = {
+		3AB4421F2B7E5B7C00E0275D /* ViewModifiers */ = {
 			isa = PBXGroup;
 			children = (
-				3A14C3E629F1AA99009FDF45 /* GridBackground.swift */,
+				3AF60E462ABDADA50054BE52 /* ViewModifiers.swift */,
 			);
-			name = Grids;
+			path = ViewModifiers;
 			sourceTree = "<group>";
 		};
-		3AF60E3F2ABDACCE0054BE52 /* Shapes */ = {
+		3AB442202B7E5B8C00E0275D /* Shapes */ = {
 			isa = PBXGroup;
 			children = (
 				3A33CB2B29E5441000160AC3 /* Star.swift */,
@@ -420,7 +374,61 @@
 				3A33CB3129E5503C00160AC3 /* Points.swift */,
 				3A33CB3729E5712000160AC3 /* Triangle.swift */,
 			);
-			name = Shapes;
+			path = Shapes;
+			sourceTree = "<group>";
+		};
+		3AB442222B7E5BB200E0275D /* Grids */ = {
+			isa = PBXGroup;
+			children = (
+				3A14C3E629F1AA99009FDF45 /* GridBackground.swift */,
+			);
+			path = Grids;
+			sourceTree = "<group>";
+		};
+		3AB442232B7E5BBD00E0275D /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				3A33CB3329E5543C00160AC3 /* RatingView.swift */,
+				3AACBF2E29ED638700D0AEF0 /* WatchedShapeView.swift */,
+				3A3E341A29EE8FAC00B76B5E /* RecommendedAnime.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		3AB442242B7E5BCA00E0275D /* List */ = {
+			isa = PBXGroup;
+			children = (
+				3A33CB3929E5727F00160AC3 /* AnimeTypeView.swift */,
+				3A33CB3529E56F2700160AC3 /* AnimeStatusView.swift */,
+				3A3E342429EED25200B76B5E /* AnimeGridCellView.swift */,
+				3A25B8FB29E3369F0078D264 /* AnimeListCell.swift */,
+				3AB4421C2B7E535E00E0275D /* RecommendedAnimesList.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		3AB442252B7E5BDD00E0275D /* Neumorphic */ = {
+			isa = PBXGroup;
+			children = (
+				3A25B90129E33C170078D264 /* DarkBackground.swift */,
+				3A25B90329E3433C0078D264 /* LightBackground.swift */,
+				3A11B49E2ABC57FB008F8172 /* NewmorphicStrokeStyle.swift */,
+				3AACBF3429ED986B00D0AEF0 /* AsyncImageNeumorphicStyle.swift */,
+				3AACBF3229ED8AEF00D0AEF0 /* NeumorphicViewStyle.swift */,
+				3A20711B29ED46AD0000BF39 /* NeumorphicButtonStyle.swift */,
+			);
+			path = Neumorphic;
+			sourceTree = "<group>";
+		};
+		3AB442262B7E5BF200E0275D /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				3A21F0FB29E7113B00ACCC83 /* LoadingView.swift */,
+				3A11B4A22ABC5A57008F8172 /* WelcomeViewText.swift */,
+				3A11B4A02ABC584A008F8172 /* WelcomeText.swift */,
+				3A11B4A52ABC5D75008F8172 /* WelcomeLogoView.swift */,
+			);
+			path = Welcome;
 			sourceTree = "<group>";
 		};
 		3AF60E442ABDAD390054BE52 /* Extensiones */ = {
@@ -432,14 +440,6 @@
 			);
 			name = Extensiones;
 			path = ..;
-			sourceTree = "<group>";
-		};
-		3AF60E452ABDAD950054BE52 /* ViewModifiers */ = {
-			isa = PBXGroup;
-			children = (
-				3AF60E462ABDADA50054BE52 /* ViewModifiers.swift */,
-			);
-			name = ViewModifiers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
