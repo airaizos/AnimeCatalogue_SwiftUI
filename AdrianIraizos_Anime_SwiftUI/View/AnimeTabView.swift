@@ -15,7 +15,9 @@ struct AnimeTabView: View {
     var body: some View {
             TabView{
                 Group {
-                    AnimesListView(navigationState: $navigationState, namespace: namespace)
+                    NavigationStack {
+                        AnimesListView(navigationState: $navigationState, namespace: namespace)
+                    }
                         .environmentObject(viewModel)
                         .tabItem {
                             Label("Animes",systemImage: "australsign")

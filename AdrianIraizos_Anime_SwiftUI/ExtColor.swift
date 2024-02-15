@@ -23,8 +23,3 @@ extension Color {
     static let pinkStart = Color(red: 0.929, green: 0.263, blue: 0.682)
     static let pinkEnd = Color(red: 0.800, green: 0.278, blue: 0.557)
 }
-
-
-
-
-

@@ -38,21 +38,22 @@ enum Obra:String,Codable,CaseIterable,Identifiable {
 }
 
 extension Anime {
-    var statusLetter:(String,Color) {
+
+    var statusIcon: IconLabel {
         switch status {
-        case .EnEmision: return ("E",.blue)
-        case .Finalizado: return ("F",.red)
-        case .Proximamente: return ("P",.green)
+        case .EnEmision: return IconLabel("E",.blue)
+        case .Finalizado: return IconLabel("F",.red)
+        case .Proximamente: return IconLabel("P",.green)
         }
     }
     
-    var typeLetter:(letra:String,color:Color) {
+    var typeIcon:IconLabel {
         switch type {
-        case .OVA: return ("O",.indigo)
-        case .Anime:return ("A",.orange)
-        case .Pelicula: return ("M",.brown)
-        case .Especial: return ("E",.purple)
-        case .All: return ("T",.black)
+        case .OVA: return IconLabel("O",.indigo)
+        case .Anime:return IconLabel("A",.orange)
+        case .Pelicula: return IconLabel("M",.brown)
+        case .Especial: return IconLabel("E",.purple)
+        case .All: return IconLabel("T",.black)
         }
     }
     
@@ -81,7 +82,15 @@ extension Anime {
     var genreView:String {
         genres?.replacingOccurrences(of: ",", with: ", ") ?? ""
     }
+}
+
+struct IconLabel {
+    let name: String
+    let color: Color
     
-    
+    init(_ name: String, _ color: Color) {
+        self.name = name
+        self.color = color
+    }
 }
 

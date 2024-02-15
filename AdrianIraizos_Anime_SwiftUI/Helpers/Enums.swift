@@ -18,7 +18,7 @@ enum SortedBy:String,CaseIterable,Identifiable {
     case votes = "Votes"
 }
 
-enum infoSize:CGFloat {
+enum InfoSize:CGFloat {
     case small = 1
     case medium = 1.5
     case large = 2

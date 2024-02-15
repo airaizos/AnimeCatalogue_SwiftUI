@@ -12,7 +12,7 @@ struct AnimeGridCellView: View {
     private let width:CGFloat = 75
     private let height:CGFloat = 105
     var titleColor:Color = .gray
-    var infoSize:infoSize = .small
+    var infoSize:InfoSize = .small
     var body: some View {
         VStack(alignment:.center,spacing: 10){
             AsyncImageNeumorphicStyle(imageURL: anime.image,width: width * infoSize.rawValue,height: height * infoSize.rawValue)

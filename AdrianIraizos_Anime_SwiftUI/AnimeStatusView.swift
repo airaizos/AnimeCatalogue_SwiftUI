@@ -8,37 +8,42 @@
 import SwiftUI
 
 struct AnimeStatusView: View {
-    var status:(letra:String,color:Color)
-    var size:infoSize = .large
+    let letter: String
+    let color: Color
+    let size: InfoSize = .large
     
     var body: some View {
         ZStack(alignment:.bottom){
-            Text(status.letra)
+            Text(letter)
                 .font(size.fontSize)
                 .fontWeight(.bold)
-                
                 .background {
                     Triangle()
                         .stroke(style: StrokeStyle(lineWidth: size.rawValue * 1.5, lineCap: .round, lineJoin: .round))
                         .fill(RadialGradient(
-                            gradient: Gradient(colors: [status.color, status.color.opacity(0.5)]),
+                            gradient: Gradient(colors: [color, color.opacity(0.5)]),
                             center:.center,
                             startRadius: 0,
                             endRadius: 20
-                            ))
+                        ))
                         .opacity(0.6)
                         .frame(width: 15 * size.rawValue,height: 15 * size.rawValue)
                         .offset(y:-2 * size.rawValue)
-                        
                 }
-                
         }
         .padding(10)
     }
 }
 
+extension AnimeStatusView {
+    init(statusIcon: IconLabel) {
+        letter = statusIcon.name
+        color = statusIcon.color
+    }
+}
+
 struct AnimeStatusView_Previews: PreviewProvider {
     static var previews: some View {
-        AnimeStatusView(status: ("P",.blue))
+        AnimeStatusView(letter: "P",color:.blue)
     }
 }

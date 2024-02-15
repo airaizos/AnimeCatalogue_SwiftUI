@@ -8,17 +8,18 @@
 import SwiftUI
 
 struct AnimeTypeView: View {
-    let type:(letra:String,color:Color)
-    var size:infoSize = .large
+    let letter: String
+    let color: Color
+    var size:InfoSize = .large
     var body: some View {
         ZStack(alignment:.bottom){
-            Text(type.letra)
+            Text(letter)
                 .font(size.fontSize)
                 .fontWeight(.bold)
                 .background {
                     Polygon(sides: 5)           .stroke(style: StrokeStyle(lineWidth: size.rawValue * 1.5, lineCap: .round, lineJoin: .round))
                         .fill(RadialGradient(
-                            gradient: Gradient(colors: [type.color, type.color.opacity(0.5)]),
+                            gradient: Gradient(colors: [color, color.opacity(0.5)]),
                             center:.center,
                             startRadius: 0,
                             endRadius: 20
@@ -30,11 +31,17 @@ struct AnimeTypeView: View {
         }
         .padding(10)
     }
-    
+}
+
+extension AnimeTypeView {
+    init(iconLabel: IconLabel) {
+        letter = iconLabel.name
+        color = iconLabel.color
+    }
 }
 
 struct AnimeTypeView_Previews: PreviewProvider {
     static var previews: some View {
-        AnimeTypeView(type: ("A",.orange))
+        AnimeTypeView(letter: "A",color: .orange)
     }
 }

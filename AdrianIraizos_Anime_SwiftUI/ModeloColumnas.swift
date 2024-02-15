@@ -10,12 +10,12 @@ import SwiftUI
 final class ModeloColumnas: ObservableObject {
     @Published var gridItem = [GridItem()]
     @Published var grids = 3
-    @Published var size:infoSize = .medium
+    @Published var size:InfoSize = .medium
     
     private let flexibleGridItem = GridItem(.flexible(minimum: 70, maximum: 300))
     
     init() {
-        if let num = UserDefaults.standard.object(forKey: "numColumnsWatched") as? Int, let imageSize = infoSize(rawValue: UserDefaults.standard.object(forKey: "infoSize") as? CGFloat ?? 1.5 ) {
+        if let num = UserDefaults.standard.object(forKey: "numColumnsWatched") as? Int, let imageSize = InfoSize(rawValue: UserDefaults.standard.object(forKey: "infoSize") as? CGFloat ?? 1.5 ) {
             gridItem = Array(repeating: flexibleGridItem, count: num)
             size = imageSize
         } else {

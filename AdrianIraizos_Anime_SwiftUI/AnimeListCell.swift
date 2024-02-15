@@ -8,37 +8,35 @@
 import SwiftUI
 
 struct AnimeListCell: View {
-    let anime:Anime
+    let title: String
+    let type: Obra
+    let rate: Double
+    let statusIcon: IconLabel
+    let typeIcon: IconLabel
+    let imageURL: URL
     var body: some View {
         HStack(spacing:20) {
-            AsyncImageNeumorphicStyle(imageURL: anime.image)
+            AsyncImageNeumorphicStyle(imageURL: imageURL)
             VStack{
                 Spacer()
-                    Text(anime.title)
+                    Text(title)
                         .font(.title2)
                         .fontWeight(.light)
                         .foregroundColor(.darkStart)
-                    
-                    
-                    Text(anime.type.rawValue)
+                    Text(type.rawValue)
                         .font(.subheadline)
                         .fontWeight(.bold)
                         .foregroundColor(.gray)
                     
                         .shadow(color: .black, radius: 0.5,x:0.5,y:0.5)
-                
-                
                 Spacer()
                 HStack(alignment:.center) {
-                    Spacer()
-                    RatingView(rate: anime.rateDouble,isGray: false)
+                    RatingView(rate: rate,isGray: false)
                     
                     Spacer()
-                    AnimeStatusView(status: anime.statusLetter)
+                    AnimeStatusView(statusIcon: statusIcon)
                     Spacer()
-                    AnimeTypeView(type: anime.typeLetter)
-                    Spacer()
-                    
+                    AnimeTypeView(iconLabel: typeIcon)
                 }
             }
             .frame(maxWidth: .infinity)
@@ -47,6 +45,17 @@ struct AnimeListCell: View {
     }
 }
 
+
+extension AnimeListCell {
+    init(anime:Anime) {
+        title = anime.title
+        type = anime.type
+        rate = anime.rateDouble
+        statusIcon = anime.statusIcon
+        typeIcon = anime.typeIcon
+        imageURL = anime.image
+    }
+}
 struct AnimeListCell_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
